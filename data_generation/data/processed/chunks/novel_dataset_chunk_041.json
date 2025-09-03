@@ -1,0 +1,4903 @@
+[
+  {
+    "id": "B071_Travels_with_Myself_and_Another_passage_815",
+    "sensor_data": {
+      "temperature": 14.8,
+      "humidity": 63.3,
+      "wind_direction": 1.983,
+      "imu": [
+        0.294,
+        0.286,
+        9.699,
+        0.023,
+        -0.008,
+        0.019
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "afternoon",
+        "weather": "snow"
+      }
+    },
+    "target_paragraph": "Though Russians write with poetic tenderness about their landscape, I had my own idea; I was sure Russia would look like the Middle West, too flat and too much of it. The climate repelled; the cold, the snow, the frozen rivers. I didn’t believe in a Russian summer. Obviously that dappled sunlight through birch trees, those butterflies were a figment of literary imagination. Summer in England is largely imaginary; Russia had to be ten times worse. I was quite content to know the Russia of their great writers and the impetuous broody characters in their books.",
+    "metadata": {
+      "source_file": "B071_Travels_with_Myself_and_Another.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.020833333333333332,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 2,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 96
+        }
+      },
+      "novel_metadata": {
+        "title": "Travels with Myself and Another",
+        "author": "Gellhorn, Martha",
+        "gender_of_author": "Female",
+        "publication_year": "1978",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2001",
+        "publisher_of_the_edition_used": "TarcherPerigee",
+        "index_number": "B071"
+      },
+      "passage_index": 815
+    }
+  },
+  {
+    "id": "B116_The_Snow_Leopard_passage_643",
+    "sensor_data": {
+      "temperature": 11.3,
+      "humidity": 52.8,
+      "wind_direction": 1.334,
+      "imu": [
+        -0.406,
+        0.413,
+        9.764,
+        0.065,
+        -0.05,
+        -0.019
+      ],
+      "context": {
+        "scenario": "mountain_climbing",
+        "time": "afternoon",
+        "weather": "snow"
+      }
+    },
+    "target_paragraph": "In its wholehearted acceptance of what is, this is just what Soen Roshi might have said: I feel as if he had struck me in the chest. I thank him, bow, go softly down the mountain: under my parka, the folded prayer flag glows. Butter tea and wind pictures, the Crystal Mountain, and blue sheep dancing on the snow—it’s quite enough!\n\nHave you seen the snow leopard?\n\nNo! Isn’t that wonderful?\n\nNOVEMBER 15",
+    "metadata": {
+      "source_file": "B116_The_Snow_Leopard.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.0136986301369863,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 73
+        }
+      },
+      "novel_metadata": {
+        "title": "The Snow Leopard",
+        "author": "Peter Matthiessen",
+        "gender_of_author": "Male",
+        "publication_year": "1978",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2008",
+        "publisher_of_the_edition_used": "Penguin",
+        "index_number": "B116"
+      },
+      "passage_index": 643
+    }
+  },
+  {
+    "id": "A025_The_Town_passage_262",
+    "sensor_data": {
+      "temperature": 25.9,
+      "humidity": 52.5,
+      "wind_direction": 3.633,
+      "imu": [
+        -0.15,
+        -0.529,
+        9.891,
+        0.046,
+        -0.009,
+        -0.017
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "morning",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "So something happened somewhere between that board of aldermen meeting last night and that special court session this morning. Except that if we ever knowed what it was, it wasn’t going to be Lawyer’s fault. I mean, we might a knowed or anyway had a good idea what happened and where while them lights was burning in that upstairs office long after ever body else in Jefferson had done went home to bed; some day Lawyer his-self might tell it, probably would, would have to tell it to somebody jest to get some rest from it. What we wouldn’t know would be jest how it happened. Because when Lawyer come to tell it, he wouldn’t be having to tell what happened: he would be having to tell, to say, it wouldn’t much matter what, to somebody, anybody listening, it wouldn’t much matter who.",
+    "metadata": {
+      "source_file": "A025_The_Town.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.013986013986013986,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 143
+        }
+      },
+      "novel_metadata": {
+        "title": "The Town",
+        "author": "Faulkner, William",
+        "gender_of_author": "Male",
+        "publication_year": "1957",
+        "publisher": "RandomHouse",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "Vintage",
+        "index_number": "A025"
+      },
+      "passage_index": 262
+    }
+  },
+  {
+    "id": "B119_Coming_into_the_Country_passage_239",
+    "sensor_data": {
+      "temperature": 27.1,
+      "humidity": 40.5,
+      "wind_direction": 2.014,
+      "imu": [
+        -0.027,
+        -0.019,
+        9.767,
+        -0.002,
+        -0.021,
+        0.007
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "At Anchorage International Airport, there is a large aerial photograph of Anchorage formed by pasting together a set of pictures that were made without what cartographers call ground control. This great aerial map is one of the first things to confront visitors from everywhere in the world, and in bold letters it is titled “ANCHORAGE, ALASKA. UNCONTROLLED MOSAIC.”",
+    "metadata": {
+      "source_file": "B119_Coming_into_the_Country.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.034482758620689655,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 58
+        }
+      },
+      "novel_metadata": {
+        "title": "Coming into the Country",
+        "author": "Mcphee, John",
+        "gender_of_author": "Male",
+        "publication_year": "1976",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "Farrar, Straus and Giroux",
+        "index_number": "B119"
+      },
+      "passage_index": 239
+    }
+  },
+  {
+    "id": "A158_The_Age_of_Innocence_passage_787",
+    "sensor_data": {
+      "temperature": 12.4,
+      "humidity": 43.5,
+      "wind_direction": 4.355,
+      "imu": [
+        1.005,
+        -0.001,
+        9.71,
+        0.069,
+        0.22,
+        0.087
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Archer's gaze, wandering away to the blank walls of the office, rested on a hanging calendar surmounted by the rugged features of the President of the United States. That such a conversation should be going on anywhere within the millions of square miles subject to his rule seemed as strange as anything that the imagination could invent.\n\n\"The change—what sort of a change?\"",
+    "metadata": {
+      "source_file": "A158_The_Age_of_Innocence.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.015873015873015872,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 63
+        }
+      },
+      "novel_metadata": {
+        "title": "The Age of Innocence",
+        "author": "Wharton,Edith",
+        "gender_of_author": "Female",
+        "publication_year": "1920",
+        "publisher": "D. Appleton & Company",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "EFE Books",
+        "index_number": "A158"
+      },
+      "passage_index": 787
+    }
+  },
+  {
+    "id": "A183_Of_Time_and_the_River_passage_3627",
+    "sensor_data": {
+      "temperature": 10.9,
+      "humidity": 34.5,
+      "wind_direction": 1.728,
+      "imu": [
+        -0.5,
+        0.121,
+        9.762,
+        0.061,
+        0.041,
+        -0.053
+      ],
+      "context": {
+        "scenario": "beach_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "And in his pictures of a later time, of Athens in the period of recorded history, of Pericles and Plato and the time of the wars with Sparta, the scenes of history were bathed in these radiant and perfect lights and weathers. He knew these men were made of living, breathing flesh and subject to the errors and imperfections of mortal men, and yet when he tried to think of a slum in Athens, of people with bad teeth, blemished skins, muddy complexions – of disease, filth, and squalor among them, and of the million weary, beaten, dusty, sweating moments of their lives, he could not. Even human grief, pain, and trouble took on a colour of classical perfection, of tragic grandeur, and the tortured and distressful skein of human life, with all that is ugly, trivial, and disgusting in it, took on the logical pattern of design and ordered destiny.",
+    "metadata": {
+      "source_file": "A183_Of_Time_and_the_River.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.013245033112582781,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 1,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 151
+        }
+      },
+      "novel_metadata": {
+        "title": "Of Time and the River",
+        "author": "Wolfe,Thomas",
+        "gender_of_author": "Male",
+        "publication_year": "1935",
+        "publisher": "Charles Scribner's Sons",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Aegitas",
+        "index_number": "A183"
+      },
+      "passage_index": 3627
+    }
+  },
+  {
+    "id": "B002_Hindoo_Holiday_passage_626",
+    "sensor_data": {
+      "temperature": 18.1,
+      "humidity": 63.7,
+      "wind_direction": 3.526,
+      "imu": [
+        -0.157,
+        -1.011,
+        9.681,
+        -0.077,
+        0.196,
+        -0.024
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "morning",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "I walked through the fair with Narayan later in the morning and examined the wares. There was nothing there of much interest, except some rough local brass-work, and a few pieces, more elaborate and finished, from Ahmedabad and Benares. Otherwise there was the usual assortment of stuff: Indian sweetmeats and foods, haberdashery, cloth, and cheap trinkets, mostly of Japanese or European manufacture. There were also some primitive merry-go-rounds and a performing bear.",
+    "metadata": {
+      "source_file": "B002_Hindoo_Holiday.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.027777777777777776,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 72
+        }
+      },
+      "novel_metadata": {
+        "title": "Hindoo Holiday",
+        "author": "Ackerley, J. R.",
+        "gender_of_author": "Male",
+        "publication_year": "1932",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2012",
+        "publisher_of_the_edition_used": "NYRB Classics",
+        "index_number": "B002"
+      },
+      "passage_index": 626
+    }
+  },
+  {
+    "id": "B046_City_of_Djinns_passage_969",
+    "sensor_data": {
+      "temperature": 25.6,
+      "humidity": 43.4,
+      "wind_direction": 1.623,
+      "imu": [
+        0.002,
+        -0.124,
+        9.839,
+        -0.026,
+        0.012,
+        -0.005
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "I sat in a dhaba in the shade of a tarpaulin, nibbling Id sweets and watching the festive crowds milling all around me. It was only nine o’clock. But already it was becoming unbearably hot.\n\nDuring the sweltering Id of 1333, a camel caravan could be seen winding its way through the narrow passes and defiles of the Hindu Kush. On the principal camel sat an irascible Muslim judge. He had been travelling for eight years and was now heading south towards Delhi, the capital of the Sultan of Hindustan.",
+    "metadata": {
+      "source_file": "B046_City_of_Djinns.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.03333333333333333,
+        "details": {
+          "temperature_hot": 2,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 90
+        }
+      },
+      "novel_metadata": {
+        "title": "City of Djinns",
+        "author": "Dalrymple, William",
+        "gender_of_author": "Male",
+        "publication_year": "2011",
+        "publisher": "Harper Press",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "Harper Press",
+        "index_number": "B046"
+      },
+      "passage_index": 969
+    }
+  },
+  {
+    "id": "B141_One_Foot_in_Laos_passage_256",
+    "sensor_data": {
+      "temperature": 23.7,
+      "humidity": 43.4,
+      "wind_direction": 1.758,
+      "imu": [
+        0.409,
+        -0.897,
+        10.113,
+        -0.024,
+        0.136,
+        0.012
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "dawn",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "At dawn I set off in rather a subdued mood – partly lack of sleep, partly negative feelings about rejoining Route 13. From Mr Somsak’s ban the track to Kasi was unmistakable, for the first few miles hacked out of sheer cliffs where swathes of vines half obscured miniature waterfalls. This was an easy day’s walking, through tranquil beauty. Sometimes the track undulated between rustling bamboo – the tallest I had seen, rising to seventy or eighty feet. Then I was overlooking wide shallow valleys where small patches of paddy glowed golden amidst tangled subtropical vegetation. Hereabouts the butterflies seemed larger, more numerous and more gorgeously coloured than anywhere else in Laos – perhaps because of a particular local plant. During a long, gradual descent to a more arid area of low scrub and blue-bush I put up two pheasants. For the last hour I was crossing level paddyland – the peaks ahead familiar, surrounding Kasi.",
+    "metadata": {
+      "source_file": "B141_One_Foot_in_Laos.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.01282051282051282,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 1,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 156
+        }
+      },
+      "novel_metadata": {
+        "title": "One Foot in Laos",
+        "author": "Dervla Murphy",
+        "gender_of_author": "Female",
+        "publication_year": "1999",
+        "publisher": "Murray",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Eland",
+        "index_number": "B141"
+      },
+      "passage_index": 256
+    }
+  },
+  {
+    "id": "A007_HERmione_passage_078",
+    "sensor_data": {
+      "temperature": 15.1,
+      "humidity": 48.9,
+      "wind_direction": 0.327,
+      "imu": [
+        0.102,
+        -0.176,
+        9.887,
+        0.073,
+        -0.03,
+        0.038
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "From the downstairs hallway Jock was barking, slipping of claw feet on polished wood, scuffling and thud—it must be Mandy chasing him from the kitchen. I told Mandy she should shut the window. Jock like a greyhound would be pulled out like a reflection of Jock seen in rippled water. Jock and Jock would be lightning succeeding lightning in angular bright pattern. Jock must have leapt through the window. I told Mandy she should close it. The broom, it must be the broom, went thud and Jock the other side of the slammed-to screen door said ouch-ouch dramatically. Mandy shouldn’t hit Jock that way. It’s so insulting to him.",
+    "metadata": {
+      "source_file": "A007_HERmione.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.01834862385321101,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 2,
+          "movement": 0,
+          "total_words": 109
+        }
+      },
+      "novel_metadata": {
+        "title": "HERmione",
+        "author": "Doolittle, Hilda",
+        "gender_of_author": "Female",
+        "publication_year": "1927",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "1981",
+        "publisher_of_the_edition_used": "New Directions",
+        "index_number": "A007"
+      },
+      "passage_index": 78
+    }
+  },
+  {
+    "id": "A144_The_Creators_passage_611",
+    "sensor_data": {
+      "temperature": 24.7,
+      "humidity": 56.5,
+      "wind_direction": 2.431,
+      "imu": [
+        0.459,
+        0.319,
+        9.867,
+        -0.031,
+        0.006,
+        0.008
+      ],
+      "context": {
+        "scenario": "beach_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "And in the kitchen garden, among the sweet-peas, Mrs. Heron thanked Jane\non her own account for what she had done, while Jane kept on saying that\nshe had done nothing. All down the kitchen garden there was an alley of\nsweet-peas with a seat at the end of it, and there they sat while Mrs.\nHeron talked about her brother Hugh who had been so good to her and to\nher children. This praise of Brodrick mingled with the scent of the\nsweet-peas, so that Jane could never again smell sweet-peas in a hot\ngarden without hearing Brodrick's praise.",
+    "metadata": {
+      "source_file": "A144_The_Creators.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.01,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 100
+        }
+      },
+      "novel_metadata": {
+        "title": "The Creators",
+        "author": "Sinclair, May",
+        "gender_of_author": "Female",
+        "publication_year": "1910",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2008",
+        "publisher_of_the_edition_used": "N/A",
+        "index_number": "A144"
+      },
+      "passage_index": 611
+    }
+  },
+  {
+    "id": "B052_Love_with_a_Chance_of_Drowning_passage_999",
+    "sensor_data": {
+      "temperature": 18.4,
+      "humidity": 51.5,
+      "wind_direction": 1.517,
+      "imu": [
+        0.417,
+        -0.229,
+        9.826,
+        -0.05,
+        0.022,
+        0.004
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Then I see something unexpected: an explosion of water, a texture like a raked Zen garden, a slick, knotty head, long fins extended, tail flukes poised, a gigantic beast airborne for an impossible length of time.\n\nA humpback whale!\n\nThe whale drops, creating a huge splash. Its great tail holds its pose right in front of our boat, and I get a sense of proportion alongside Amazing Grace. This beast is huge. It slips below the surface, gone as fast as a shooting star.",
+    "metadata": {
+      "source_file": "B052_Love_with_a_Chance_of_Drowning.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.011904761904761904,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 84
+        }
+      },
+      "novel_metadata": {
+        "title": "Love with a Chance of Drowning",
+        "author": "DeRoche, Torre",
+        "gender_of_author": "Female",
+        "publication_year": "2013",
+        "publisher": "Hachette",
+        "publication_year_of_the_edition_used": "2013",
+        "publisher_of_the_edition_used": "Hachette",
+        "index_number": "B052"
+      },
+      "passage_index": 999
+    }
+  },
+  {
+    "id": "B022_Elsewhere_passage_250",
+    "sensor_data": {
+      "temperature": 17.5,
+      "humidity": 49.3,
+      "wind_direction": 5.657,
+      "imu": [
+        -0.29,
+        1.185,
+        9.734,
+        0.234,
+        -0.117,
+        -0.071
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "night",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Hameed’s office had a concrete floor, maps of the surrounding mountain valleys and roads on the wall, and only one chair. But it had a big square wooden table.\n\n‘You can stay the night here,’ he said, giving me the key. Later, he sent his young son up with a bowl of dahl and rotis. I ate it gratefully, sitting on the step that overlooked the street, as the sun went down. I had made it this far.\n\nThat night, I locked myself in Hameed’s office, stretched out on his table, and slept.",
+    "metadata": {
+      "source_file": "B022_Elsewhere.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.021505376344086023,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 93
+        }
+      },
+      "novel_metadata": {
+        "title": "A Tale for the Time Being",
+        "author": "Boland, Rosita",
+        "gender_of_author": "Female",
+        "publication_year": "2019",
+        "publisher": "Transworld Digital",
+        "publication_year_of_the_edition_used": "2019",
+        "publisher_of_the_edition_used": "Transworld Digital",
+        "index_number": "B022"
+      },
+      "passage_index": 250
+    }
+  },
+  {
+    "id": "B024_One_Summer_passage_843",
+    "sensor_data": {
+      "temperature": 21.8,
+      "humidity": 53.7,
+      "wind_direction": 0.65,
+      "imu": [
+        -1.125,
+        0.291,
+        9.647,
+        -0.054,
+        -0.097,
+        0.014
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Eagerly encouraged by J. Edgar Hoover, Palmer prepared a series of raids on radical gathering spots. The first were held on November 7, 1919?the second anniversary of the Russian Revolution?and mostly involved federal agents and police in twelve cities storming selected clubs and cafes, smashing furniture, and arresting everyone in sight. In New York, police raided the Union of Russian Workers, beating anyone who protested or even questioned what they were doing. The union was merely a social club, where members could go to play chess or take classes to improve their English; it had never had any connection to radical affairs. In Hartford, Connecticut, police arrested a large number of suspects?the exact number is uncertain?then arrested anyone who came to ask after them. In Detroit, an entire orchestra and all the patrons of a particular restaurant were among eight hundred detainees who were held for up to a week in a windowless corridor without adequate water, toilets, or space to lie down. Eventually all were released without charge.",
+    "metadata": {
+      "source_file": "B024_One_Summer.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.01775147928994083,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 2,
+          "movement": 1,
+          "total_words": 169
+        }
+      },
+      "novel_metadata": {
+        "title": "One Summer",
+        "author": "Bryson, Bill",
+        "gender_of_author": "Male",
+        "publication_year": "2013",
+        "publisher": "Anchor",
+        "publication_year_of_the_edition_used": "2013",
+        "publisher_of_the_edition_used": "Anchor",
+        "index_number": "B024"
+      },
+      "passage_index": 843
+    }
+  },
+  {
+    "id": "B111_Holy_Cow_passage_825",
+    "sensor_data": {
+      "temperature": 20.0,
+      "humidity": 51.8,
+      "wind_direction": 0.885,
+      "imu": [
+        -0.14,
+        -0.75,
+        9.893,
+        -0.048,
+        -0.06,
+        0.021
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "“A huge light filled the room, it started speaking through me to my mother. I didn’t understand most of what I was saying, lots of things about an orange robe came out, Mum started filling with light and I was in a state of bliss. Two years later I was in my art gallery and a guy turned up, he showed me a photo of Sai Baba and I yelled, ‘That’s him, that’s God!’ I understood all the orange robe stuff. I said I have to go to him.”",
+    "metadata": {
+      "source_file": "B111_Holy_Cow.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.011235955056179775,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 89
+        }
+      },
+      "novel_metadata": {
+        "title": "Holy Cow",
+        "author": "Macdonald, Sarah",
+        "gender_of_author": "Female",
+        "publication_year": "2004",
+        "publisher": "Crown",
+        "publication_year_of_the_edition_used": "2004",
+        "publisher_of_the_edition_used": "Crown",
+        "index_number": "B111"
+      },
+      "passage_index": 825
+    }
+  },
+  {
+    "id": "B078_Destination_Earth_passage_207",
+    "sensor_data": {
+      "temperature": 20.9,
+      "humidity": 42.8,
+      "wind_direction": 5.701,
+      "imu": [
+        -0.254,
+        -0.486,
+        9.605,
+        -0.254,
+        -0.276,
+        -0.053
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Africa Leaking\n\nBamako, Mali\n\nFinally, we arrived at a boutique hotel managed by a French-American couple in Bamako. At last, we had running hot water and fresh-smelling towels, a soft bed and nice linens. For a second, we almost thought we had left Africa.",
+    "metadata": {
+      "source_file": "B078_Destination_Earth.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.045454545454545456,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 44
+        }
+      },
+      "novel_metadata": {
+        "title": "Destination Earth",
+        "author": "Nicos Hadjicostisv",
+        "gender_of_author": "Male",
+        "publication_year": "2016",
+        "publisher": "Bamboo Leaf Press",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Bamboo Leaf Press",
+        "index_number": "B078",
+        "soure_link": "https://amazon.com/-/ko/dp/B01GQKZZ52/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr="
+      },
+      "passage_index": 207
+    }
+  },
+  {
+    "id": "A013_The_Sound_and_The_Fury_passage_369",
+    "sensor_data": {
+      "temperature": 23.3,
+      "humidity": 42.0,
+      "wind_direction": 0.53,
+      "imu": [
+        -0.001,
+        0.243,
+        9.805,
+        0.014,
+        0.003,
+        -0.021
+      ],
+      "context": {
+        "scenario": "mountain_climbing",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "“Are you a Canadian?” the third said. He had red hair.\n\n“Canadian?”\n\n“He dont talk like them,” the second said. “I’ve heard them talk. He talks like they do in minstrel shows.”\n\n“Say,” the third said. “Aint you afraid he’ll hit you?”\n\n“Hit me?”\n\n“You said he talks like a colored man.”\n\n“Ah, dry up,” the second said. “You can see the steeple when you get over that hill there.”\n\nI thanked them. “I hope you have good luck. Only dont catch that old fellow down there. He deserves to be let alone.”",
+    "metadata": {
+      "source_file": "A013_The_Sound_and_The_Fury.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.021505376344086023,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 1,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 93
+        }
+      },
+      "novel_metadata": {
+        "`title": "The Sound and the Fury",
+        "author": "Faulkner, William",
+        "gender_of_author": "Male",
+        "publication_year": "1929",
+        "publisher": "Jonathan Cape & Harrison Smith",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "Grapevine India",
+        "index_number": "A013"
+      },
+      "passage_index": 369
+    }
+  },
+  {
+    "id": "B114_The_Old_Ways_passage_456",
+    "sensor_data": {
+      "temperature": 28.0,
+      "humidity": 49.0,
+      "wind_direction": 5.082,
+      "imu": [
+        -0.368,
+        -0.142,
+        9.824,
+        -0.03,
+        -0.007,
+        0.009
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "night",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "Granite was my grandfather’s best-loved rock. He shared his liking of granite with one of his heroes, Goethe, to whose writing he had been introduced when studying at Oxford in the mid-1930s under Walter Ettinghausen, who later went on to found the Israeli Foreign Service. As a young man, Goethe wrote an essay entitled ‘Über der Granit’: an essay on (über, ‘concerning’) the subject of granite, but also an essay about literally being on (über, ‘over’) granite. Granite – that igneous rock of upsurges and plugs – satisfied Goethe for its connection to the earth’s hot core. Shepherd valued granite for similar reasons. One October night she slept out on the granite of the plateau in air that was as ‘bland as silk’, and while half asleep felt herself become stone-like, ‘rooted …in …immobility’. On a hot summer day she lay down and sensed under her ‘the central core of fire from which was thrust this grumbling grinding mass of plutonic rock, over me blue air, and between the fire of the rock and the fire of the sun, scree, soil and water, moss, grass, flower and tree, insect, bird and beast, wind, rain and snow – the total mountain’.",
+    "metadata": {
+      "source_file": "B114_The_Old_Ways.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.015,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 2,
+          "movement": 0,
+          "total_words": 200
+        }
+      },
+      "novel_metadata": {
+        "title": "The Old Ways",
+        "author": "Robert MacFarlane",
+        "gender_of_author": "Male",
+        "publication_year": "2012",
+        "publisher": "Hamish Hamilton",
+        "publication_year_of_the_edition_used": "2013",
+        "publisher_of_the_edition_used": "Penguin Books",
+        "index_number": "B114"
+      },
+      "passage_index": 456
+    }
+  },
+  {
+    "id": "A012_Flags_in_the_Dust_passage_197",
+    "sensor_data": {
+      "temperature": 18.6,
+      "humidity": 52.4,
+      "wind_direction": 2.377,
+      "imu": [
+        0.114,
+        0.221,
+        9.903,
+        0.002,
+        0.033,
+        -0.05
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Caspey emptied his cup. “I dont take nothin’ offen no white man no mo’, lootenant ner captain ner M.P. War showed de white folks dey cant git along widout de cullud man. Tromple him in de dus’, but when de trouble bust loose, hit’s ‘Please, suh, Mr Cullud Man; right dis way whar de bugle blow-in’, Mr Cullud Man; you is de savior of de country.’ And now de cullud race gwine reap de benefits of de war, and dat soon.”\n\n“Sho,” murmured Simon.",
+    "metadata": {
+      "source_file": "A012_Flags_in_the_Dust.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.011904761904761904,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 84
+        }
+      },
+      "novel_metadata": {
+        "title": "Flags in the Dust",
+        "author": "Faulkner, William",
+        "gender_of_author": "Male",
+        "publication_year": "1973",
+        "publisher": "RandomHouse",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "Vintage",
+        "index_number": "A012"
+      },
+      "passage_index": 197
+    }
+  },
+  {
+    "id": "A072_A_Hazard_of_New_Fortunes_passage_069",
+    "sensor_data": {
+      "temperature": 26.6,
+      "humidity": 58.5,
+      "wind_direction": 0.351,
+      "imu": [
+        0.956,
+        -0.182,
+        10.021,
+        -0.234,
+        -0.095,
+        0.012
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "One day, shortly after their return to town in the autumn from the brief summer outing they permitted themselves, the Marches met Margaret Vance. At first they did not know her in the dress of the sisterhood which she wore; but she smiled joyfully, almost gaily on seeing them, and though she hurried by with the sister who accompanied her, and did not stay to speak, they felt that the peace that passeth understanding had looked at them from her eyes.\n“Well, she is at rest, there can’t be any doubt of that,” he said as he glanced round at the drifting black robe which followed her free, nunlike walk.\n“Yes, now she can do all the good she likes,” sighed his wife. “I wonder—I wonder if she ever told his father about her talk with poor Conrad that day he was shot?”\n“I don’t know. I don’t care. In any event if would be right. She did nothing wrong. If she unwittingly sent him to his death, she sent him to die for God’s sake, for man’s sake.”\n“Yes—yes. But still ”\n“Well, we must trust that look of hers.”",
+    "metadata": {
+      "source_file": "A072_A_Hazard_of_New_Fortunes.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.015706806282722512,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 2,
+          "total_words": 191
+        }
+      },
+      "novel_metadata": {
+        "title": "A Hazard of New Fortunes",
+        "author": "Howells, William Dean",
+        "gender_of_author": "Male",
+        "publication_year": "1889",
+        "publisher": "Harper & Brothers",
+        "publication_year_of_the_edition_used": "2017",
+        "publisher_of_the_edition_used": "Franklin Classics",
+        "index_number": "A072"
+      },
+      "passage_index": 69
+    }
+  },
+  {
+    "id": "B042_The_Puma_Years_passage_494",
+    "sensor_data": {
+      "temperature": 11.7,
+      "humidity": 69.1,
+      "wind_direction": 2.196,
+      "imu": [
+        -0.015,
+        0.012,
+        9.797,
+        0.057,
+        -0.034,
+        -0.039
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "night",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "I just feel a rush of panic. She’s assigning me to another cat. To Sama! The angry, ripping crash of his head, the snarl as he clamped his teeth on the bars! Katarina’s frantic tears every night in the fumador. I turn my head desperately, brushing the massive scaly root of the old elephant. The bark is cold. I can’t do this. This isn’t why I came back. I can’t do this again. I can’t—",
+    "metadata": {
+      "source_file": "B042_The_Puma_Years.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.013333333333333334,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 1,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 75
+        }
+      },
+      "novel_metadata": {
+        "title": "The Puma Years",
+        "author": "Coleman, Laura",
+        "gender_of_author": "Female",
+        "publication_year": "2021",
+        "publisher": "Little A",
+        "publication_year_of_the_edition_used": "2021",
+        "publisher_of_the_edition_used": "Little A",
+        "index_number": "B042"
+      },
+      "passage_index": 494
+    }
+  },
+  {
+    "id": "B030_A_Walk_in_the_Woods_passage_182",
+    "sensor_data": {
+      "temperature": 22.0,
+      "humidity": 55.9,
+      "wind_direction": 3.12,
+      "imu": [
+        0.693,
+        -0.379,
+        9.789,
+        0.275,
+        0.098,
+        0.03
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "“When’s your birthday?” she said to me.\n\n“December 8.”\n\n“That’s Virgo.”\n\n“No, actually it’s Sagittarius.”\n\n“Whatever.” And then abruptly: “Jeez, you guys stink.”\n\n“Well, uh, we’ve been walking.”\n\n“Me, I don’t sweat. Never have. Don’t dream either.”\n\n“Everybody dreams,” Katz said.\n\n“Well, I don’t.”\n\n“Except people of extremely low intelligence. It’s a scientific fact.”",
+    "metadata": {
+      "source_file": "B030_A_Walk_in_the_Woods.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.018518518518518517,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 54
+        }
+      },
+      "novel_metadata": {
+        "title": "A Walk in the Woods",
+        "author": "Bryson, Bill",
+        "gender_of_author": "Male",
+        "publication_year": "2010",
+        "publisher": "Crown",
+        "publication_year_of_the_edition_used": "2010",
+        "publisher_of_the_edition_used": "Crown",
+        "index_number": "B030"
+      },
+      "passage_index": 182
+    }
+  },
+  {
+    "id": "A180_A_House_of_Pomegranates_passage_240",
+    "sensor_data": {
+      "temperature": 5.5,
+      "humidity": 62.9,
+      "wind_direction": 1.39,
+      "imu": [
+        0.011,
+        0.556,
+        9.832,
+        -0.048,
+        -0.082,
+        0.011
+      ],
+      "context": {
+        "scenario": "beach_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "And his Soul besought him to depart, but he would not, so great was his love. And the sea came nearer, and sought to cover him with its waves, and when he knew that the end was at hand he kissed with mad lips the cold lips of the Mermaid, and the heart that was within him brake. And as through the fulness of his love his heart did break, the Soul found an entrance and entered in, and was one with him even as before. And the sea covered the young Fisherman with its waves.",
+    "metadata": {
+      "source_file": "A180_A_House_of_Pomegranates.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.010416666666666666,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 1,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 96
+        }
+      },
+      "novel_metadata": {
+        "title": "A House of Pomegranates",
+        "author": "Wilde, Oscar",
+        "gender_of_author": "Male",
+        "publication_year": "1888",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2020",
+        "publisher_of_the_edition_used": "Open Road Media",
+        "index_number": "A180"
+      },
+      "passage_index": 240
+    }
+  },
+  {
+    "id": "B071_Travels_with_Myself_and_Another_passage_557",
+    "sensor_data": {
+      "temperature": 20.9,
+      "humidity": 48.4,
+      "wind_direction": 3.326,
+      "imu": [
+        0.252,
+        0.642,
+        10.049,
+        -0.167,
+        0.198,
+        -0.068
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "All along the river the blacks sit. They are capable of doing this for hours, without moving a muscle. The young men are given to exhibitionism and have lovely bodies to exhibit—naked, gleaming black against the golden sandbanks. Modesty must be an instinct with women only; the men do not bother to move from a crouch, while defecating, no matter who passes.",
+    "metadata": {
+      "source_file": "B071_Travels_with_Myself_and_Another.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.016129032258064516,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 62
+        }
+      },
+      "novel_metadata": {
+        "title": "Travels with Myself and Another",
+        "author": "Gellhorn, Martha",
+        "gender_of_author": "Female",
+        "publication_year": "1978",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2001",
+        "publisher_of_the_edition_used": "TarcherPerigee",
+        "index_number": "B071"
+      },
+      "passage_index": 557
+    }
+  },
+  {
+    "id": "B147_What_I_Was_Doing_While_You_Were_Breeding_passage_743",
+    "sensor_data": {
+      "temperature": 21.3,
+      "humidity": 50.2,
+      "wind_direction": 5.436,
+      "imu": [
+        -0.406,
+        0.389,
+        9.944,
+        -0.041,
+        -0.013,
+        0.009
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "My last week in Argentina, Juan took me out to the campo for Semana Santa. We drove out with his welcoming, interesting aunt and uncle, and his cousin’s twelve-year-old daughter. She was chatty and adorable, and we traded Spanish and English lessons while she braided my hair, and Juan quietly stared out at the passing yellow pampas and blue sky.",
+    "metadata": {
+      "source_file": "B147_What_I_Was_Doing_While_You_Were_Breeding.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.016666666666666666,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 60
+        }
+      },
+      "novel_metadata": {
+        "title": "What I Was Doing While You Were Breeding",
+        "author": "Kristin Newman",
+        "gender_of_author": "Female",
+        "publication_year": "2014",
+        "publisher": "Crown",
+        "publication_year_of_the_edition_used": "2014",
+        "publisher_of_the_edition_used": "Crown",
+        "index_number": "B147"
+      },
+      "passage_index": 743
+    }
+  },
+  {
+    "id": "B008_Real_Queer_America_passage_579",
+    "sensor_data": {
+      "temperature": 24.8,
+      "humidity": 65.0,
+      "wind_direction": 2.97,
+      "imu": [
+        0.528,
+        -0.06,
+        9.722,
+        -0.039,
+        -0.068,
+        0.018
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "morning",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "In the morning light, I learned that Jenn collects hundreds of prisms and hangs them everywhere, so when the sun slants through the windows, the whole house becomes a queer wonderland.",
+    "metadata": {
+      "source_file": "B008_Real_Queer_America.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.03225806451612903,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 31
+        }
+      },
+      "novel_metadata": {
+        "title": "Real Queer America",
+        "author": "Samantha Allen",
+        "gender_of_author": "Female",
+        "publication_year": "2019",
+        "publisher": "Little, Brown and Company",
+        "publication_year_of_the_edition_used": "2019",
+        "publisher_of_the_edition_used": "Little, Brown and Company",
+        "index_number": "B008"
+      },
+      "passage_index": 579
+    }
+  },
+  {
+    "id": "B030_A_Walk_in_the_Woods_passage_036",
+    "sensor_data": {
+      "temperature": 19.9,
+      "humidity": 69.7,
+      "wind_direction": 4.01,
+      "imu": [
+        -1.234,
+        0.009,
+        10.132,
+        0.212,
+        0.264,
+        -0.066
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "And then the dull thought—oh, God—that perhaps you brought the Snickers in here with you, that it’s somewhere in here, down by your feet or underneath you or—oh, shit, here it is. Another bump of grunting head against the tent, this time near your shoulders. More crazy wobble. Then silence, a very long silence, and—wait, shhhhh … yes!—the unutterable relief of realizing that the bear has withdrawn to the other side of the camp or shambled back into the woods. I tell you right now, I couldn’t stand it.",
+    "metadata": {
+      "source_file": "B030_A_Walk_in_the_Woods.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.011235955056179775,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 89
+        }
+      },
+      "novel_metadata": {
+        "title": "A Walk in the Woods",
+        "author": "Bryson, Bill",
+        "gender_of_author": "Male",
+        "publication_year": "2010",
+        "publisher": "Crown",
+        "publication_year_of_the_edition_used": "2010",
+        "publisher_of_the_edition_used": "Crown",
+        "index_number": "B030"
+      },
+      "passage_index": 36
+    }
+  },
+  {
+    "id": "B145_An_Area_of_Darkness_passage_408",
+    "sensor_data": {
+      "temperature": 8.9,
+      "humidity": 44.1,
+      "wind_direction": 1.91,
+      "imu": [
+        -0.133,
+        0.948,
+        9.756,
+        0.192,
+        -0.3,
+        0.01
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The cook was Aziz’s protégé. He was fat and jolly and I would have liked to take him. But he had revealed, through Aziz, that he shared Aziz’s disability; he too had been advised not to walk and he too required a pony for himself. Then he had sent word from the kitchen, through Aziz again, that he required a new pair of shoes for the journey. I couldn’t afford him. I decided, too, that the coolie was unnecessary; and the sweeper was to be replaced by a small spade.",
+    "metadata": {
+      "source_file": "B145_An_Area_of_Darkness.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.03333333333333333,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 1,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 90
+        }
+      },
+      "novel_metadata": {
+        "title": "An Area of Darkness",
+        "author": "V. S. Naipaul",
+        "gender_of_author": "Male",
+        "publication_year": "1964",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2010",
+        "publisher_of_the_edition_used": "Vintage",
+        "index_number": "B145"
+      },
+      "passage_index": 408
+    }
+  },
+  {
+    "id": "B081_Seven_Years_in_Tibet_passage_449",
+    "sensor_data": {
+      "temperature": 14.7,
+      "humidity": 56.2,
+      "wind_direction": 0.386,
+      "imu": [
+        1.248,
+        -0.361,
+        9.382,
+        -0.332,
+        0.027,
+        -0.033
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "morning",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "On February 21st some soldiers appeared at our door. They called on us to pack our things as they had been ordered to escort us to India. We were to start early the next morning. That seemed to be the end of all things, but how was I to travel? I could not walk even as far as the window, as I tried to demonstrate to the lieutenant. He put on a helpless expression. Like all soldiers he had to obey orders and was not qualified to receive explanations. Pulling myself together I asked him to tell his superior that I could not leave Lhasa unless I was carried. The soldiers retired.",
+    "metadata": {
+      "source_file": "B081_Seven_Years_in_Tibet.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.017857142857142856,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 112
+        }
+      },
+      "novel_metadata": {
+        "title": "Seven Years in Tibet",
+        "author": "Heinrich Harrer",
+        "gender_of_author": "Male",
+        "publication_year": "2009",
+        "publisher": "Tarcher Perigee",
+        "publication_year_of_the_edition_used": "2009",
+        "publisher_of_the_edition_used": "Tarcher Perigee",
+        "index_number": "B081",
+        "soure_link": "https://www.amazon.com/-/ko/dp/B002KS3AIY/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1671021516&sr=1-1"
+      },
+      "passage_index": 449
+    }
+  },
+  {
+    "id": "A187_Night_and_Day_passage_1339",
+    "sensor_data": {
+      "temperature": 21.0,
+      "humidity": 57.9,
+      "wind_direction": 4.957,
+      "imu": [
+        0.124,
+        0.475,
+        9.882,
+        -0.02,
+        0.056,
+        -0.029
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "‘Uncle Trevor,’ she exclaimed, ‘I insist upon telling you the truth!’ She flung herself between Rodney and her uncle, as if she sought to intercept their blows. As her uncle stood perfectly still, looking very large and imposing, and as nobody spoke, she shrank back a little, and looked first at Katharine and then at Rodney. ‘You must know the truth,’ she said, a little lamely.",
+    "metadata": {
+      "source_file": "A187_Night_and_Day.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.015151515151515152,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 66
+        }
+      },
+      "novel_metadata": {
+        "title": "Night and Day",
+        "author": "Woolf,Virginia",
+        "gender_of_author": "Female",
+        "publication_year": "1919",
+        "publisher": "Duckworth",
+        "publication_year_of_the_edition_used": "2017",
+        "publisher_of_the_edition_used": "JA",
+        "index_number": "A187"
+      },
+      "passage_index": 1339
+    }
+  },
+  {
+    "id": "B106_Twilight_in_Italy_passage_009",
+    "sensor_data": {
+      "temperature": 19.6,
+      "humidity": 61.6,
+      "wind_direction": 5.652,
+      "imu": [
+        0.434,
+        -0.303,
+        9.699,
+        0.022,
+        -0.008,
+        -0.026
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The Italian people are called 'Children of the Sun'. They might better be called 'Children of the Shadow'. Their souls are dark and nocturnal. If they are to be easy, they must be able to hide, to be hidden in lairs and caves of darkness. Going through these tiny chaotic backways of the village was like venturing through the labyrinth made by furtive creatures, who watched from out of another element. And I was pale, and clear, and evanescent, like the light, and they were dark, and close, and constant, like the shadow.",
+    "metadata": {
+      "source_file": "B106_Twilight_in_Italy.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.010752688172043012,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 93
+        }
+      },
+      "novel_metadata": {
+        "title": "Twilight in Italy",
+        "author": "D. H. Lawrence",
+        "gender_of_author": "Male",
+        "publication_year": "1916",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2015",
+        "publisher_of_the_edition_used": "Start Classics",
+        "index_number": "B106"
+      },
+      "passage_index": 9
+    }
+  },
+  {
+    "id": "B041_Last_Train_to_Cairo_passage_624",
+    "sensor_data": {
+      "temperature": 20.5,
+      "humidity": 56.1,
+      "wind_direction": 1.522,
+      "imu": [
+        0.425,
+        -0.081,
+        9.823,
+        0.012,
+        0.095,
+        0.014
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "At the end of our second loop, we spotted the Nubian Dream at the dock and begrudgingly made our way down to the water. Gin Tonic was happy to see us and asked what we thought of the gardens. His son was fast asleep in a cubby hole under a bench. “He is tired, he wants to be like his father, so he won’t eat or drink now for Ramadan.” Back on the river, Gin Tonic pushed the outboard motor against the drifting current. Just under the river’s surface, tall, freshwater grasses reached up toward the sun; they swayed gently in the current, like leaves on a tree. Gin Tonic continued his tour. He pointed toward Elephantine Island and the Nubian villages that filled the southern half – unreachable from our hotel. Teresa asked about the village.",
+    "metadata": {
+      "source_file": "B041_Last_Train_to_Cairo.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.014598540145985401,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 137
+        }
+      },
+      "novel_metadata": {
+        "title": "Last Train to Cairo",
+        "author": "Cohen, Paul Q.",
+        "gender_of_author": "Male",
+        "publication_year": "2021",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2021",
+        "publisher_of_the_edition_used": "N/A",
+        "index_number": "B041"
+      },
+      "passage_index": 624
+    }
+  },
+  {
+    "id": "B136_The_Ukimwi_Road_passage_578",
+    "sensor_data": {
+      "temperature": 18.2,
+      "humidity": 66.4,
+      "wind_direction": 3.434,
+      "imu": [
+        0.001,
+        0.324,
+        9.738,
+        -0.027,
+        -0.035,
+        0.052
+      ],
+      "context": {
+        "scenario": "mountain_climbing",
+        "time": "morning",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "That first day out of Dodoma is deeply graven on my memory. The tarmac was smooth but over eighty-five miles of open country a powerful wind opposed me – the sort that necessitates pedalling down steep slopes. It kept the tall savannah grass flat on the ground, as though neatly combed, and cyclists with this gale behind them scarcely needed to pedal uphill. There was no moment of respite; I didn’t seem to be sweating but I absorbed six litres of water without peeing until the following morning.",
+    "metadata": {
+      "source_file": "B136_The_Ukimwi_Road.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.011363636363636364,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 88
+        }
+      },
+      "novel_metadata": {
+        "title": "The Ukimwi Road",
+        "author": "Dervla Murphy",
+        "gender_of_author": "Female",
+        "publication_year": "1994",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Eland",
+        "index_number": "B136"
+      },
+      "passage_index": 578
+    }
+  },
+  {
+    "id": "A183_Of_Time_and_the_River_passage_1837",
+    "sensor_data": {
+      "temperature": 24.9,
+      "humidity": 67.8,
+      "wind_direction": 1.805,
+      "imu": [
+        -0.002,
+        -0.135,
+        9.857,
+        0.074,
+        -0.018,
+        0.005
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "‘Robert,’ he said, ‘if you really want to stay here, why don’t you go and see old Gibbs and talk to him. Tell him you’re sorry for all the trouble you made and the damage you did, and that you’re willing to pay whatever he says is fair. Then let him rave. He’s a sour old devil and he’ll bawl you out, but let him rave. He enjoys it. Then tell him if he’ll let you stay, you’ll never act like this again. And if I can help out any, I’ll do it.’",
+    "metadata": {
+      "source_file": "A183_Of_Time_and_the_River.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.010752688172043012,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 93
+        }
+      },
+      "novel_metadata": {
+        "title": "Of Time and the River",
+        "author": "Wolfe,Thomas",
+        "gender_of_author": "Male",
+        "publication_year": "1935",
+        "publisher": "Charles Scribner's Sons",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Aegitas",
+        "index_number": "A183"
+      },
+      "passage_index": 1837
+    }
+  },
+  {
+    "id": "B025_Neither_Here_Nor_There_passage_541",
+    "sensor_data": {
+      "temperature": 23.9,
+      "humidity": 50.3,
+      "wind_direction": 2.354,
+      "imu": [
+        -0.047,
+        2.763,
+        9.703,
+        0.06,
+        0.101,
+        -0.153
+      ],
+      "context": {
+        "scenario": "mountain_climbing",
+        "time": "morning",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "In the morning I visited the two main churches. The Basilica of San Fidele, begun in 914, was much the more ancient, but the domed cathedral, 500 years younger, was larger and more splendid ? indeed, more splendid than any provincial church I had seen since Aachen. It was dark and I had to stand for a minute to adjust to the dimness for fear of walking into a pillar. Morning sunlight flowed through a lofty stained-glass window, but was swallowed almost immediately by the gloom among the high arches. The church was not only surprisingly large for its community, but richly endowed ? it was full of subtle tapestries and ancient paintings and some striking statuary, including a Christ figure that is said to weep. (They must show it a Jimmy Tarbuck video beforehand.) I spent an hour sitting out of the way, gazing at the interior and watching people lighting candles. Very restful. This done, I felt content to return to the station and climb aboard the first train to Switzerland.",
+    "metadata": {
+      "source_file": "B025_Neither_Here_Nor_There.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.011560693641618497,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 173
+        }
+      },
+      "novel_metadata": {
+        "title": "Neither Here Nor There",
+        "author": "Bryson, Bill",
+        "gender_of_author": "Male",
+        "publication_year": "2015",
+        "publisher": "‎William Morrow Paperbacks",
+        "publication_year_of_the_edition_used": "2015",
+        "publisher_of_the_edition_used": "‎William Morrow Paperbacks",
+        "index_number": "B025"
+      },
+      "passage_index": 541
+    }
+  },
+  {
+    "id": "A195_The_Years_passage_307",
+    "sensor_data": {
+      "temperature": 10.6,
+      "humidity": 61.5,
+      "wind_direction": 0.474,
+      "imu": [
+        0.036,
+        0.027,
+        9.816,
+        -0.002,
+        -0.111,
+        -0.006
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "He took the necklace in his large hairy hand. It looked a little cheap, Eleanor was afraid.\n\n‘And what about a box for this, eh?’ he asked.\n\n‘Crosby, find a box for the necklace,’ said Eleanor. And Crosby, suddenly radiating importance, hurried off to the basement.\n\n‘It’ll be dinner then,’ she said to her father. That’ll mean, she thought with relief, that I needn’t be back for tea.",
+    "metadata": {
+      "source_file": "A195_The_Years.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.014705882352941176,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 68
+        }
+      },
+      "novel_metadata": {
+        "title": "The Years",
+        "author": "Woolf, Virginia",
+        "gender_of_author": "Female",
+        "publication_year": "1937",
+        "publisher": "Hogarth Press",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "Delhi Open Books",
+        "index_number": "A195"
+      },
+      "passage_index": 307
+    }
+  },
+  {
+    "id": "B024_One_Summer_passage_207",
+    "sensor_data": {
+      "temperature": 17.1,
+      "humidity": 44.8,
+      "wind_direction": 2.235,
+      "imu": [
+        -0.139,
+        -0.156,
+        9.875,
+        0.038,
+        0.09,
+        -0.018
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Bellanca was a brilliant and innovative designer. His planes were among the first in the world to use air-cooled engines, to enclose the cockpit (for aerodynamic purposes, not the comfort of the occupants), and to incorporate streamlining into every possible aspect of the plane’s exterior design. A strut on a Bellanca plane didn’t just hold up the wing; it added lift or, at the very least, minimized drag. In consequence, Bellanca’s plane was probably, for its size, the best in the world.",
+    "metadata": {
+      "source_file": "B024_One_Summer.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.024390243902439025,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 1,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 82
+        }
+      },
+      "novel_metadata": {
+        "title": "One Summer",
+        "author": "Bryson, Bill",
+        "gender_of_author": "Male",
+        "publication_year": "2013",
+        "publisher": "Anchor",
+        "publication_year_of_the_edition_used": "2013",
+        "publisher_of_the_edition_used": "Anchor",
+        "index_number": "B024"
+      },
+      "passage_index": 207
+    }
+  },
+  {
+    "id": "A160_The_Custom_of_the_Country_passage_271",
+    "sensor_data": {
+      "temperature": 22.3,
+      "humidity": 50.6,
+      "wind_direction": 1.673,
+      "imu": [
+        0.298,
+        -0.284,
+        9.822,
+        0.063,
+        -0.069,
+        -0.022
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "“Oh, the only thing that struck me as unnatural was their making you feel so too. But I’m free to admit I wasn’t a promising case in those days.” His glance played over her for a moment. “Say, Undine—it was good while it lasted, though, wasn’t it?”\n\nShe shrank back with a burning face and eyes of misery.\n\n“Why, what’s the matter? That ruled out too? Oh, all right. Look at here, Undine, suppose you let me know what you are here to talk about, anyhow.”",
+    "metadata": {
+      "source_file": "A160_The_Custom_of_the_Country.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.011627906976744186,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 86
+        }
+      },
+      "novel_metadata": {
+        "title": "The Custom of the Country",
+        "author": "Wharton,Edith",
+        "gender_of_author": "Female",
+        "publication_year": "1913",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "DigiCat",
+        "index_number": "A160"
+      },
+      "passage_index": 271
+    }
+  },
+  {
+    "id": "A160_The_Custom_of_the_Country_passage_133",
+    "sensor_data": {
+      "temperature": 18.6,
+      "humidity": 60.8,
+      "wind_direction": 3.999,
+      "imu": [
+        -0.374,
+        0.179,
+        9.743,
+        0.04,
+        0.027,
+        -0.016
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "night",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "“Oh, father!” She sprang up, all alight, the novel on the floor, her fingers twitching for the tickets. But a substantial packet emerged, like nothing she had ever seen. She looked at it, hoping, fearing—she beamed blissful interrogation on her father while his sallow smile continued to tantalize her. Then she closed on him with a rush, smothering his words against her hair.\n\n“It’s for more than one night—why, it’s for every other Friday! Oh, you darling, you darling!” she exulted.",
+    "metadata": {
+      "source_file": "A160_The_Custom_of_the_Country.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.012345679012345678,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 81
+        }
+      },
+      "novel_metadata": {
+        "title": "The Custom of the Country",
+        "author": "Wharton,Edith",
+        "gender_of_author": "Female",
+        "publication_year": "1913",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "DigiCat",
+        "index_number": "A160"
+      },
+      "passage_index": 133
+    }
+  },
+  {
+    "id": "B106_Twilight_in_Italy_passage_055",
+    "sensor_data": {
+      "temperature": 26.8,
+      "humidity": 50.8,
+      "wind_direction": 3.368,
+      "imu": [
+        -0.054,
+        -0.223,
+        9.839,
+        0.007,
+        -0.032,
+        0.021
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "afternoon",
+        "weather": "snow"
+      }
+    },
+    "target_paragraph": "The moon climbed higher, away from the snowy, fading ridge, she became gradually herself. Between the roots of the olive tree was a rosy-tipped daisy just going to sleep. I gathered it and put it among the frail, moony little bunch of primroses, so that its sleep should warm the rest. Also I put in some little periwinkles, that were very blue, reminding me of the eyes of the old woman.",
+    "metadata": {
+      "source_file": "B106_Twilight_in_Italy.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.014084507042253521,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 71
+        }
+      },
+      "novel_metadata": {
+        "title": "Twilight in Italy",
+        "author": "D. H. Lawrence",
+        "gender_of_author": "Male",
+        "publication_year": "1916",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2015",
+        "publisher_of_the_edition_used": "Start Classics",
+        "index_number": "B106"
+      },
+      "passage_index": 55
+    }
+  },
+  {
+    "id": "B006_Maiden_Voyage_passage_225",
+    "sensor_data": {
+      "temperature": 17.7,
+      "humidity": 48.1,
+      "wind_direction": 1.177,
+      "imu": [
+        -0.256,
+        -0.262,
+        9.277,
+        0.227,
+        0.188,
+        0.026
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "morning",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "I had met two young Danish teenagers in Colon who were visiting relatives and wanted to see the canal, as well as the daughter of a yacht club member. With Luc, plus the canal pilot and me, Varuna had the requisite four line handlers. They arrived at the dock the next morning and, at o’dark-thirty, we stuffed everyone aboard and headed for the first lock.",
+    "metadata": {
+      "source_file": "B006_Maiden_Voyage.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.015384615384615385,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 65
+        }
+      },
+      "novel_metadata": {
+        "title": "Maiden Voyage",
+        "author": "Aebi, Tania",
+        "gender_of_author": "Female",
+        "publication_year": "1989",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2012",
+        "publisher_of_the_edition_used": "Simon & Schuster",
+        "index_number": "B006"
+      },
+      "passage_index": 225
+    }
+  },
+  {
+    "id": "B006_Maiden_Voyage_passage_189",
+    "sensor_data": {
+      "temperature": 11.1,
+      "humidity": 60.6,
+      "wind_direction": 5.969,
+      "imu": [
+        2.072,
+        -1.056,
+        9.832,
+        -0.291,
+        -0.016,
+        0.049
+      ],
+      "context": {
+        "scenario": "beach_walking",
+        "time": "night",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Upon leaving the Virgin Islands, we were once again in the trade winds, but this time running with them. This was Varuna’s most glorious point of sail; with the wind at her back, her jib poled out on one side and her main let all the way out on the other, she went her fastest and the motion was the most comfortable. Because this was the beginning of hurricane season, I began to steer a course that skirted south of their stomping grounds toward the coasts of Venezuela and Colombia. The first night, I sat in the cockpit and watched the glimmer of Puerto Rico, St. John and St. Croix disappear under the inky horizon. With the sails and Monitor set, I stretched out under the stars and enjoyed our speed. We were making 6 knots, sometimes 10, as we surfed down the waves. In the first twenty-four hours, Varuna logged 129 miles into the 1,056 miles to go. “Wow,” I thought, “at this speed, I’ll be in Panama in no time flat.”",
+    "metadata": {
+      "source_file": "B006_Maiden_Voyage.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.011560693641618497,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 173
+        }
+      },
+      "novel_metadata": {
+        "title": "Maiden Voyage",
+        "author": "Aebi, Tania",
+        "gender_of_author": "Female",
+        "publication_year": "1989",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2012",
+        "publisher_of_the_edition_used": "Simon & Schuster",
+        "index_number": "B006"
+      },
+      "passage_index": 189
+    }
+  },
+  {
+    "id": "A182_You_Can_t_Go_Home_Again_passage_208",
+    "sensor_data": {
+      "temperature": 13.7,
+      "humidity": 58.0,
+      "wind_direction": 5.556,
+      "imu": [
+        -0.322,
+        -0.919,
+        9.849,
+        -0.118,
+        0.038,
+        0.013
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "\"And you think you can get used to spending all your time out on the farm in Zebulon?\"\n\n\"Git used to it?\" In Nebraska's voice there was now the same note of scornful protest that it had when he was a boy, and for a moment he turned and looked at his friend with an expression of astonished disgust. \"Why, what are you talkin' about? That's the greatest life in the world!\"\n\n\"And your father? How is he, Bras?\"",
+    "metadata": {
+      "source_file": "A182_You_Can_t_Go_Home_Again.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.012658227848101266,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 79
+        }
+      },
+      "novel_metadata": {
+        "title": "You Can't Go Home Again",
+        "author": "Wolfe,Thomas",
+        "gender_of_author": "Male",
+        "publication_year": "1940",
+        "publisher": "Harper & Row",
+        "publication_year_of_the_edition_used": "2020",
+        "publisher_of_the_edition_used": "Otbebookpublishing",
+        "index_number": "A182"
+      },
+      "passage_index": 208
+    }
+  },
+  {
+    "id": "B021_Six_Months_in_the_Sandwich_Isla_passage_093",
+    "sensor_data": {
+      "temperature": 27.1,
+      "humidity": 44.8,
+      "wind_direction": 4.581,
+      "imu": [
+        0.287,
+        -0.443,
+        9.794,
+        0.016,
+        0.015,
+        -0.005
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "night",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "\"Is that possibly a pool of blood?\" I thought in horror, as a rain puddle glowed crimson on the track. Not that indeed! A glare brighter and redder than that from any furnace suddenly lightened the whole sky, and from that moment brightened our path. There sat Miss K. under her dripping umbrella, as provokingly erect as when she left Hilo. There Upa jogged along, huddled up in his poncho, and his canteen shone red. There the ohia trees were relieved blackly against the sky. The scene started out from the darkness with the suddenness of a revelation. We felt the pungency of sulphumus fumes in the still night air. A sound as of the sea broke on our ears, rising and falling as if breaking on the shore, but the ocean was thirty miles away. The heavens became redder and brighter, and when we reached the crater-house at eight, clouds-of red vapour mixed with flame were curling ceaselessly out of a vast, invisible pit of blackness, and Kilauea was in all its fiery glory. We had reached the largest active volcano in the world, the \"place of everlasting burnings.\"",
+    "metadata": {
+      "source_file": "B021_Six_Months_in_the_Sandwich_Isla.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.010526315789473684,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 190
+        }
+      },
+      "novel_metadata": {
+        "title": "Six Months in the Sandwich Islands",
+        "author": "Bird, Isabella L.",
+        "gender_of_author": "Female",
+        "publication_year": "1964",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2013",
+        "publisher_of_the_edition_used": "Tuttle Publishing",
+        "index_number": "B021"
+      },
+      "passage_index": 93
+    }
+  },
+  {
+    "id": "A152_Father_passage_803",
+    "sensor_data": {
+      "temperature": 24.8,
+      "humidity": 64.7,
+      "wind_direction": 0.542,
+      "imu": [
+        0.341,
+        1.323,
+        9.646,
+        -0.041,
+        0.217,
+        0.129
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "morning",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "He leaned against her, and to Jen it was the strangest sensation, having father clinging to her for support. Not yet ever had he touched her, except, night and morning, in a brief, perfunctory kiss. Aloof and unapproachable, he had passed along the years of her childhood and her growing-up without so much as a pat on her shoulder, or a stroking of her hair. Now he was clinging to her, and clinging to her so heavily that she needed all her sturdiness to guide his footsteps out into the porch. And again she felt a yearning feeling, which again she tried to argue away.",
+    "metadata": {
+      "source_file": "A152_Father.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.01904761904761905,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 105
+        }
+      },
+      "novel_metadata": {
+        "title": "Father",
+        "author": "von Arnim, Elizabeth",
+        "gender_of_author": "Female",
+        "publication_year": "1931",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2020",
+        "publisher_of_the_edition_used": "British Library Publishing",
+        "index_number": "A152"
+      },
+      "passage_index": 803
+    }
+  },
+  {
+    "id": "B135_The_Island_that_Dared_passage_966",
+    "sensor_data": {
+      "temperature": 23.8,
+      "humidity": 60.0,
+      "wind_direction": 2.495,
+      "imu": [
+        -0.727,
+        0.47,
+        9.525,
+        -0.007,
+        0.04,
+        -0.051
+      ],
+      "context": {
+        "scenario": "mountain_climbing",
+        "time": "noon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "These mountains are not camper-friendly (the Rebels used hammocks) and Night Two was sensationally uncomfortable. Having seen no bohio since noon I walked too far, hoping to reach one, then had to make my bed across a precipitous path where the law of gravity precluded sound sleep. My own fault: stupidly I had climbed out of a ravine where I could have slept soundly on the stream’s level bank. Then the sun set and I dared not descend in darkness. However, the night noises almost made up for my perpetual motion. By day only bird calls break the silence, by night one becomes aware of a bustling population – croaks, hisses, grunts, wauls, squeaks, whines (some insect other than mosquitoes) and much rustling through the dead leaves. Of course nothing alarming: Cuba’s fauna is benign, the ants and mosquitoes merely tiresome.",
+    "metadata": {
+      "source_file": "B135_The_Island_that_Dared.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.014184397163120567,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 2,
+          "total_words": 141
+        }
+      },
+      "novel_metadata": {
+        "title": "Praise for The Island that Dared",
+        "author": "Dervla Murphy",
+        "gender_of_author": "Female",
+        "publication_year": "N/A",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "Eland",
+        "index_number": "B135"
+      },
+      "passage_index": 966
+    }
+  },
+  {
+    "id": "B012_Thirst_2600_Miles_to_Home_passage_520",
+    "sensor_data": {
+      "temperature": 18.4,
+      "humidity": 60.5,
+      "wind_direction": 1.355,
+      "imu": [
+        -0.644,
+        0.982,
+        9.774,
+        -0.032,
+        0.085,
+        -0.064
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "After a few minutes, I pulled my feet out, rinsing my socks in the rushing water before slipping them back on. I could still feel the injured toe. I yanked the sock back off and wrung it out more thoroughly. Setting the sock in the sun, I slathered some antibiotic ointment on the flushed and puffy toe. Even though no wound was visible, I figured it wouldn’t hurt.",
+    "metadata": {
+      "source_file": "B012_Thirst_2600_Miles_to_Home.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.014705882352941176,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 68
+        }
+      },
+      "novel_metadata": {
+        "title": "Thirst 2600 Miles to Home",
+        "author": "Anderson, Heather",
+        "gender_of_author": "Female",
+        "publication_year": "2019",
+        "publisher": "Mountaineer Books",
+        "publication_year_of_the_edition_used": "2019",
+        "publisher_of_the_edition_used": "Mountaineer Books",
+        "index_number": "B012"
+      },
+      "passage_index": 520
+    }
+  },
+  {
+    "id": "B052_Love_with_a_Chance_of_Drowning_passage_1177",
+    "sensor_data": {
+      "temperature": 22.2,
+      "humidity": 55.9,
+      "wind_direction": 2.669,
+      "imu": [
+        0.453,
+        -0.02,
+        9.688,
+        -0.122,
+        -0.046,
+        -0.063
+      ],
+      "context": {
+        "scenario": "beach_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Ivan runs up and down the deck, trying to figure out what to do. I stand with my hand pressed to my forehead, watching the rocky outcrop on the beach become close enough to jump to. One big leap and I could be off this boat. We’re going to shipwreck. Maybe we’ve already run aground.\n\n“I’ll try the harbormaster,” Ivan yells. “Maybe they can tow us with Mary J.”\n\nBut the radio is thick with weather static. Nobody hears him.",
+    "metadata": {
+      "source_file": "B052_Love_with_a_Chance_of_Drowning.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.0125,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 80
+        }
+      },
+      "novel_metadata": {
+        "title": "Love with a Chance of Drowning",
+        "author": "DeRoche, Torre",
+        "gender_of_author": "Female",
+        "publication_year": "2013",
+        "publisher": "Hachette",
+        "publication_year_of_the_edition_used": "2013",
+        "publisher_of_the_edition_used": "Hachette",
+        "index_number": "B052"
+      },
+      "passage_index": 1177
+    }
+  },
+  {
+    "id": "B114_The_Old_Ways_passage_579",
+    "sensor_data": {
+      "temperature": 23.4,
+      "humidity": 61.7,
+      "wind_direction": 4.525,
+      "imu": [
+        0.048,
+        0.304,
+        9.714,
+        -0.214,
+        0.102,
+        -0.072
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "We wandered through the valley, following routes that at times were perceptible only to Miguel. He led me along side-streams that fed the main river. One year he had walked and mapped the course of every waterway in the valley.",
+    "metadata": {
+      "source_file": "B114_The_Old_Ways.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.05,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 2,
+          "total_words": 40
+        }
+      },
+      "novel_metadata": {
+        "title": "The Old Ways",
+        "author": "Robert MacFarlane",
+        "gender_of_author": "Male",
+        "publication_year": "2012",
+        "publisher": "Hamish Hamilton",
+        "publication_year_of_the_edition_used": "2013",
+        "publisher_of_the_edition_used": "Penguin Books",
+        "index_number": "B114"
+      },
+      "passage_index": 579
+    }
+  },
+  {
+    "id": "B085_A_Voyage_Long_and_Strange_passage_865",
+    "sensor_data": {
+      "temperature": 26.0,
+      "humidity": 57.9,
+      "wind_direction": 5.344,
+      "imu": [
+        -0.381,
+        -0.092,
+        9.776,
+        -0.042,
+        -0.042,
+        -0.003
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "When Coronado returned empty-handed, prominent colonists who had invested heavily in the expedition found themselves in financial straits. His return also coincided with the passage of new laws in Spain, designed to curtail abuses against Indians. Coronado’s expedition became a test case, with Crown lawyers charging that the torture of natives and burning of pueblos were unwarranted.",
+    "metadata": {
+      "source_file": "B085_A_Voyage_Long_and_Strange.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.017543859649122806,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 57
+        }
+      },
+      "novel_metadata": {
+        "title": "A Voyage Long and Strange",
+        "author": "Tony Horwitz",
+        "gender_of_author": "Male",
+        "publication_year": "2008",
+        "publisher": "Henry Colt and Co.",
+        "publication_year_of_the_edition_used": "2008",
+        "publisher_of_the_edition_used": "Henry Colt and Co.",
+        "index_number": "B085"
+      },
+      "passage_index": 865
+    }
+  },
+  {
+    "id": "A147_The_Flaw_in_the_Crystal_passage_057",
+    "sensor_data": {
+      "temperature": 11.5,
+      "humidity": 59.5,
+      "wind_direction": 0.596,
+      "imu": [
+        1.117,
+        -0.563,
+        9.855,
+        -0.206,
+        -0.254,
+        0.077
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "\"Harding,\" said Milly, \"Agatha has come to see you.\"\n\nHe turned in his chair and rose as they entered.\n\nHis chin was sunk on his chest, and the first thing Agatha noticed was\nthe difficult, slow, forward-thrusting movement with which he lifted it.\nHis eyes seemed to come up last of all from the depths to meet her. With\na peculiar foreign courtesy he bowed his head again over her hand as he\nheld it.",
+    "metadata": {
+      "source_file": "A147_The_Flaw_in_the_Crystal.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.02666666666666667,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 75
+        }
+      },
+      "novel_metadata": {
+        "title": "The Flaw in the Crystal",
+        "author": "Sinclair, May",
+        "gender_of_author": "Female",
+        "publication_year": "1912",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "N/A",
+        "index_number": "A147"
+      },
+      "passage_index": 57
+    }
+  },
+  {
+    "id": "A183_Of_Time_and_the_River_passage_2532",
+    "sensor_data": {
+      "temperature": 8.8,
+      "humidity": 52.2,
+      "wind_direction": 4.88,
+      "imu": [
+        0.275,
+        0.093,
+        9.752,
+        0.056,
+        -0.157,
+        -0.019
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The snarling medley of bitter tongues rose, mounted; they vented their weight of insult, misery, and reproach on one another and at length subsided, checked by exhaustion rather than by some more charitable cause. And as the tumult died away Sterling, two spots of colour burning on his pallid face, goaded completely from his former affectation of coldly elegant disdain, could be heard saying to Fried in a high, excited, almost hysterical tone:",
+    "metadata": {
+      "source_file": "A183_Of_Time_and_the_River.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.0410958904109589,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 2,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 73
+        }
+      },
+      "novel_metadata": {
+        "title": "Of Time and the River",
+        "author": "Wolfe,Thomas",
+        "gender_of_author": "Male",
+        "publication_year": "1935",
+        "publisher": "Charles Scribner's Sons",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Aegitas",
+        "index_number": "A183"
+      },
+      "passage_index": 2532
+    }
+  },
+  {
+    "id": "B144_Transylvania_and_Beyond_passage_652",
+    "sensor_data": {
+      "temperature": 21.6,
+      "humidity": 52.2,
+      "wind_direction": 1.483,
+      "imu": [
+        0.142,
+        -0.318,
+        9.748,
+        -0.004,
+        -0.026,
+        0.016
+      ],
+      "context": {
+        "scenario": "beach_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "At 6 p.m. a nurse wheeled in a rattling squealing trolley bearing four platefuls of something indefinable that smelt nauseating. Solemnly she announced, ‘President Ceausescu invites you to eat!’ Everyone smiled sourly and the trolley was wheeled out. This ritualistic black joke well conveyed the despair of those for whom nothing had improved since the revolution. Most hospital meals went in vast cauldrons to the local pigs – reputedly an extraordinarily undiscriminating tribe, even by porcine standards.",
+    "metadata": {
+      "source_file": "B144_Transylvania_and_Beyond.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.012987012987012988,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 77
+        }
+      },
+      "novel_metadata": {
+        "title": "Transylvania and Beyond",
+        "author": "Dervla Murphy",
+        "gender_of_author": "Female",
+        "publication_year": "1993",
+        "publisher": "The Overlook Press",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Eland",
+        "index_number": "B144"
+      },
+      "passage_index": 652
+    }
+  },
+  {
+    "id": "A011_Mosquitoes_passage_227",
+    "sensor_data": {
+      "temperature": 22.0,
+      "humidity": 55.5,
+      "wind_direction": 4.035,
+      "imu": [
+        0.039,
+        0.094,
+        9.834,
+        -0.054,
+        -0.01,
+        -0.006
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Pete crammed it down on his head, holding his head tilted rigidly a little to windward. The wind was eating his cigarette right out of his mouth: he held his hand as a shield, smoking behind his hand.\n\n“It’s all right,” he answered. “Where’d you put it, anyway?”",
+    "metadata": {
+      "source_file": "A011_Mosquitoes.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.020833333333333332,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 48
+        }
+      },
+      "novel_metadata": {
+        "title": "Mosquitoes",
+        "author": "Faulkner, William",
+        "gender_of_author": "Male",
+        "publication_year": "1927",
+        "publisher": "Boni&Liveright",
+        "publication_year_of_the_edition_used": "2023",
+        "publisher_of_the_edition_used": "e-artnow",
+        "index_number": "A011"
+      },
+      "passage_index": 227
+    }
+  },
+  {
+    "id": "B021_Six_Months_in_the_Sandwich_Isla_passage_209",
+    "sensor_data": {
+      "temperature": 23.6,
+      "humidity": 52.0,
+      "wind_direction": 0.234,
+      "imu": [
+        0.475,
+        0.178,
+        9.868,
+        0.021,
+        0.036,
+        -0.041
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "noon",
+        "weather": "snow"
+      }
+    },
+    "target_paragraph": "It was a beautiful view from the top of the pali. The white moon was setting, the earliest sunlight was lighting up the dewy depths of the lonely valley, reddening with a rich rose red the huge headland which forms one of its sentinels; heavy snow had fallen during the night on Mauna Kea, and his great ragged dome, snow-covered down to the forests, was blushing like an Alpine peak at the touch of the early sun. It ripened into a splendid joyous day, which redeemed the sweeping uplands of Hamakua from the dreariness which I had thought belonged to them. There was a fresh sea-breeze, and the sun, though unclouded, was not too hot. We halted for an early lunch at the clean grass-house we had stopped at before, and later in the afternoon at that of the woman with whom we had ridden from Hakalau, who received us very cordially, and regaled us with poi and pork.",
+    "metadata": {
+      "source_file": "B021_Six_Months_in_the_Sandwich_Isla.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.012578616352201259,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 159
+        }
+      },
+      "novel_metadata": {
+        "title": "Six Months in the Sandwich Islands",
+        "author": "Bird, Isabella L.",
+        "gender_of_author": "Female",
+        "publication_year": "1964",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2013",
+        "publisher_of_the_edition_used": "Tuttle Publishing",
+        "index_number": "B021"
+      },
+      "passage_index": 209
+    }
+  },
+  {
+    "id": "B042_The_Puma_Years_passage_789",
+    "sensor_data": {
+      "temperature": 16.2,
+      "humidity": 68.7,
+      "wind_direction": 2.306,
+      "imu": [
+        0.613,
+        0.519,
+        9.871,
+        -0.074,
+        -0.098,
+        0.031
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "When I walk over to the door, she knows. After a moment’s hesitation, as if making it clear that this is her idea, not mine, she saunters past with a dignified shake of her head. A perfunctory hiss in my face and then she’s in. I sit down and unclip her. She stays next to me for a while, uninterested in the meat that I’ve already put out on her throne. My hands shake as I stroke her through the fence. Then she gives me a last hiss and is gone. All I can see are her eyes, gleaming like fairy lights, as she waits for me to go.",
+    "metadata": {
+      "source_file": "B042_The_Puma_Years.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.01834862385321101,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 109
+        }
+      },
+      "novel_metadata": {
+        "title": "The Puma Years",
+        "author": "Coleman, Laura",
+        "gender_of_author": "Female",
+        "publication_year": "2021",
+        "publisher": "Little A",
+        "publication_year_of_the_edition_used": "2021",
+        "publisher_of_the_edition_used": "Little A",
+        "index_number": "B042"
+      },
+      "passage_index": 789
+    }
+  },
+  {
+    "id": "B075_Travels_with_My_Aunt_passage_510",
+    "sensor_data": {
+      "temperature": 12.5,
+      "humidity": 48.2,
+      "wind_direction": 6.114,
+      "imu": [
+        -0.374,
+        0.31,
+        9.82,
+        0.101,
+        -0.024,
+        -0.02
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "‘Didn’t the Germans intern you?’\n\nThe people here were very good to me. I was protected. The mayor provided me with an identity card.’ Miss Paterson’s leg jumped. ‘After the war they even gave me a medal.’\n\n‘A medal for teaching English?’ my aunt asked incredulously.\n\n‘And other things,’ Miss Paterson said. She leant back in her chair and her teeth began to click. Her thoughts were far away.\n\n‘Tell me about my father,’ I told her. ‘What brought him to Boulogne?’",
+    "metadata": {
+      "source_file": "B075_Travels_with_My_Aunt.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.012195121951219513,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 82
+        }
+      },
+      "novel_metadata": {
+        "title": "Travels with My Aunt",
+        "author": "Graham Greene",
+        "gender_of_author": "Male",
+        "publication_year": "2018",
+        "publisher": "Open Road Media",
+        "publication_year_of_the_edition_used": "2018",
+        "publisher_of_the_edition_used": "Open Road Media",
+        "index_number": "B075"
+      },
+      "passage_index": 510
+    }
+  },
+  {
+    "id": "B011_Wild_Wisdom_passage_479",
+    "sensor_data": {
+      "temperature": 24.1,
+      "humidity": 49.0,
+      "wind_direction": 4.624,
+      "imu": [
+        0.03,
+        -0.195,
+        9.811,
+        -0.076,
+        0.102,
+        0.001
+      ],
+      "context": {
+        "scenario": "beach_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "A Robinson Crusoe Experience\n\nDuring our trip, we slept in bamboo huts on the beach. The huts, or tukas as they are called locally, are built to survive strong winds and even typhoons. I thought they were such clever contraptions because, not being anchored to the ground by concrete bases, they tend to bend with the wind and occasionally get blown away during typhoons?hopefully not too far?so that they can be retrieved, straightened out and re-used after the storm has passed.",
+    "metadata": {
+      "source_file": "B011_Wild_Wisdom.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.024691358024691357,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 2,
+          "movement": 0,
+          "total_words": 81
+        }
+      },
+      "novel_metadata": {
+        "title": "Wild Wisdom",
+        "author": "Amour-Levar, Christine",
+        "gender_of_author": "Female",
+        "publication_year": "2022",
+        "publisher": "Random House",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "Random House",
+        "index_number": "B011"
+      },
+      "passage_index": 479
+    }
+  },
+  {
+    "id": "B068_Islands_of_Abandonment_passage_459",
+    "sensor_data": {
+      "temperature": 21.1,
+      "humidity": 83.0,
+      "wind_direction": 3.609,
+      "imu": [
+        -0.766,
+        -0.16,
+        9.785,
+        -0.017,
+        -0.017,
+        0.012
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "That year, rain fell almost constantly: the dull and dreadful rhythm of it came pounding off steel helmets. Steam rose from shoulders, seeped through uniforms, trickled between toes. Water was everywhere, yet they had nothing to drink. Men sucked from the filthy ponds that filled the shell holes, drank their own urine, licked moisture from the walls of fortifications. All this, for three hundred days straight.",
+    "metadata": {
+      "source_file": "B068_Islands_of_Abandonment.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.015151515151515152,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 1,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 66
+        }
+      },
+      "novel_metadata": {
+        "title": "Islands of Abandonment",
+        "author": "Flyn, Cal",
+        "gender_of_author": "Female",
+        "publication_year": "2021",
+        "publisher": "Penguin Books",
+        "publication_year_of_the_edition_used": "2021",
+        "publisher_of_the_edition_used": "Penguin Books",
+        "index_number": "B068"
+      },
+      "passage_index": 459
+    }
+  },
+  {
+    "id": "A013_The_Sound_and_The_Fury_passage_006",
+    "sensor_data": {
+      "temperature": 9.8,
+      "humidity": 67.2,
+      "wind_direction": 1.835,
+      "imu": [
+        0.311,
+        -0.241,
+        9.872,
+        -0.057,
+        0.02,
+        -0.016
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Keep your hands in your pockets, Caddy said. Or they’ll get froze. You dont want your hands froze on Christmas, do you.\n\n“It’s too cold out there.” Versh said. “You dont want to go out doors.”\n\n“What is it now.” Mother said.\n\n“He want to go out doors.” Versh said.\n\n“Let him go.” Uncle Maury said.\n\n“It’s too cold.” Mother said. “He’d better stay in. Benjamin. Stop that, now.”\n\n“It wont hurt him.” Uncle Maury said.",
+    "metadata": {
+      "source_file": "A013_The_Sound_and_The_Fury.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.013157894736842105,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 1,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 76
+        }
+      },
+      "novel_metadata": {
+        "`title": "The Sound and the Fury",
+        "author": "Faulkner, William",
+        "gender_of_author": "Male",
+        "publication_year": "1929",
+        "publisher": "Jonathan Cape & Harrison Smith",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "Grapevine India",
+        "index_number": "A013"
+      },
+      "passage_index": 6
+    }
+  },
+  {
+    "id": "A025_The_Town_passage_657",
+    "sensor_data": {
+      "temperature": 20.1,
+      "humidity": 63.1,
+      "wind_direction": 5.933,
+      "imu": [
+        0.899,
+        0.252,
+        9.898,
+        -0.04,
+        -0.412,
+        -0.002
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Old Het said she stopped. She said, “Well. Gentlemen, hush,” she said. “Aint we had—” Then she smelled it. She said she stood right still, smelling, and it was like she was actually looking at that open cellar as it was when they passed it last time without any coal scuttle setting on the coping. “Fore God,” she hollered at Mrs Hait, “I smell smoke! Child, run in the house and get your money!”",
+    "metadata": {
+      "source_file": "A025_The_Town.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.013513513513513514,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 74
+        }
+      },
+      "novel_metadata": {
+        "title": "The Town",
+        "author": "Faulkner, William",
+        "gender_of_author": "Male",
+        "publication_year": "1957",
+        "publisher": "RandomHouse",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "Vintage",
+        "index_number": "A025"
+      },
+      "passage_index": 657
+    }
+  },
+  {
+    "id": "B022_Elsewhere_passage_298",
+    "sensor_data": {
+      "temperature": 24.3,
+      "humidity": 64.9,
+      "wind_direction": 0.466,
+      "imu": [
+        0.218,
+        1.066,
+        9.896,
+        0.119,
+        -0.259,
+        -0.002
+      ],
+      "context": {
+        "scenario": "beach_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "I marched purposefully into the tiny office. I had done my research. The planes were always over-booked, but two seats were reserved on every flight for tourists. One of them was going to be mine, a week hence.\n\n‘Madame?’ the clerk asked.",
+    "metadata": {
+      "source_file": "B022_Elsewhere.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.023809523809523808,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 42
+        }
+      },
+      "novel_metadata": {
+        "title": "A Tale for the Time Being",
+        "author": "Boland, Rosita",
+        "gender_of_author": "Female",
+        "publication_year": "2019",
+        "publisher": "Transworld Digital",
+        "publication_year_of_the_edition_used": "2019",
+        "publisher_of_the_edition_used": "Transworld Digital",
+        "index_number": "B022"
+      },
+      "passage_index": 298
+    }
+  },
+  {
+    "id": "A150_Mr.Skeffington_passage_879",
+    "sensor_data": {
+      "temperature": 22.2,
+      "humidity": 62.4,
+      "wind_direction": 0.476,
+      "imu": [
+        -0.139,
+        -0.237,
+        9.838,
+        -0.04,
+        -0.015,
+        -0.035
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "\"Oh--Life, Death. All the things,\" said Fanny, airily.\n\n\"Darling, not Death,\" protested Martha.\n\nNigella again took her holder out of her mouth. \"Of course,\" she said, \"if you prefer to be by yourself at Stokes instead of with us--\"\n\n\"How embarrassingly you put it,\" smiled Fanny--her first smile since they arrived, Nigella noted.\n\n\"And won't you be miserably lonely, darling?\" asked Martha. \"You were so ill there. Won't that rather haunt you?\"",
+    "metadata": {
+      "source_file": "A150_Mr.Skeffington.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.013888888888888888,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 72
+        }
+      },
+      "novel_metadata": {
+        "title": "Mr. Skeffington",
+        "author": "von Arnim, Elizabeth",
+        "gender_of_author": "Female",
+        "publication_year": "1940",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2014",
+        "publisher_of_the_edition_used": "Virago",
+        "index_number": "A150"
+      },
+      "passage_index": 879
+    }
+  },
+  {
+    "id": "B199_Chile_Travels_In_A_Thin_Country_passage_628",
+    "sensor_data": {
+      "temperature": 21.6,
+      "humidity": 56.8,
+      "wind_direction": 1.139,
+      "imu": [
+        0.248,
+        0.179,
+        9.777,
+        -0.12,
+        0.063,
+        -0.01
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Shortly after this episode at the bar a hotelier ran out of his kitchen and onto the street to greet Chris, who, being a tour guide, was well-known (and well-liked) on the island. The Chilotes were keen on the idea of him getting married, and they were sorry to hear that he brought no news in that department. The hotelier remonstrated and dispensed consolatory tots of licor d’oro (liquid gold), a local speciality which always appeared in unlabelled bottles. It was mild, sweet and amber, and although it was translucent, the main ingredient was cow’s milk.",
+    "metadata": {
+      "source_file": "B199_Chile_Travels_In_A_Thin_Country.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.010416666666666666,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 96
+        }
+      },
+      "novel_metadata": {
+        "title": "Chile: Travels in a Thin Country",
+        "author": "Wheeler, Sara",
+        "gender_of_author": "Female",
+        "publication_year": "1994",
+        "publisher": "Modern Library",
+        "publication_year_of_the_edition_used": "2019",
+        "publisher_of_the_edition_used": "Abacus",
+        "index_number": "B199"
+      },
+      "passage_index": 628
+    }
+  },
+  {
+    "id": "B060_Bali_Sekala_Niskala_passage_665",
+    "sensor_data": {
+      "temperature": 23.8,
+      "humidity": 51.1,
+      "wind_direction": 3.962,
+      "imu": [
+        -1.211,
+        -1.646,
+        9.324,
+        0.132,
+        -0.17,
+        -0.046
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "November 10 is Indonesia's National Heroes' Day, and November 20 is Heroes' Day in Bali, the anniversary of the 1946 battle of a small army of 96 Balinese troops under the leadership of Lt. Col. I Gusti Ngurah Rai against a vastly superior Dutch army. The battle symbolizes the Balinese part in the war of Independence. Every last man in Ngurah Rai's small force died in the battle at the village of Marga, 27 kilometers north of Denpasar. Ngurah Rai's name is given to Bali's International Airport, and there is a statue of him at the east end of the runway.",
+    "metadata": {
+      "source_file": "B060_Bali_Sekala_Niskala.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.0297029702970297,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 2,
+          "movement": 1,
+          "total_words": 101
+        }
+      },
+      "novel_metadata": {
+        "title": "Bali Sekala&Niskala",
+        "author": "Eiseman, Fred B.",
+        "gender_of_author": "Male",
+        "publication_year": "2011",
+        "publisher": "Tuttle Publishing",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "Tuttle Publishing",
+        "index_number": "B060"
+      },
+      "passage_index": 665
+    }
+  },
+  {
+    "id": "A059_The_Woodlanders_passage_244",
+    "sensor_data": {
+      "temperature": 17.5,
+      "humidity": 40.9,
+      "wind_direction": 2.414,
+      "imu": [
+        0.285,
+        0.017,
+        9.742,
+        -0.049,
+        0.07,
+        -0.015
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The holes were already dug, and they set to work. Winterborne’s fingers were endowed with a gentle conjuror’s touch in spreading the roots of each little tree, resulting in a sort of caress, under which the delicate fibres all laid themselves out in their proper directions for growth. He put most of these roots towards the south-west; for, he said, in forty years’ time, when some great gale is blowing from that quarter, the trees will require the strongest holdfast on that side to stand against it and not fall.",
+    "metadata": {
+      "source_file": "A059_The_Woodlanders.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.022222222222222223,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 2,
+          "movement": 0,
+          "total_words": 90
+        }
+      },
+      "novel_metadata": {
+        "title": "The Woodlanders",
+        "author": "Hardy, Thomas",
+        "gender_of_author": "Male",
+        "publication_year": "1887",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "N/A",
+        "index_number": "A059"
+      },
+      "passage_index": 244
+    }
+  },
+  {
+    "id": "A146_Audrey_Craven_passage_340",
+    "sensor_data": {
+      "temperature": 11.5,
+      "humidity": 66.7,
+      "wind_direction": 6.026,
+      "imu": [
+        -0.806,
+        0.736,
+        10.083,
+        0.071,
+        -0.096,
+        -0.16
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "He had just chosen a \"Mark I.,\" and was going into the shop to buy it, when he heard his name called in a loud hearty voice, \"Ted, you bounder! stop!\" and his arm was pulled with a grip that drew him backward from the doorstep.\n\n\"Hardy!\"",
+    "metadata": {
+      "source_file": "A146_Audrey_Craven.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.02127659574468085,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 47
+        }
+      },
+      "novel_metadata": {
+        "title": "Audrey Craven",
+        "author": "Sinclair, May",
+        "gender_of_author": "Female",
+        "publication_year": "1897",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "DigiCat",
+        "index_number": "A146"
+      },
+      "passage_index": 340
+    }
+  },
+  {
+    "id": "B041_Last_Train_to_Cairo_passage_914",
+    "sensor_data": {
+      "temperature": 21.8,
+      "humidity": 68.2,
+      "wind_direction": 1.108,
+      "imu": [
+        0.033,
+        0.667,
+        9.732,
+        -0.058,
+        -0.097,
+        -0.081
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "evening",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Abdel was waiting for us. “My friends! Where you go next?”\n\nWhere you go next? That familiar pitch followed us from Cairo to Luxor to Aswan to Hurghada and Alexandria and back again. Where you go next? It was our last evening in Egypt, we had gone everywhere we could go, we had seen everything we could see. Where you go next? We go to America, we go to Boston, we go home. Where you go next?\n\n“To the hotel, please. We go to the hotel.”",
+    "metadata": {
+      "source_file": "B041_Last_Train_to_Cairo.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.023255813953488372,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 86
+        }
+      },
+      "novel_metadata": {
+        "title": "Last Train to Cairo",
+        "author": "Cohen, Paul Q.",
+        "gender_of_author": "Male",
+        "publication_year": "2021",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2021",
+        "publisher_of_the_edition_used": "N/A",
+        "index_number": "B041"
+      },
+      "passage_index": 914
+    }
+  },
+  {
+    "id": "B097_Nothing_Went_to_Plan_and_Other_passage_133",
+    "sensor_data": {
+      "temperature": 16.7,
+      "humidity": 44.0,
+      "wind_direction": 4.015,
+      "imu": [
+        -0.884,
+        -1.075,
+        9.453,
+        0.031,
+        -0.142,
+        0.022
+      ],
+      "context": {
+        "scenario": "city_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The walk home passed Uncle Coffee (Mrs L’s nephew, retired now), often on his veranda with guests. He never failed to wave and call out a cheery greeting in his excellent English. This was a rare and admirable achievement, given the great difference between our two languages.\n\nIn a place as rural as this, one could see many more stars. I love cities for other reasons, but when I’m in a city, I miss a starry sky.",
+    "metadata": {
+      "source_file": "B097_Nothing_Went_to_Plan_and_Other.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.012987012987012988,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 77
+        }
+      },
+      "novel_metadata": {
+        "title": "Nothing Went to Plan And Other",
+        "author": "Eileen Kay",
+        "gender_of_author": "Female",
+        "publication_year": "2022",
+        "publisher": "Sabre Books London",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "Sabre Books London",
+        "index_number": "B097"
+      },
+      "passage_index": 133
+    }
+  },
+  {
+    "id": "B145_An_Area_of_Darkness_passage_493",
+    "sensor_data": {
+      "temperature": 10.1,
+      "humidity": 58.7,
+      "wind_direction": 0.711,
+      "imu": [
+        2.258,
+        1.288,
+        9.567,
+        0.063,
+        -0.283,
+        0.114
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "morning",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "‘Morning fare, sahib.’\n\nHe was right; I knew that.\n\n‘Two rupees, three rupees, what different? Good-bye, goodbye. You don’t worry.’\n\nI dug into my pockets.\n\n‘Don’t worry, sahib. Good-bye.’\n\nThrough the window I pushed out some rupee notes.\n\nHe took them. Tears were running down his cheeks. Even at that moment I could not be sure that he had ever been mine.\n\n*",
+    "metadata": {
+      "source_file": "B145_An_Area_of_Darkness.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.031746031746031744,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 63
+        }
+      },
+      "novel_metadata": {
+        "title": "An Area of Darkness",
+        "author": "V. S. Naipaul",
+        "gender_of_author": "Male",
+        "publication_year": "1964",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2010",
+        "publisher_of_the_edition_used": "Vintage",
+        "index_number": "B145"
+      },
+      "passage_index": 493
+    }
+  },
+  {
+    "id": "B070_The_Trail_passage_379",
+    "sensor_data": {
+      "temperature": 21.6,
+      "humidity": 41.6,
+      "wind_direction": 4.758,
+      "imu": [
+        0.088,
+        0.166,
+        9.859,
+        0.011,
+        0.028,
+        -0.005
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "“Nitrogen fixation is the evil brainchild of the German scientist Fritz Haber, the guy who invented mustard gas back in World War One. Haber figured out this way to take nitrogen from the air and convert it into ammonia, because the Germans needed ammonia to make gunpowder. Come on—didn’t you take chemistry?”\n\nHe was beginning to sound like the Unabomber.",
+    "metadata": {
+      "source_file": "B070_The_Trail.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.016666666666666666,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 60
+        }
+      },
+      "novel_metadata": {
+        "title": "Trail",
+        "author": "Gallogly, Ethan",
+        "gender_of_author": "Male",
+        "publication_year": "2021",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2021",
+        "publisher_of_the_edition_used": "N/A",
+        "index_number": "B070"
+      },
+      "passage_index": 379
+    }
+  },
+  {
+    "id": "B012_Thirst_2600_Miles_to_Home_passage_244",
+    "sensor_data": {
+      "temperature": 18.8,
+      "humidity": 53.3,
+      "wind_direction": 5.878,
+      "imu": [
+        0.034,
+        0.086,
+        9.804,
+        -0.033,
+        0.012,
+        -0.009
+      ],
+      "context": {
+        "scenario": "mountain_climbing",
+        "time": "night",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "The trail wound through canyon after canyon, traveling up and over ridges in between. Every time I thought I saw the top, the trail would curve, meander, and again climb. My weary mind began to insist that there was no end.\n\n“Is this climb ever going to end?” I shouted to hear my own self over the howling wind.\n\nYou’ll never reach the top tonight. This terrain is too difficult. You’re too tired to fight the wind anymore.",
+    "metadata": {
+      "source_file": "B012_Thirst_2600_Miles_to_Home.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.01282051282051282,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 78
+        }
+      },
+      "novel_metadata": {
+        "title": "Thirst 2600 Miles to Home",
+        "author": "Anderson, Heather",
+        "gender_of_author": "Female",
+        "publication_year": "2019",
+        "publisher": "Mountaineer Books",
+        "publication_year_of_the_edition_used": "2019",
+        "publisher_of_the_edition_used": "Mountaineer Books",
+        "index_number": "B012"
+      },
+      "passage_index": 244
+    }
+  },
+  {
+    "id": "B025_Neither_Here_Nor_There_passage_473",
+    "sensor_data": {
+      "temperature": 21.9,
+      "humidity": 56.4,
+      "wind_direction": 3.933,
+      "imu": [
+        1.858,
+        1.336,
+        9.294,
+        -0.037,
+        -0.057,
+        -0.184
+      ],
+      "context": {
+        "scenario": "mountain_climbing",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Naples looked even worse after Sorrento and Capri than it had before. I walked for half a mile along the waterfront, but there was no sign of happy fishermen mending their nets and singing ‘Santa Lucia’, as I had fervently hoped there might be. Instead there were just menacing-looking derelicts and mountains ? and I mean mountains ? of rubbish on every corner and yet more people selling lottery tickets and trinkets from cardboard boxes.",
+    "metadata": {
+      "source_file": "B025_Neither_Here_Nor_There.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.013333333333333334,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 75
+        }
+      },
+      "novel_metadata": {
+        "title": "Neither Here Nor There",
+        "author": "Bryson, Bill",
+        "gender_of_author": "Male",
+        "publication_year": "2015",
+        "publisher": "‎William Morrow Paperbacks",
+        "publication_year_of_the_edition_used": "2015",
+        "publisher_of_the_edition_used": "‎William Morrow Paperbacks",
+        "index_number": "B025"
+      },
+      "passage_index": 473
+    }
+  },
+  {
+    "id": "B143_Between_River_and_Sea_passage_1466",
+    "sensor_data": {
+      "temperature": 20.8,
+      "humidity": 41.8,
+      "wind_direction": 5.583,
+      "imu": [
+        -0.619,
+        0.185,
+        9.825,
+        -0.214,
+        0.032,
+        -0.024
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "At the bus stop Limor awaited me and was easily recognisable from Anna’s description: ‘Small, soon-to-be-fat, with a grey ponytail and a caricature Jewish nose, more often seen among Arabs.’ During our walk to the car park I fished for her biography, as is my way.",
+    "metadata": {
+      "source_file": "B143_Between_River_and_Sea.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.021739130434782608,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 46
+        }
+      },
+      "novel_metadata": {
+        "title": "Between River and Sea",
+        "author": "Dervla Murphy",
+        "gender_of_author": "Female",
+        "publication_year": "N/A",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2015",
+        "publisher_of_the_edition_used": "Eland",
+        "index_number": "B143"
+      },
+      "passage_index": 1466
+    }
+  },
+  {
+    "id": "B145_An_Area_of_Darkness_passage_395",
+    "sensor_data": {
+      "temperature": 11.0,
+      "humidity": 40.2,
+      "wind_direction": 5.739,
+      "imu": [
+        -0.381,
+        0.258,
+        9.881,
+        -0.296,
+        -0.006,
+        0.011
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "afternoon",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "What was it about Gulmarg that attracted Aziz? It was a holiday settlement of unpainted wooden huts about a small green meadow set in the mountains some three thousand feet above the Valley. On one side the meadow fell away to the Valley through pine forests; on the other it was bounded by higher mountains in the interstices of which, even in August, snow lay in brown drifts. We arrived in rain. At the bungalow of the friends with whom we were going to stay Aziz was at once sent off to the servants’ quarters, and we saw him again only when the rain was over. He was walking back down the muddy road from such centre as the settlement had. His gait was made unusual by the weight of Mr Butt’s shoes. (Mr Butt later reported, almost with emotion, that Aziz had ruined his shoes on this visit.) His smile and greeting were of pure friendliness. ‘How you liking Gulmarg, sir?’",
+    "metadata": {
+      "source_file": "B145_An_Area_of_Darkness.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.012345679012345678,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 162
+        }
+      },
+      "novel_metadata": {
+        "title": "An Area of Darkness",
+        "author": "V. S. Naipaul",
+        "gender_of_author": "Male",
+        "publication_year": "1964",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2010",
+        "publisher_of_the_edition_used": "Vintage",
+        "index_number": "B145"
+      },
+      "passage_index": 395
+    }
+  },
+  {
+    "id": "A145_The_Immortal_Moment_passage_381",
+    "sensor_data": {
+      "temperature": 25.9,
+      "humidity": 51.0,
+      "wind_direction": 3.93,
+      "imu": [
+        -0.209,
+        -0.402,
+        9.852,
+        0.044,
+        -0.053,
+        0.002
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "* * *\n\nCHAPTER XVI\n\nIT was not from Marston, then, that she had to fear betrayal. Neither was she any more afraid of the rumours of the Cliff Hotel. She was aware that her engagement to Robert Lucy, unannounced but accepted for the simple fact it was, had raised her above censure and suspicion.\n\nIt had come just in time to occupy Mrs. Jurd and Miss Keating on their way to Surbiton.",
+    "metadata": {
+      "source_file": "A145_The_Immortal_Moment.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.0136986301369863,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 73
+        }
+      },
+      "novel_metadata": {
+        "title": "The Immortal Moment",
+        "author": "Sinclair, May",
+        "gender_of_author": "Female",
+        "publication_year": "1908",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "N/A",
+        "index_number": "A145"
+      },
+      "passage_index": 381
+    }
+  },
+  {
+    "id": "B056_Siren_Land_passage_045",
+    "sensor_data": {
+      "temperature": 27.9,
+      "humidity": 50.9,
+      "wind_direction": 1.684,
+      "imu": [
+        1.21,
+        0.19,
+        9.794,
+        -0.145,
+        -0.055,
+        0.025
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "night",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "The olives make scanty shade: they are too ferociously pruned hereabouts. The whole of the southern incline is planted with them wherever a little soil can be scraped together, and their oil is excellent - better, says Pliny, than that of Venafrum - probably because the inhabitants know the secret of preparing it. As soon as it is plucked, the fruit must be pressed in those picturesque rustic mills where, by the dim light of a lantern - the work is nearly always done at night - half-naked, Praxitelean shapes of men and boys may be discerned turning the heavy stone wheel which crushes the berry to a clammy pulp. Alas, these trees are now remorselessly uprooted wherever the soil will feed the more profitable grape; Capri has lost half its olives, Ischia all: a consummation to be deplored since the vine, however gladsome in its summer greenery, is bare for six months in the year when its straggling limbs have a peculiarly unkempt and disreputable appearance. Were the landscape alone to be considered, I could wish that some new scourge like phylloxera might be introduced, for there is enough wine in the country already. At this moment it is being sold for three francs a barrel (forty-four litres) on Ischia, whereas the oil-crop has failed altogether; there has been no rain, the grub has invaded the fruit, and the preceding winter was too mild (the olive likes a good shiver once a year). These trees are small in size, mere pigmies beside the writhing monsters of Spain and Greece and Apulia; their upper limbs are stretched in a nervous tension which is the despair of artists, but in those tumid roots there sits - to all appearances - a deep repose. Yet who can tell what passionate alchemy is astir in that subterranean laboratory, sustaining life and fashioning fruit through those scorching summer months, among stones that are often too hot to handle?",
+    "metadata": {
+      "source_file": "B056_Siren_Land.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.012345679012345678,
+        "details": {
+          "temperature_hot": 2,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 324
+        }
+      },
+      "novel_metadata": {
+        "title": "Siren Land",
+        "author": "Douglas, Norman",
+        "gender_of_author": "Male",
+        "publication_year": "1911",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "N/A",
+        "publisher_of_the_edition_used": "N/A",
+        "index_number": "B056"
+      },
+      "passage_index": 45
+    }
+  },
+  {
+    "id": "A183_Of_Time_and_the_River_passage_585",
+    "sensor_data": {
+      "temperature": 17.9,
+      "humidity": 49.0,
+      "wind_direction": 3.315,
+      "imu": [
+        -0.329,
+        0.595,
+        9.312,
+        0.039,
+        0.023,
+        -0.091
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "And she, poor soul, was like a rabbit trapped before the fierce yellow eye, the hypnotic stare of a crouching tiger. She did not know whether he would spring, strike forth his paw to maul her, or walk off indifferently. She was dazed and stricken before the violence of his first passion, the unreasoning madness of his jealousy, and in the years that followed she was bewildered, resentful, and finally embittered by the abrupt indifference which succeeded it – an indifference so great that often he seemed to forget her very existence for days at a time, to live with her in a little house as if he were scarcely conscious of her presence, stumping about the place in an intensity of self-absorption while he cursed and muttered to himself, banged open furnace doors, chopped up whatever combinations of raw foods his fantastic imagination might contrive, and answering her impatiently and contemptuously when she spoke to him: ‘What did you say-y? Oh, what are you talk-ing about?’ – and he would stump away again, absorbed mysteriously with his own affairs. And sometimes, if he was the victim of conspiracy in the universe – if God had forsaken him and man had tricked and cheated him, he would roll upon the floor, hammer his heels against the wall, and howl his curses at oblivious heaven.",
+    "metadata": {
+      "source_file": "A183_Of_Time_and_the_River.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.017857142857142856,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 1,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 224
+        }
+      },
+      "novel_metadata": {
+        "title": "Of Time and the River",
+        "author": "Wolfe,Thomas",
+        "gender_of_author": "Male",
+        "publication_year": "1935",
+        "publisher": "Charles Scribner's Sons",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Aegitas",
+        "index_number": "A183"
+      },
+      "passage_index": 585
+    }
+  },
+  {
+    "id": "A026_The_Mansion_passage_762",
+    "sensor_data": {
+      "temperature": 14.3,
+      "humidity": 45.7,
+      "wind_direction": 3.435,
+      "imu": [
+        0.02,
+        0.426,
+        9.834,
+        -0.035,
+        -0.055,
+        -0.014
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "“Maybe,” Ratliff said. (This was Charles’s Uncle Gavin telling him what had happened when he got back home in September after it was all over and whatever it was had licked Clarence, caused him to withdraw from the race, at old Will Varner’s annual picnic in July; this was back in April when his uncle and Ratliff were talking.) “What you need is to have the young folks back for at least a day or two between now and the seventeenth of next August. What a shame the folks that started this war and drafted all the young voters away never had sense enough to hold off at least long enough to keep Clarence Snopes outen Congress, aint it?”",
+    "metadata": {
+      "source_file": "A026_The_Mansion.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.01680672268907563,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 2,
+          "movement": 0,
+          "total_words": 119
+        }
+      },
+      "novel_metadata": {
+        "title": "The Mansion",
+        "author": "Faulkner, William",
+        "gender_of_author": "Male",
+        "publication_year": "1959",
+        "publisher": "RandomHouse",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "Vintage",
+        "index_number": "A026"
+      },
+      "passage_index": 762
+    }
+  },
+  {
+    "id": "B013_Mud_Rocks_Blazes_passage_699",
+    "sensor_data": {
+      "temperature": 21.7,
+      "humidity": 55.8,
+      "wind_direction": 0.141,
+      "imu": [
+        1.114,
+        0.052,
+        9.548,
+        0.069,
+        0.038,
+        -0.002
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "I laughed softly at myself as I rose up the mountain, my footsteps lit by moonlight and headlamps. The forest was replete with its sounds of life—sounds that no longer terrified me. Owls hooted back and forth to one another. Deer rustled in the brush as they bounded away. Trees waved—rubbing their boughs together with deep groans and loud squeals. I felt welcomed by the harmony and added my own rhythmic footfalls to the song.",
+    "metadata": {
+      "source_file": "B013_Mud_Rocks_Blazes.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.013333333333333334,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 75
+        }
+      },
+      "novel_metadata": {
+        "title": "Mud Rocks Blazes",
+        "author": "Anderson, Heather",
+        "publication_year": "2021",
+        "publisher": "Mountaineers Books",
+        "publication_year_of_the_edition_used": "2021",
+        "publisher_of_the_edition_used": "Mountaineers Books",
+        "index_number": "B013"
+      },
+      "passage_index": 699
+    }
+  },
+  {
+    "id": "A010_Soldiers__Pay_passage_932",
+    "sensor_data": {
+      "temperature": 24.1,
+      "humidity": 62.6,
+      "wind_direction": 5.149,
+      "imu": [
+        -0.071,
+        0.087,
+        9.868,
+        0.032,
+        -0.001,
+        -0.051
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "‘But I’m not: I don’t intend to. I’m trying to help you both.’\n\n‘Oh, you are against me. Everybody’s against me, except Donald. And you keep him shut up like a—prisoner.’ She turned quickly and leaned her head against the window.",
+    "metadata": {
+      "source_file": "A010_Soldiers__Pay.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.024390243902439025,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 41
+        }
+      },
+      "novel_metadata": {
+        "title": "Soldier's Pay",
+        "author": "Faulkner, William",
+        "gender_of_author": "Male",
+        "publication_year": "1926",
+        "publisher": "Boni&Liveright",
+        "publication_year_of_the_edition_used": "2021",
+        "publisher_of_the_edition_used": "Wildside Press",
+        "index_number": "A010"
+      },
+      "passage_index": 932
+    }
+  },
+  {
+    "id": "B016_Amurath_to_Amurath_passage_408",
+    "sensor_data": {
+      "temperature": 12.4,
+      "humidity": 71.3,
+      "wind_direction": 1.888,
+      "imu": [
+        -0.289,
+        0.244,
+        9.821,
+        0.07,
+        0.052,
+        0.004
+      ],
+      "context": {
+        "scenario": "mountain_climbing",
+        "time": "afternoon",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "We rode next day in two and a half hours to ?ara?osh, where there are no less than seven churches. Three of them stand outside the village, each surrounded by its fortress wall, which usually encloses one or two small living-rooms besides the church. They reminded me forcibly of the walled Coptic monasteries of Egypt, but the monastic buildings were smaller. Between them stretched fields of barley wherein the villagers, standing in line, were pulling up the crops to the strains of the bagpipes. The churches were oriented almost at haphazard, and provided with the smallest doors, and windows to correspond. The interiors were so dark that I abandoned all hope of photographing the ornaments upon the inner doors,[158] though I made a rapid sketch of the lintel over the sanctuary door of Mar Shim’un (Fig. 175). Above it was a slab bearing a floral Persian pattern incised upon the stone. Inside the town several of the churches had recently been repaired, or were in process of reparation. A young priest, Kas Yusef, showed me the work, and gloried in the replacing of old and ruined churches by new and brand-new edifices. New lamps for old, but it was the old lamp that could summon the genius, and I realized the sound moral of the fairy story as I watched the refurbishing of ancient walls at ?ara?osh; but I did not impart my impression to the Syrian priest, whose ardour it would have been unkind to damp. The Syrians have annexed most of the larger churches, so said the worthy Jacobite father who brought me the key of Mar Shim’un, and he told his tale not without a touch of bitterness. Yet it would have been folly to blink the fact that he was no match for Kas Yusef, who was young and eager, and had been trained in a French school at Mo?ul. Twenty minutes beyond ?ara?osh we came to the ruined church of Mar Yuhanna Deleimoyya (St. John the Deleimi), which no one has troubled to repair, though it had beautiful carved lintels and domes adorned with plasterwork. Thence we rode for an hour through cornlands to Bartalla, and saw Ba’ashika at the foot of the hills. They were real hills which lay before us, not the bare desert ridges which were all the heights we had seen since we crossed over Lebanon on the way to Aleppo. Here were the buttresses of mightier ranges than Lebanon, the alps of Kurdistan which end the land of the two rivers. As we climbed upwards, the corn grew greener, the grass deeper, the flowers more brilliant along the edge of trickling streams. But my companions paid no heed to these marvels. Jusef’s thoughts were busy with the great cities he had seen since he set forth on his travels, and especially with Mo?ul, last and therefore fairest in his memory. He rehearsed its advantages to the Mo?ul zaptieh, and ’Abdullah was well pleased to listen to such talk.",
+    "metadata": {
+      "source_file": "B016_Amurath_to_Amurath.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.010040160642570281,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 1,
+          "humidity_wet": 1,
+          "humidity_dry": 0,
+          "wind": 2,
+          "movement": 0,
+          "total_words": 498
+        }
+      },
+      "novel_metadata": {
+        "title": "Amurath to Amurath",
+        "author": "Bell, Gertrude",
+        "gender_of_author": "Female",
+        "publication_year": "1911",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Anboco",
+        "index_number": "B016"
+      },
+      "passage_index": 408
+    }
+  },
+  {
+    "id": "B140_Tibetan_Foothold_passage_044",
+    "sensor_data": {
+      "temperature": 22.5,
+      "humidity": 52.9,
+      "wind_direction": 1.105,
+      "imu": [
+        2.351,
+        -0.587,
+        9.748,
+        -0.123,
+        0.093,
+        0.102
+      ],
+      "context": {
+        "scenario": "beach_walking",
+        "time": "afternoon",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "At first sight it seemed lunatic to enclose two such dissimilar women in a confined space and expect them both to survive. And yet, miraculously, we never quarrelled. Juliet’s patience and thoughtfulness were monumental. She tolerated the nauseating clouds of cigarette smoke with which I filled our little bedroom and the piles of reference books and sheaves of manuscript that wandered all over our cramped floor space, apparently of their own volition. She never interrupted when I was writing and I soon acquired the knack of not hearing her transistor. Inevitably I felt the strain of never being alone, yet by the end of our four months together Juliet and I had developed a sincere mutual affection.",
+    "metadata": {
+      "source_file": "B140_Tibetan_Foothold.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.017094017094017096,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 2,
+          "total_words": 117
+        }
+      },
+      "novel_metadata": {
+        "title": "Tibetan Foothold",
+        "author": "Dervla Murphy",
+        "gender_of_author": "Female",
+        "publication_year": "1966",
+        "publisher": "Murray",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "Eland",
+        "index_number": "B140"
+      },
+      "passage_index": 44
+    }
+  },
+  {
+    "id": "B142_South_from_Limpopo_passage_1089",
+    "sensor_data": {
+      "temperature": 20.6,
+      "humidity": 56.2,
+      "wind_direction": 3.944,
+      "imu": [
+        0.547,
+        0.841,
+        9.794,
+        0.211,
+        -0.036,
+        0.072
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Meanwhile the electoral shambles has fallen over the edge into comedy and the count will take longer than expected – much longer. Computers are playing up or being fed the wrong diet. (Everyone is astonished to hear that the Irish run all their elections with flawless efficiency sans computers.) Ballot papers beyond reckoning have not been delivered to the 800 counting centres because their armed escorts failed to turn up. Accusations and denials of intimidation, muddle, rigging and conspiracy are flying in every direction. Here we wonder who secreted 900,000 ballot papers in a merchant’s warehouse near Cape Town’s airport on the 26th? On discovering the contents of the boxes the merchant called the police, then received an anonymous death-threat. Allegedly the boxes were moved to a security company’s store but no one knows what happened next. Does their fate explain the Khayelitsha crisis? A flustered IEC spokeswoman explained, ‘We are now reorganizing the distribution of ballot papers. Serious misplacement [sic] has taken place and we are asking the police to investigate.’",
+    "metadata": {
+      "source_file": "B142_South_from_Limpopo.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.01744186046511628,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 2,
+          "total_words": 172
+        }
+      },
+      "novel_metadata": {
+        "title": "South from the Limpopo",
+        "author": "Dervla Murphy",
+        "gender_of_author": "Female",
+        "publication_year": "1998",
+        "publisher": "Flamingo",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Eland",
+        "index_number": "B142"
+      },
+      "passage_index": 1089
+    }
+  },
+  {
+    "id": "B093_This_Could_Be_Home_passage_044",
+    "sensor_data": {
+      "temperature": 22.7,
+      "humidity": 41.5,
+      "wind_direction": 0.182,
+      "imu": [
+        -1.275,
+        0.116,
+        9.945,
+        -0.148,
+        0.246,
+        -0.033
+      ],
+      "context": {
+        "scenario": "city_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "As I walk around the building site out of which the new Raffles is emerging, I can’t help thinking how much the hotel, too, has a story that mirrors that of the metropolis that encircles it. Although many associate the establishment with the British Empire, it’s actually been a profoundly multicultural site ever since it was opened by two Armenian brothers born in Isfahan, Tigran and Martin Sarkies. And although it offers an air of having been where it is forever, in truth it’s been a work in constant progress since the beginning.",
+    "metadata": {
+      "source_file": "B093_This_Could_Be_Home.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.03225806451612903,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 93
+        }
+      },
+      "novel_metadata": {
+        "title": "This Could Be Home",
+        "author": "Pico Iyer",
+        "gender_of_author": "Male",
+        "publication_year": "2019",
+        "publisher": "Epigram",
+        "publication_year_of_the_edition_used": "2019",
+        "publisher_of_the_edition_used": "Epigram",
+        "index_number": "B093"
+      },
+      "passage_index": 44
+    }
+  },
+  {
+    "id": "A182_You_Can_t_Go_Home_Again_passage_489",
+    "sensor_data": {
+      "temperature": 21.3,
+      "humidity": 33.9,
+      "wind_direction": 5.991,
+      "imu": [
+        -0.456,
+        -0.264,
+        9.831,
+        -0.048,
+        0.068,
+        0.05
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "morning",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "He liked the morning plunge in his great sunken tub, the sensual warmth of sudsy water, and the sharp, aromatic cleanness of the bath salts. He had an eye for aesthetic values, too, and he liked to loll back in the tub and watch the dance of water spangles in their magic shift and play upon the creamy ceiling. Most of all, he liked to come up pink and dripping, streaked liberally with tarry-scented soap, and then he loved the stinging drive and shock of needled spray, the sense of hardihood and bracing conflict, and he liked the glow of abundant health as he stepped forth, draining down upon a thick cork mat, and vigorously rubbed himself dry in the folds of a big, crashy bath towel.",
+    "metadata": {
+      "source_file": "A182_You_Can_t_Go_Home_Again.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.023622047244094488,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 1,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 127
+        }
+      },
+      "novel_metadata": {
+        "title": "You Can't Go Home Again",
+        "author": "Wolfe,Thomas",
+        "gender_of_author": "Male",
+        "publication_year": "1940",
+        "publisher": "Harper & Row",
+        "publication_year_of_the_edition_used": "2020",
+        "publisher_of_the_edition_used": "Otbebookpublishing",
+        "index_number": "A182"
+      },
+      "passage_index": 489
+    }
+  },
+  {
+    "id": "B106_Twilight_in_Italy_passage_204",
+    "sensor_data": {
+      "temperature": 20.9,
+      "humidity": 56.4,
+      "wind_direction": 5.304,
+      "imu": [
+        -0.113,
+        1.101,
+        9.922,
+        -0.128,
+        0.141,
+        -0.057
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The last time I saw her was here, on the Garda, at Salò. She was the chalked, thin-armed daughter of Rigoletto. I detested her, her voice had a chalky squeak in it. And yet, by the end, my heart was overripe in my breast, ready to burst with loving affection. I was ready to walk on to the stage, to wipe out the odious, miscreant lover, and to offer her all myself, saying, 'I can see it is real love you want, and you shall have it: I will give it to you.'",
+    "metadata": {
+      "source_file": "B106_Twilight_in_Italy.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.010752688172043012,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 93
+        }
+      },
+      "novel_metadata": {
+        "title": "Twilight in Italy",
+        "author": "D. H. Lawrence",
+        "gender_of_author": "Male",
+        "publication_year": "1916",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2015",
+        "publisher_of_the_edition_used": "Start Classics",
+        "index_number": "B106"
+      },
+      "passage_index": 204
+    }
+  },
+  {
+    "id": "A167_A_Son_at_the_Front_passage_189",
+    "sensor_data": {
+      "temperature": 19.1,
+      "humidity": 50.7,
+      "wind_direction": 0.055,
+      "imu": [
+        -0.064,
+        0.232,
+        9.844,
+        -0.012,
+        -0.017,
+        -0.005
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The words followed Campton down the stairs. What did it mean, and what must it feel like, for parents in this safe denationalized modern world to be suddenly saying to each other with white lips: A son in the war?",
+    "metadata": {
+      "source_file": "A167_A_Son_at_the_Front.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.025,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 40
+        }
+      },
+      "novel_metadata": {
+        "title": "A Son at the Front",
+        "author": "Wharton,Edith",
+        "gender_of_author": "Female",
+        "publication_year": "1923",
+        "publisher": "Northern Illinois University Press",
+        "publication_year_of_the_edition_used": "2019",
+        "publisher_of_the_edition_used": "e-artnow",
+        "index_number": "A167"
+      },
+      "passage_index": 189
+    }
+  },
+  {
+    "id": "B036_In_Patagonia_passage_361",
+    "sensor_data": {
+      "temperature": 13.1,
+      "humidity": 43.1,
+      "wind_direction": 5.064,
+      "imu": [
+        -0.167,
+        0.94,
+        9.818,
+        -0.062,
+        -0.089,
+        -0.085
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "THE SPANIARD’S wife packed me a lunch of cold chops and I walked north through a country broken by gulches and mesas, where the most unlikely colours had been spat to the surface. In one place the rocks were alternately lilac, rose-pink and lime-green. There was a bright-yellow gorge bristling with the bones of extinct mammals. It led into a dried lake bed, ringed with purple rocks where cow skulls stuck out of a crust of flaky orange mud.",
+    "metadata": {
+      "source_file": "B036_In_Patagonia.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.02531645569620253,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 1,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 79
+        }
+      },
+      "novel_metadata": {
+        "title": "In Patagonia",
+        "author": "Chatwin, Bruce",
+        "gender_of_author": "Male",
+        "publication_year": "1977",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2003",
+        "publisher_of_the_edition_used": "Penguin Classics",
+        "index_number": "B036"
+      },
+      "passage_index": 361
+    }
+  },
+  {
+    "id": "B070_The_Trail_passage_696",
+    "sensor_data": {
+      "temperature": 19.2,
+      "humidity": 70.3,
+      "wind_direction": 1.719,
+      "imu": [
+        -0.026,
+        0.007,
+        9.945,
+        -0.044,
+        -0.065,
+        -0.003
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The scent of pee and moist earth wafted in from outside. At least having marked my territory, I’d be safe from marauding bears.\n\nRelieved, I set the tainted pot as far away as possible, and using my headlamp, began studying the map, examining the route for tomorrow. Suddenly I saw our mistake—this wasn’t the realm of the God of War, this was just a horrid mudhole.\n\n“Hey Syd, look at your map!” I called to him in his bivy.",
+    "metadata": {
+      "source_file": "B070_The_Trail.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.012658227848101266,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 1,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 79
+        }
+      },
+      "novel_metadata": {
+        "title": "Trail",
+        "author": "Gallogly, Ethan",
+        "gender_of_author": "Male",
+        "publication_year": "2021",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2021",
+        "publisher_of_the_edition_used": "N/A",
+        "index_number": "B070"
+      },
+      "passage_index": 696
+    }
+  },
+  {
+    "id": "A167_A_Son_at_the_Front_passage_1042",
+    "sensor_data": {
+      "temperature": 18.6,
+      "humidity": 89.1,
+      "wind_direction": 3.53,
+      "imu": [
+        -0.387,
+        -0.595,
+        9.73,
+        0.005,
+        0.029,
+        0.041
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The young man, as carefully brushed and equipped as usual, but pale with emotion, clutched the painter’s hand in a moist grasp.\n\n“My dear Master, I had to see you—to see you alone and immediately.”\n\nCampton looked at him with apprehension. What was the meaning of his “alone”? Had Mrs. Talkett lost her head, and betrayed her secret—or had she committed some act of imprudence of which the report had come back to her husband?\n\n“Do sit down,” said the painter weakly.",
+    "metadata": {
+      "source_file": "A167_A_Son_at_the_Front.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.012195121951219513,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 1,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 82
+        }
+      },
+      "novel_metadata": {
+        "title": "A Son at the Front",
+        "author": "Wharton,Edith",
+        "gender_of_author": "Female",
+        "publication_year": "1923",
+        "publisher": "Northern Illinois University Press",
+        "publication_year_of_the_edition_used": "2019",
+        "publisher_of_the_edition_used": "e-artnow",
+        "index_number": "A167"
+      },
+      "passage_index": 1042
+    }
+  },
+  {
+    "id": "B117_Under_the_Tuscan_Sun_passage_253",
+    "sensor_data": {
+      "temperature": 20.8,
+      "humidity": 55.0,
+      "wind_direction": 5.75,
+      "imu": [
+        -0.222,
+        -0.927,
+        9.745,
+        0.008,
+        -0.012,
+        0.099
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "morning",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "After we clean up late in the day, we walk around assessing what’s left, how we’ve done. We will not have any children together but decide that this is the equivalent of having triplets. As each room is finished, we get to bring in the furniture for it. Gradually, rooms are set up, still spare but basically furnished. I’ve brought over white bedspreads for the twin beds. We take a morning in Arezzo and buy a few lamps from a place that still makes the traditional majolica vases of the area into lamps. A fabulous feeling—things are shaping up, they’re done, it’s clean, we’ll be warm in winter—we’ve done it! This feels giddy and fuels us to keep going.",
+    "metadata": {
+      "source_file": "B117_Under_the_Tuscan_Sun.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.01680672268907563,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 119
+        }
+      },
+      "novel_metadata": {
+        "title": "Under the Tuscan Sun",
+        "author": "Mayes, Frances",
+        "gender_of_author": "Female",
+        "publication_year": "2003",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2003",
+        "publisher_of_the_edition_used": "Crown",
+        "index_number": "B117"
+      },
+      "passage_index": 253
+    }
+  },
+  {
+    "id": "B133_Eight_Feet_in_the_Andes_passage_332",
+    "sensor_data": {
+      "temperature": 20.7,
+      "humidity": 69.8,
+      "wind_direction": 4.11,
+      "imu": [
+        0.055,
+        -0.735,
+        9.969,
+        -0.042,
+        0.085,
+        0.017
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "evening",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "On 20 October Rachel rode Juana at a walk from the hotel to her pasture beyond the Plaza – and back again in the evening. As she never once stumbled, or seemed in any discomfort, Foro suggested a longer test next day. So Rachel took her for a bare-back two-mile trot along the wide grass verge of the road to San Marcos. She moved beautifully and seemed actually to enjoy her outing. Rachel is sure that she missed us when left alone all day in her big field – which may be true. Mules are half donkeys and sociable in proportion. Foro then announced that she should be ready for shoeing on the 25th and 150 soles bought us a set of shoes from our hotel proprietor; hot shoeing is unknown here.",
+    "metadata": {
+      "source_file": "B133_Eight_Feet_in_the_Andes.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.022727272727272728,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 2,
+          "total_words": 132
+        }
+      },
+      "novel_metadata": {
+        "title": "Eight Feet in the Andes",
+        "author": "Dervla Murphy",
+        "gender_of_author": "Female",
+        "publication_year": "2003",
+        "publisher": "John Murray",
+        "publication_year_of_the_edition_used": "2003",
+        "publisher_of_the_edition_used": "John Murray",
+        "index_number": "B133"
+      },
+      "passage_index": 332
+    }
+  },
+  {
+    "id": "A010_Soldiers__Pay_passage_145",
+    "sensor_data": {
+      "temperature": 14.5,
+      "humidity": 45.2,
+      "wind_direction": 0.094,
+      "imu": [
+        -0.336,
+        -0.287,
+        9.882,
+        -0.058,
+        0.007,
+        -0.017
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Raising his hand he felt his own undamaged brow. No scar there. Near him upon a chair was his hat severed by a white band, upon the table the other man’s cap with its cloth crown sloping backward from a bronze initialed crest.",
+    "metadata": {
+      "source_file": "A010_Soldiers__Pay.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.023255813953488372,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 43
+        }
+      },
+      "novel_metadata": {
+        "title": "Soldier's Pay",
+        "author": "Faulkner, William",
+        "gender_of_author": "Male",
+        "publication_year": "1926",
+        "publisher": "Boni&Liveright",
+        "publication_year_of_the_edition_used": "2021",
+        "publisher_of_the_edition_used": "Wildside Press",
+        "index_number": "A010"
+      },
+      "passage_index": 145
+    }
+  },
+  {
+    "id": "A001_The_Awakening_passage_560",
+    "sensor_data": {
+      "temperature": 11.7,
+      "humidity": 57.7,
+      "wind_direction": 2.584,
+      "imu": [
+        -0.146,
+        0.026,
+        9.836,
+        0.093,
+        -0.081,
+        0.014
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "“I have forgotten nothing at Grand Isle,” he said, not looking at her, but rolling a cigarette. His tobacco pouch, which he laid upon the table, was a fantastic embroidered silk affair, evidently the handi-work of a woman.\n\n“You used to carry your tobacco in a rubber pouch,” said Edna, picking up the pouch and examining the needlework.\n\n“Yes; it was lost.”\n\n“Where did you buy this one? In Mexico?”\n\n“It was given to me by a Vera Cruz girl; they are very generous,”",
+    "metadata": {
+      "source_file": "A001_The_Awakening.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.011904761904761904,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 84
+        }
+      },
+      "novel_metadata": {
+        "title": "The Awakening",
+        "author": "Chopin, Kate",
+        "gender_of_author": "Female",
+        "publication_year": "N/A",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2023",
+        "publisher_of_the_edition_used": "Classic Books",
+        "index_number": "A001"
+      },
+      "passage_index": 560
+    }
+  },
+  {
+    "id": "B138_Where_the_Indus_is_Young_passage_264",
+    "sensor_data": {
+      "temperature": 16.8,
+      "humidity": 67.2,
+      "wind_direction": 2.559,
+      "imu": [
+        0.209,
+        -1.25,
+        9.592,
+        0.083,
+        0.209,
+        -0.013
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Part of the way we rode the forlorn-looking ponies of the district, all dirty and covered with long shaggy hair, but plucky and willing like their masters. The primitive saddles were so uncomfortable that we usually preferred to walk … between these impossible saddles and the pony’s back goes the thick folded namdah (a species of soft felt manufactured in Kashgar and used throughout both sides of the Karakoram region), which has a tendency to slip out and drag saddle and rider with it. Anyone intending to take a long journey through Baltistan should provide himself with a good leather saddle.",
+    "metadata": {
+      "source_file": "B138_Where_the_Indus_is_Young.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.019801980198019802,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 101
+        }
+      },
+      "novel_metadata": {
+        "title": "Where the Indus is Young",
+        "author": "Dervla Murphy",
+        "gender_of_author": "Female",
+        "publication_year": "1978",
+        "publisher": "Readers Union",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "Eland",
+        "index_number": "B138"
+      },
+      "passage_index": 264
+    }
+  },
+  {
+    "id": "B071_Travels_with_Myself_and_Another_passage_336",
+    "sensor_data": {
+      "temperature": 21.6,
+      "humidity": 68.9,
+      "wind_direction": 0.632,
+      "imu": [
+        0.02,
+        2.244,
+        9.717,
+        0.238,
+        0.022,
+        -0.019
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The last time I saw that beautiful cove on Virgin Gorda it was full of suntanned bodies and ringed by boats, from swan yachts to rubber Zodiacs, and there were bottles and plastic debris on the seabed and picnic litter on the sand for the rich are as disgusting as the poor in their carelessness of the natural world. The Social Inn on Tortola is incredible prehistory where now you book months ahead to reserve rooms in ten hotels, or buy a luxury condominium residence; the Pilot is unthinkable in the two stylish marinas. St Martin, which I loved first and most, is a thriving blighted area. A great runway on the Dutch side receives jets. Phillipsburg and Marigot are boom towns. Handsome houses of foreigners dot the hills. There are grand hotels and crummy motels, casinos and boutiques, supermarkets and launderettes, snack bars and robber restaurants, throngs of visitors and plentiful muck on the beaches. And the island, once a green bouquet of trees, looks bald. Progress uses space and is more valuable than trees.",
+    "metadata": {
+      "source_file": "B071_Travels_with_Myself_and_Another.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.022727272727272728,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 2,
+          "total_words": 176
+        }
+      },
+      "novel_metadata": {
+        "title": "Travels with Myself and Another",
+        "author": "Gellhorn, Martha",
+        "gender_of_author": "Female",
+        "publication_year": "1978",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2001",
+        "publisher_of_the_edition_used": "TarcherPerigee",
+        "index_number": "B071"
+      },
+      "passage_index": 336
+    }
+  },
+  {
+    "id": "B037_What_the_Psychic_Told_the_Pilgrim_passage_1044",
+    "sensor_data": {
+      "temperature": 24.6,
+      "humidity": 34.7,
+      "wind_direction": 3.186,
+      "imu": [
+        0.402,
+        -2.325,
+        9.939,
+        -0.143,
+        -0.29,
+        0.096
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "night",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "I passed small, shantylike settlements, and then several minutes later passed grand homes. The contrasts were startling.\n\nMy initial plan had been to walk as far as Barbadelo and check in to the refugio, but a quick check of my maps showed that I had somehow missed Barbadelo and was well past it. Ferreiros was the next stop with a refugio, and I resolved to stop there for the night. I was hot, sweaty, parched, exhausted, dirty, and starved.",
+    "metadata": {
+      "source_file": "B037_What_the_Psychic_Told_the_Pilgrim.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.0379746835443038,
+        "details": {
+          "temperature_hot": 1,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 1,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 79
+        }
+      },
+      "novel_metadata": {
+        "title": "What the Psychic Told the Pilgrim",
+        "author": "Christmas, Jane",
+        "gender_of_author": "Female",
+        "publication_year": "2007",
+        "publisher": "Greystone Books",
+        "publication_year_of_the_edition_used": "2007",
+        "publisher_of_the_edition_used": "Greystone Books",
+        "index_number": "B037"
+      },
+      "passage_index": 1044
+    }
+  },
+  {
+    "id": "B039_Rome_and_a_Villa_passage_676",
+    "sensor_data": {
+      "temperature": 9.9,
+      "humidity": 68.3,
+      "wind_direction": 1.209,
+      "imu": [
+        1.054,
+        -2.781,
+        9.798,
+        -0.268,
+        0.254,
+        -0.055
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "evening",
+        "weather": "rain"
+      }
+    },
+    "target_paragraph": "Many of the stories are not of emotional crisis but only a moment lifted out of the normal repetitive run of things, at home, at work, in the neighborhood; a woman goes on vacation and comes back; a lazy girl is scolded by her mother. A little classic of storytelling with the imposing title “Se More” (French, On Meurt) is about the death of a donkey: “Poor darling . . . I was bringing him back from the miller’s with a ton of grain on his back and he’d already fallen ten times because he was stumble-footed, the dirty pig. . . . So I beat him over the head. . . .” “La Bona Famija,” The Good Family, maintains a breathless delicacy in describing a poor family’s usual evening meal, in a mood never quite of gaiety nor of resignation, nor of complaint. There are little street dramas, and charming anecdotes of the wonders of the world, in one of which a man tells of having heard about beavers for the first time, touching also on a basic matter of Roman pride: “If he’d called them masons, all right, but architects!. . .”",
+    "metadata": {
+      "source_file": "B039_Rome_and_a_Villa.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.010309278350515464,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 1,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 194
+        }
+      },
+      "novel_metadata": {
+        "title": "Rome and a Villa",
+        "author": "Clark, Eleanor",
+        "gender_of_author": "Female",
+        "publication_year": "1952",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2013",
+        "publisher_of_the_edition_used": "Harper Perennial",
+        "index_number": "B039"
+      },
+      "passage_index": 676
+    }
+  },
+  {
+    "id": "A183_Of_Time_and_the_River_passage_3521",
+    "sensor_data": {
+      "temperature": 14.4,
+      "humidity": 55.9,
+      "wind_direction": 1.641,
+      "imu": [
+        0.843,
+        1.752,
+        9.968,
+        -0.074,
+        0.004,
+        0.036
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Sons of the lost and lonely fathers, sons of the wanderers, children of hardy loins, the savage earth, the pioneers, what had we to do with all their bells and churches? Could we feed our hunger on portraits of the Spanish king? Brother, for what? For what? To kill the giant of loneliness and fear, to slay the hunger that would not rest, that would not give us rest.",
+    "metadata": {
+      "source_file": "A183_Of_Time_and_the_River.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.014492753623188406,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 69
+        }
+      },
+      "novel_metadata": {
+        "title": "Of Time and the River",
+        "author": "Wolfe,Thomas",
+        "gender_of_author": "Male",
+        "publication_year": "1935",
+        "publisher": "Charles Scribner's Sons",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Aegitas",
+        "index_number": "A183"
+      },
+      "passage_index": 3521
+    }
+  }
+]

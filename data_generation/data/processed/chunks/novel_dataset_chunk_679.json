@@ -1,0 +1,345 @@
+[
+  {
+    "id": "B023_The_Road_to_Sata_passage_094",
+    "sensor_data": {
+      "temperature": 16.6,
+      "humidity": 57.1,
+      "wind_direction": 5.781,
+      "imu": [
+        -0.908,
+        -0.02,
+        9.755,
+        -0.005,
+        0.076,
+        -0.036
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "night",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The owner had a soft round face and a quiet voice, and after dinner we sat in his living room together sipping beer that I knew his wife had gone out specially to buy. You could hear the river from the living room too, cooling the night with its plashing.",
+    "metadata": {
+      "source_file": "B023_The_Road_to_Sata.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.02,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 1,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 0,
+          "total_words": 50
+        }
+      },
+      "novel_metadata": {
+        "title": "The Road to Sata",
+        "author": "Booth, Alan",
+        "gender_of_author": "Male",
+        "publication_year": "1985",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2020",
+        "publisher_of_the_edition_used": "Penguin",
+        "index_number": "B023"
+      },
+      "passage_index": 94
+    }
+  },
+  {
+    "id": "B199_Chile_Travels_In_A_Thin_Country_passage_701",
+    "sensor_data": {
+      "temperature": 11.4,
+      "humidity": 64.8,
+      "wind_direction": 1.527,
+      "imu": [
+        1.455,
+        -1.14,
+        9.473,
+        0.225,
+        0.053,
+        -0.03
+      ],
+      "context": {
+        "scenario": "mountain_climbing",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "Later we walked over shattered ice pools and climbed a rock; at the top we watched eight chinstrap penguins waddling placidly around the rookery. Below I could see the church, at that time resembling a blue bandstand, and next to it were the churchbuilders, who waved, their heads sticking up out of a giant container bearing the words ‘capilla antártica’ (Antarctic chapel) in a docker’s scrawl.",
+    "metadata": {
+      "source_file": "B199_Chile_Travels_In_A_Thin_Country.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.015151515151515152,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 66
+        }
+      },
+      "novel_metadata": {
+        "title": "Chile: Travels in a Thin Country",
+        "author": "Wheeler, Sara",
+        "gender_of_author": "Female",
+        "publication_year": "1994",
+        "publisher": "Modern Library",
+        "publication_year_of_the_edition_used": "2019",
+        "publisher_of_the_edition_used": "Abacus",
+        "index_number": "B199"
+      },
+      "passage_index": 701
+    }
+  },
+  {
+    "id": "B014_The_Adventures_of_Elizabeth_in_Ruegen_passage_454",
+    "sensor_data": {
+      "temperature": 16.5,
+      "humidity": 37.4,
+      "wind_direction": 6.133,
+      "imu": [
+        -0.25,
+        0.209,
+        9.864,
+        0.042,
+        -0.044,
+        0.026
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "morning",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The water was icily cold in the shadow of the cliffs, but it was a wonderful feeling getting all the closeness of the night dashed off me in that vast and splendid morning solitude. Dripping I hurried up again, my skirt and cloak over the soaked bathing dress, my wet feet thrust into shoes I could never afterwards wear, a trickle of salt water marking the way I took. It was just five o'clock as I got in at the window. In another quarter of an hour I was dry and dressed and out of the window a second time—getting in and out of that window had a singular fascination for me—and on my way for an early exploring of the woods.",
+    "metadata": {
+      "source_file": "B014_The_Adventures_of_Elizabeth_in_Ruegen.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.03278688524590164,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 1,
+          "humidity_wet": 1,
+          "humidity_dry": 1,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 122
+        }
+      },
+      "novel_metadata": {
+        "title": "The Adventure of Elizabeth in Ruegen",
+        "author": "Arnim, Elizabeth von",
+        "gender_of_author": "Female",
+        "publication_year": "1904",
+        "publisher": "Macmillan & Co.",
+        "publication_year_of_the_edition_used": "2010",
+        "publisher_of_the_edition_used": "Girlebooks.com",
+        "index_number": "B014"
+      },
+      "passage_index": 454
+    }
+  },
+  {
+    "id": "A004_The_Secret_Agent_passage_094",
+    "sensor_data": {
+      "temperature": 13.5,
+      "humidity": 52.1,
+      "wind_direction": 1.033,
+      "imu": [
+        0.989,
+        -1.195,
+        9.851,
+        -0.28,
+        0.003,
+        0.086
+      ],
+      "context": {
+        "scenario": "forest_exploration",
+        "time": "evening",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "She had never really understood why Winnie had married Mr Verloc. It was very sensible of her, and evidently had turned out for the best, but her girl might have naturally hoped to find somebody of a more suitable age. There had been a steady young fellow, only son of a butcher in the next street, helping his father in business, with whom Winnie had been walking out with obvious gusto. He was dependent on his father, it is true; but the business was good, and his prospects excellent. He took her girl to the theatre on several evenings. Then just as she began to dread to hear of their engagement (for what could she have done with that big house alone, with Stevie on her hands), that romance came to an abrupt end, and Winnie went about looking very dull. But Mr Verloc, turning up providentially to occupy the first-floor front bedroom, there had been no more question of the young butcher. It was clearly providential.",
+    "metadata": {
+      "source_file": "A004_The_Secret_Agent.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.011976047904191617,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 1,
+          "total_words": 167
+        }
+      },
+      "novel_metadata": {
+        "title": "The Secret Agent",
+        "author": "Conrad, Joseph",
+        "gender_of_author": "Male",
+        "publication_year": "N/A",
+        "publisher": "N/A",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "E-BOOKARAMA",
+        "index_number": "A004"
+      },
+      "passage_index": 94
+    }
+  },
+  {
+    "id": "A013_The_Sound_and_The_Fury_passage_281",
+    "sensor_data": {
+      "temperature": 12.5,
+      "humidity": 52.4,
+      "wind_direction": 3.937,
+      "imu": [
+        -1.418,
+        0.99,
+        9.888,
+        -0.079,
+        -0.047,
+        -0.036
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "I’m going to run away. He began to cry she went and touched him. Hush. I’m not going to. Hush. He hushed. Dilsey.\n\nHe smell what you tell him when he want to. Dont have to listen nor talk.\n\nCan he smell that new name they give him? Can he smell bad luck?\n\nWhat he want to worry about luck for? Luck cant do him no hurt.\n\nWhat they change his name for then if aint trying to help his luck?",
+    "metadata": {
+      "source_file": "A013_The_Sound_and_The_Fury.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.012345679012345678,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 0,
+          "movement": 1,
+          "total_words": 81
+        }
+      },
+      "novel_metadata": {
+        "`title": "The Sound and the Fury",
+        "author": "Faulkner, William",
+        "gender_of_author": "Male",
+        "publication_year": "1929",
+        "publisher": "Jonathan Cape & Harrison Smith",
+        "publication_year_of_the_edition_used": "2022",
+        "publisher_of_the_edition_used": "Grapevine India",
+        "index_number": "A013"
+      },
+      "passage_index": 281
+    }
+  },
+  {
+    "id": "A015_Sanctuary_passage_766",
+    "sensor_data": {
+      "temperature": 19.4,
+      "humidity": 60.7,
+      "wind_direction": 3.461,
+      "imu": [
+        0.091,
+        0.004,
+        9.809,
+        -0.01,
+        -0.055,
+        -0.022
+      ],
+      "context": {
+        "scenario": "general_walking",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "“You have just heard the testimony of the chemist and the gynecologist—who is, as you gentlemen know, an authority on the most sacred affairs of that most sacred thing in life: womanhood—who says that this is no longer a matter for the hangman, but for a bonfire of gasoline—”\n\n“I object!” Horace said: “The prosecution is attempting to sway—”",
+    "metadata": {
+      "source_file": "A015_Sanctuary.txt",
+      "style_category": "modernist",
+      "sensory_analysis": {
+        "sensory_score": 0.01694915254237288,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 59
+        }
+      },
+      "novel_metadata": {
+        "title": "Sanctuary",
+        "author": "Faulkner, William",
+        "gender_of_author": "Male",
+        "publication_year": "1931",
+        "publisher": "Jonathan Cape & Harrison Smith",
+        "publication_year_of_the_edition_used": "2011",
+        "publisher_of_the_edition_used": "Vintage",
+        "index_number": "A015"
+      },
+      "passage_index": 766
+    }
+  },
+  {
+    "id": "B144_Transylvania_and_Beyond_passage_737",
+    "sensor_data": {
+      "temperature": 23.2,
+      "humidity": 57.6,
+      "wind_direction": 5.483,
+      "imu": [
+        -0.278,
+        -0.23,
+        9.864,
+        0.074,
+        -0.017,
+        0.008
+      ],
+      "context": {
+        "scenario": "mountain_climbing",
+        "time": "afternoon",
+        "weather": "clear"
+      }
+    },
+    "target_paragraph": "The dogs’ professionalism came too close for comfort as I crossed a nameless (on all my three maps) pass between the small town of Darmanesti and the large village of Sinmartin. This is surely one of Europe’s most beautiful roads, partly because it hasn’t been repaired since 1918 and is no longer usable by wheeled traffic – even two-wheeled, so again I had to push Luke uphill for over twenty miles. Carpathian slopes go on and on; a few days previously I had freewheeled non-stop for twenty-eight miles from the Frumoasa Pass.",
+    "metadata": {
+      "source_file": "B144_Transylvania_and_Beyond.txt",
+      "style_category": "travel",
+      "sensory_analysis": {
+        "sensory_score": 0.010869565217391304,
+        "details": {
+          "temperature_hot": 0,
+          "temperature_cold": 0,
+          "humidity_wet": 0,
+          "humidity_dry": 0,
+          "wind": 1,
+          "movement": 0,
+          "total_words": 92
+        }
+      },
+      "novel_metadata": {
+        "title": "Transylvania and Beyond",
+        "author": "Dervla Murphy",
+        "gender_of_author": "Female",
+        "publication_year": "1993",
+        "publisher": "The Overlook Press",
+        "publication_year_of_the_edition_used": "2016",
+        "publisher_of_the_edition_used": "Eland",
+        "index_number": "B144"
+      },
+      "passage_index": 737
+    }
+  }
+]
