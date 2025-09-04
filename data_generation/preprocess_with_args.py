@@ -9,10 +9,10 @@ import sys
 from pathlib import Path
 
 def main():
-    parser = argparse.ArgumentParser(description='Novel corpus preprocessing for LLaVA-NeXT')
+    parser = argparse.ArgumentParser(description='Novel corpus preprocessing for LLaVA-Sensing')
     
     # 입력/출력 경로
-    parser.add_argument('--input_dir', default='/home/yc424k/LLaVA-NeXT/Novel',
+    parser.add_argument('--input_dir', default='/home/yc424k/LLaVA-Sensing/Novel',
                        help='Novel corpus input directory')
     parser.add_argument('--output_dir', default='data/processed',
                        help='Output directory for processed data')

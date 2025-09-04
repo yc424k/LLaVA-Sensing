@@ -38,13 +38,13 @@ class CorpusAnalyzer:
     
     def __init__(self):
         self.sensor_keywords = SensorKeywords(
-            temperature_hot=["뜨거운", "더운", "무더운", "따뜻한", "온화한", "열기", "햇살", "햇빛", "온기", "후텁지근", "찜통"],
-            temperature_cold=["차가운", "추운", "시원한", "서늘한", "냉기", "얼어붙은", "얼음", "서리", "냉랭한", "쌀쌀한"],
-            humidity_dry=["건조한", "메마른", "바싹", "타는듯한", "갈증", "목마른", "카랑카랑", "뽀송뽀송"],
-            humidity_wet=["습한", "촉촉한", "젖은", "끈적한", "눅눅한", "축축한", "물기", "이슬", "안개", "무거운"],
-            wind_keywords=["바람", "미풍", "산들바람", "강풍", "돌풍", "세찬", "부드러운", "스치는", "불어오는", "휘날리는", "흔들리는"],
-            movement_keywords=["걷다", "뛰다", "달리다", "움직이다", "발걸음", "발소리", "걸음걸이", "진동", "흔들림"],
-            sensory_keywords=["느끼다", "감각", "촉감", "질감", "피부", "몸", "얼굴", "손", "발", "숨", "냄새", "향기"]
+            temperature_hot=["hot", "scorching", "burning", "blazing", "sweltering", "sultry", "warm", "mild", "tepid", "balmy", "toasty", "heated", "fiery", "boiling", "steaming"],
+            temperature_cold=["cold", "freezing", "frigid", "icy", "chilly", "cool", "crisp", "frosty", "bitter", "arctic", "frozen", "numb", "shivering", "brisk"],
+            humidity_dry=["dry", "arid", "parched", "withered", "dusty", "crisp", "brittle", "desiccated", "drought", "thirsty"],
+            humidity_wet=["humid", "moist", "damp", "wet", "soggy", "sticky", "clammy", "muggy", "steamy", "dewy", "misty", "saturated"],
+            wind_keywords=["wind", "breeze", "gale", "gust", "draft", "zephyr", "gentle", "fierce", "howling", "whistling", "rustling", "swirling", "billowing", "fluttering"],
+            movement_keywords=["walk", "stride", "march", "run", "sprint", "dash", "move", "step", "pace", "footstep", "motion", "vibration", "shake", "tremble"],
+            sensory_keywords=["feel", "sense", "touch", "texture", "skin", "body", "face", "hand", "foot", "breath", "smell", "scent", "aroma", "fragrance"]
         )
         
         # Setup NLTK
@@ -290,14 +290,14 @@ class SensorDataInferrer:
         text_lower = text.lower()
         
         directional_hints = {
-            '동쪽': 0, '동': 0, '해돋이': 0,
-            '남쪽': np.pi/2, '남': np.pi/2,
-            '서쪽': np.pi, '서': np.pi, '해넘이': np.pi,
-            '북쪽': 3*np.pi/2, '북': 3*np.pi/2,
-            '앞': 0, '정면': 0,
-            '뒤': np.pi, '후방': np.pi,
-            '오른쪽': np.pi/2, '우': np.pi/2,
-            '왼쪽': 3*np.pi/2, '좌': 3*np.pi/2
+            'east': 0, 'eastern': 0, 'sunrise': 0,
+            'south': np.pi/2, 'southern': np.pi/2,
+            'west': np.pi, 'western': np.pi, 'sunset': np.pi,
+            'north': 3*np.pi/2, 'northern': 3*np.pi/2,
+            'front': 0, 'forward': 0, 'ahead': 0,
+            'back': np.pi, 'behind': np.pi, 'rear': np.pi,
+            'right': np.pi/2, 'rightward': np.pi/2,
+            'left': 3*np.pi/2, 'leftward': 3*np.pi/2
         }
         
         for hint, direction in directional_hints.items():
@@ -315,7 +315,7 @@ class SensorDataInferrer:
         # Adjust based on movement intensity
         movement_intensity = analysis['movement_score'] * 10
         
-        if '뛰' in text or '달리' in text:
+        if 'run' in text or 'sprint' in text or 'dash' in text:
             # Running motion
             acc_x = np.random.normal(0, 2 + movement_intensity)
             acc_y = np.random.normal(0, 2 + movement_intensity)
@@ -323,7 +323,7 @@ class SensorDataInferrer:
             gyro_x = np.random.normal(0, 0.5)
             gyro_y = np.random.normal(0, 0.5)
             gyro_z = np.random.normal(0, 0.2)
-        elif '걷' in text or '산책' in text:
+        elif 'walk' in text or 'stroll' in text:
             # Walking motion
             acc_x = np.random.normal(0, 1 + movement_intensity)
             acc_y = np.random.normal(0, 1 + movement_intensity)
@@ -348,12 +348,12 @@ class SensorDataInferrer:
         
         # Time inference
         time_keywords = {
-            '새벽': '새벽', '아침': '아침', '오전': '오전',
-            '정오': '정오', '오후': '오후', '저녁': '저녁',
-            '밤': '밤', '자정': '자정'
+            'dawn': 'dawn', 'morning': 'morning', 'am': 'morning',
+            'noon': 'noon', 'afternoon': 'afternoon', 'pm': 'afternoon',
+            'evening': 'evening', 'night': 'night', 'midnight': 'midnight'
         }
         
-        detected_time = '오후'  # Default
+        detected_time = 'afternoon'  # Default
         for keyword, time_label in time_keywords.items():
             if keyword in text_lower:
                 detected_time = time_label
@@ -361,11 +361,11 @@ class SensorDataInferrer:
         
         # Weather inference
         weather_keywords = {
-            '비': '비', '눈': '눈', '맑': '맑음', '흐림': '흐림',
-            '안개': '안개', '바람': '바람', '폭우': '폭우'
+            'rain': 'rain', 'snow': 'snow', 'clear': 'clear', 'cloudy': 'cloudy',
+            'fog': 'fog', 'wind': 'windy', 'storm': 'storm'
         }
         
-        detected_weather = '맑음'  # Default
+        detected_weather = 'clear'  # Default
         for keyword, weather_label in weather_keywords.items():
             if keyword in text_lower:
                 detected_weather = weather_label
@@ -373,12 +373,12 @@ class SensorDataInferrer:
         
         # Scenario inference
         scenario_keywords = {
-            '숲': '숲속_탐험', '산': '산길_등반', '바다': '해변_걷기', '해변': '해변_걷기',
-            '도시': '도시_산책', '거리': '도시_산책', '공원': '공원_산책',
-            '강': '강변_걷기', '들판': '들판_횡단'
+            'forest': 'forest_exploration', 'mountain': 'mountain_climbing', 'ocean': 'beach_walking', 'beach': 'beach_walking',
+            'city': 'city_walking', 'street': 'city_walking', 'park': 'park_stroll',
+            'river': 'river_walk', 'field': 'field_crossing'
         }
         
-        detected_scenario = '도시_산책'  # Default
+        detected_scenario = 'city_walking'  # Default
         for keyword, scenario_label in scenario_keywords.items():
             if keyword in text_lower:
                 detected_scenario = scenario_label

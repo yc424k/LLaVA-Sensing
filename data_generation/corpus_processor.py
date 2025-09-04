@@ -30,23 +30,23 @@ class LiteraryStyleClassifier:
     
     def __init__(self):
         self.styles = {
-            "모더니즘": LiteraryStyle(
-                name="모더니즘",
-                characteristics=["의식의_흐름", "내적_독백", "시간의_비선형성"],
-                keywords=["기억", "의식", "시간", "순간", "느낌", "생각"],
-                sentence_patterns=[r".*\.{3}", r".*\?.*\?", r"그는\s+생각했다"]
+            "modernism": LiteraryStyle(
+                name="modernism",
+                characteristics=["stream_of_consciousness", "interior_monologue", "nonlinear_time"],
+                keywords=["memory", "consciousness", "time", "moment", "feeling", "thought"],
+                sentence_patterns=[r".*\.{3}", r".*\?.*\?", r"he\s+thought"]
             ),
-            "자연주의": LiteraryStyle(
-                name="자연주의", 
-                characteristics=["환경_묘사", "객관적_관찰", "과학적_정확성"],
-                keywords=["자연", "환경", "바람", "온도", "습도", "공기"],
-                sentence_patterns=[r".*도\s*였다", r".*는\s*것이다"]
+            "naturalism": LiteraryStyle(
+                name="naturalism", 
+                characteristics=["environmental_description", "objective_observation", "scientific_accuracy"],
+                keywords=["nature", "environment", "wind", "temperature", "humidity", "air"],
+                sentence_patterns=[r".*was\s+", r".*it\s+is"]
             ),
-            "여행기": LiteraryStyle(
-                name="여행기",
-                characteristics=["장소_묘사", "이동_경험", "문화적_관찰"],
-                keywords=["길", "걷다", "여행", "장소", "풍경", "경험"],
-                sentence_patterns=[r".*에서.*로", r".*를\s*지나"]
+            "travel_writing": LiteraryStyle(
+                name="travel_writing",
+                characteristics=["place_description", "movement_experience", "cultural_observation"],
+                keywords=["path", "walk", "journey", "place", "landscape", "experience"],
+                sentence_patterns=[r".*from.*to", r".*through.*"]
             )
         }
         
@@ -97,45 +97,45 @@ class SensorContextExtractor:
         
         # Temperature patterns
         self.temp_patterns = {
-            'hot_extreme': [r'뜨거운', r'작열하는', r'찌는듯한', r'무더운'],
-            'hot_mild': [r'따뜻한', r'온화한', r'포근한'],
-            'cold_extreme': [r'얼어붙는', r'혹독한', r'차디찬'],
-            'cold_mild': [r'시원한', r'서늘한', r'선선한']
+            'hot_extreme': [r'scorching', r'blazing', r'sweltering', r'burning'],
+            'hot_mild': [r'warm', r'mild', r'balmy', r'tepid'],
+            'cold_extreme': [r'freezing', r'frigid', r'icy', r'arctic'],
+            'cold_mild': [r'cool', r'crisp', r'chilly', r'fresh']
         }
         
         # Humidity patterns  
         self.humidity_patterns = {
-            'very_humid': [r'끈적끈적한', r'축축한', r'눅눅한'],
-            'humid': [r'촉촉한', r'습한', r'물기'],
-            'dry': [r'건조한', r'메마른', r'바싹'],
-            'very_dry': [r'카랑카랑한', r'타는듯한']
+            'very_humid': [r'sticky', r'clammy', r'muggy'],
+            'humid': [r'moist', r'damp', r'dewy'],
+            'dry': [r'dry', r'arid', r'parched'],
+            'very_dry': [r'desiccated', r'withered', r'dusty']
         }
         
         # Wind patterns with direction
         self.wind_patterns = {
-            'front': [r'정면.*바람', r'앞.*바람', r'마주.*바람'],
-            'back': [r'뒤.*바람', r'등.*바람', r'밀어.*바람'],
-            'side': [r'옆.*바람', r'측면.*바람', r'스치.*바람'],
-            'gentle': [r'산들바람', r'미풍', r'부드러운.*바람'],
-            'strong': [r'강풍', r'돌풍', r'세찬.*바람']
+            'front': [r'front.*wind', r'ahead.*wind', r'facing.*wind'],
+            'back': [r'behind.*wind', r'back.*wind', r'pushing.*wind'],
+            'side': [r'side.*wind', r'lateral.*wind', r'cross.*wind'],
+            'gentle': [r'gentle.*breeze', r'soft.*wind', r'light.*breeze'],
+            'strong': [r'strong.*wind', r'fierce.*wind', r'gale']
         }
         
         # Movement patterns
         self.movement_patterns = {
-            'walking': [r'걷다', r'걸어가다', r'산책', r'발걸음'],
-            'running': [r'뛰다', r'달리다', r'달려가다'],
-            'standing': [r'서있다', r'멈춰서다', r'정지'],
-            'climbing': [r'오르다', r'등반', r'기어오르다']
+            'walking': [r'walk', r'stroll', r'pace', r'footstep'],
+            'running': [r'run', r'sprint', r'dash', r'race'],
+            'standing': [r'stand', r'stop', r'pause', r'still'],
+            'climbing': [r'climb', r'ascend', r'scale', r'clamber']
         }
         
         # Time patterns
         self.time_patterns = {
-            'dawn': [r'새벽', r'동이트다', r'여명'],
-            'morning': [r'아침', r'오전', r'아침나절'],
-            'noon': [r'정오', r'한낮', r'낮'],
-            'afternoon': [r'오후', r'해질녘'],
-            'evening': [r'저녁', r'해넘이', r'노을'],
-            'night': [r'밤', r'자정', r'한밤중']
+            'dawn': [r'dawn', r'daybreak', r'sunrise'],
+            'morning': [r'morning', r'am', r'forenoon'],
+            'noon': [r'noon', r'midday', r'day'],
+            'afternoon': [r'afternoon', r'pm', r'evening'],
+            'evening': [r'evening', r'sunset', r'dusk'],
+            'night': [r'night', r'midnight', r'darkness']
         }
     
     def extract_sensor_context(self, text: str) -> Dict:
@@ -248,11 +248,11 @@ class SensorContextExtractor:
     def _extract_weather_context(self, text: str) -> Dict:
         """Extract weather-related context."""
         weather_patterns = {
-            'rain': [r'비', r'빗방울', r'소나기', r'장대비'],
-            'snow': [r'눈', r'함박눈', r'눈발'],
-            'fog': [r'안개', r'자욱', r'뿌연'],
-            'clear': [r'맑다', r'청명', r'화창'],
-            'cloudy': [r'흐림', r'구름', r'잔뜩']
+            'rain': [r'rain', r'drizzle', r'shower', r'downpour'],
+            'snow': [r'snow', r'snowfall', r'flake'],
+            'fog': [r'fog', r'mist', r'haze'],
+            'clear': [r'clear', r'bright', r'sunny'],
+            'cloudy': [r'cloudy', r'overcast', r'grey']
         }
         
         weather_context = {'condition': 'unknown', 'keywords': []}
@@ -270,12 +270,12 @@ class SensorContextExtractor:
     def _extract_location_context(self, text: str) -> Dict:
         """Extract location-related context."""
         location_patterns = {
-            'urban': [r'도시', r'거리', r'건물', r'아스팔트', r'신호등'],
-            'forest': [r'숲', r'나무', r'잎사귀', r'울창한'],
-            'mountain': [r'산', r'봉우리', r'능선', r'바위'],
-            'beach': [r'바다', r'해변', r'파도', r'모래'],
-            'park': [r'공원', r'잔디', r'벤치', r'화단'],
-            'indoor': [r'실내', r'방', r'집', r'건물안']
+            'urban': [r'city', r'street', r'building', r'asphalt', r'traffic'],
+            'forest': [r'forest', r'trees', r'leaves', r'woods'],
+            'mountain': [r'mountain', r'peak', r'ridge', r'rock'],
+            'beach': [r'ocean', r'beach', r'waves', r'sand'],
+            'park': [r'park', r'grass', r'bench', r'garden'],
+            'indoor': [r'indoor', r'room', r'house', r'inside']
         }
         
         location_context = {'type': 'unknown', 'keywords': []}
@@ -397,27 +397,27 @@ class AdvancedSensorMapper:
         
         # Map context
         scenario_mapping = {
-            'urban': '도시_산책',
-            'forest': '숲속_탐험',
-            'mountain': '산길_등반',
-            'beach': '해변_걷기',
-            'park': '공원_산책'
+            'urban': 'city_walking',
+            'forest': 'forest_exploration',
+            'mountain': 'mountain_climbing',
+            'beach': 'beach_walking',
+            'park': 'park_stroll'
         }
         
         time_mapping = {
-            'dawn': '새벽', 'morning': '아침', 'noon': '정오',
-            'afternoon': '오후', 'evening': '저녁', 'night': '밤'
+            'dawn': 'dawn', 'morning': 'morning', 'noon': 'noon',
+            'afternoon': 'afternoon', 'evening': 'evening', 'night': 'night'
         }
         
         weather_mapping = {
-            'rain': '비', 'snow': '눈', 'clear': '맑음',
-            'cloudy': '흐림', 'fog': '안개'
+            'rain': 'rain', 'snow': 'snow', 'clear': 'clear',
+            'cloudy': 'cloudy', 'fog': 'fog'
         }
         
         sensor_data['context'] = {
-            'scenario': scenario_mapping.get(context['location']['type'], '도시_산책'),
-            'time': time_mapping.get(context['time']['period'], '오후'),
-            'weather': weather_mapping.get(context['weather']['condition'], '맑음')
+            'scenario': scenario_mapping.get(context['location']['type'], 'city_walking'),
+            'time': time_mapping.get(context['time']['period'], 'afternoon'),
+            'weather': weather_mapping.get(context['weather']['condition'], 'clear')
         }
         
         return sensor_data
@@ -463,9 +463,9 @@ def main():
     
     # Example text
     example_text = """
-    새벽 공기가 차갑게 느껴지는 가운데, 앞에서 불어오는 바람이 
-    얼굴을 스치며 지나갔다. 그는 천천히 숲길을 걸으며 
-    촉촉한 이슬에 젖은 나뭇잎들을 바라보았다.
+    The dawn air felt cold against his face, as a front wind 
+    brushed past him. He walked slowly through the forest path, 
+    observing the moist dew-covered leaves.
     """
     
     # Process text

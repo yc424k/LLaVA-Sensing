@@ -3,120 +3,120 @@ Advanced prompt templates for generating high-quality literary training data.
 """
 
 LITERARY_STYLE_PROMPTS = {
-    "모더니즘_소설": {
-        "system_prompt": "당신은 버지니아 울프나 제임스 조이스 같은 모더니즘 소설가의 문체로 글을 쓰는 작가입니다.",
-        "style_description": "의식의 흐름, 내적 독백, 감각적 묘사가 특징",
-        "example_start": "그의 의식 속에서 바람이 기억과 뒤섞이며...",
+    "modernist_novel": {
+        "system_prompt": "You are a writer in the style of modernist novelists like Virginia Woolf or James Joyce.",
+        "style_description": "Features stream of consciousness, interior monologue, and sensory descriptions",
+        "example_start": "In his consciousness, the wind mingled with memories...",
         "characteristics": [
-            "시간의 비선형적 흐름",
-            "내적 의식의 표현",
-            "감각과 기억의 교차",
-            "상징적 이미지 사용"
+            "nonlinear flow of time",
+            "expression of inner consciousness",
+            "intersection of sensation and memory",
+            "use of symbolic imagery"
         ]
     },
     
-    "여행기_수필": {
-        "system_prompt": "당신은 섬세한 관찰력으로 여행 경험을 기록하는 수필가입니다.",
-        "style_description": "객관적 관찰과 주관적 감상의 조화",
-        "example_start": "이곳의 공기는 다른 곳과 달랐다...",
+    "travel_essay": {
+        "system_prompt": "You are an essayist who records travel experiences with delicate observation.",
+        "style_description": "Harmony of objective observation and subjective impression",
+        "example_start": "The air here was different from anywhere else...",
         "characteristics": [
-            "구체적인 장소감",
-            "객관적 묘사와 주관적 감상",
-            "문화적 배경 고려",
-            "여행자의 시선"
+            "specific sense of place",
+            "objective description and subjective impression",
+            "consideration of cultural background",
+            "traveler's perspective"
         ]
     },
     
-    "감각적_묘사": {
-        "system_prompt": "당신은 오감을 통한 섬세한 묘사로 독자를 몰입시키는 작가입니다.",
-        "style_description": "시각, 촉각, 청각, 후각, 미각을 모두 활용한 묘사",
-        "example_start": "피부로 느껴지는 공기의 질감이...",
+    "sensory_description": {
+        "system_prompt": "You are a writer who immerses readers through delicate descriptions using all five senses.",
+        "style_description": "Description utilizing sight, touch, hearing, smell, and taste",
+        "example_start": "The texture of air felt against the skin...",
         "characteristics": [
-            "다층적 감각 묘사",
-            "공감각적 표현",
-            "신체적 반응 포함",
-            "환경과의 상호작용"
+            "multi-layered sensory description",
+            "synesthetic expression",
+            "inclusion of physical reactions",
+            "interaction with environment"
         ]
     },
     
-    "의식의_흐름": {
-        "system_prompt": "당신은 인간의 무의식과 의식 사이를 자유롭게 넘나드는 실험적 작가입니다.",
-        "style_description": "논리적 구조보다는 연상과 직관의 흐름",
-        "example_start": "바람... 아니, 바람이 아니라 그것은...",
+    "stream_of_consciousness": {
+        "system_prompt": "You are an experimental writer who freely moves between human unconscious and consciousness.",
+        "style_description": "Flow of association and intuition rather than logical structure",
+        "example_start": "Wind... no, not wind but it was...",
         "characteristics": [
-            "연상의 자유로운 흐름",
-            "시제의 자유로운 이동",
-            "현재와 과거의 중첩",
-            "내적 대화"
+            "free flow of association",
+            "free movement of tenses",
+            "overlap of present and past",
+            "inner dialogue"
         ]
     },
     
-    "자연주의_문체": {
-        "system_prompt": "당신은 자연과 인간의 관계를 깊이 있게 탐구하는 자연주의 작가입니다.",
-        "style_description": "자연 현상의 정확한 관찰과 인간에 미치는 영향",
-        "example_start": "자연은 그에게 말을 걸어왔다...",
+    "naturalist_style": {
+        "system_prompt": "You are a naturalist writer who deeply explores the relationship between nature and humans.",
+        "style_description": "Accurate observation of natural phenomena and their impact on humans",
+        "example_start": "Nature spoke to him...",
         "characteristics": [
-            "자연 현상의 정밀한 묘사",
-            "인간과 자연의 상호작용",
-            "환경 결정론적 시각",
-            "과학적 관찰력"
+            "precise description of natural phenomena",
+            "interaction between humans and nature",
+            "environmental deterministic perspective",
+            "scientific observational skills"
         ]
     }
 }
 
 SCENARIO_CONTEXT_PROMPTS = {
-    "도시_산책": {
-        "environment": "도시의 거리, 건물들 사이",
-        "sounds": "차 소리, 사람들의 발소리, 도시의 웅성거림",
-        "smells": "배기가스, 음식 냄새, 아스팔트",
-        "textures": "콘크리트, 유리, 금속",
-        "mood_keywords": ["분주한", "복잡한", "인공적인", "현대적인"]
+    "city_walking": {
+        "environment": "city streets, between buildings",
+        "sounds": "car noise, people's footsteps, urban murmur",
+        "smells": "exhaust fumes, food aromas, asphalt",
+        "textures": "concrete, glass, metal",
+        "mood_keywords": ["busy", "complex", "artificial", "modern"]
     },
     
-    "숲속_탐험": {
-        "environment": "나무들 사이의 좁은 길, 울창한 숲",
-        "sounds": "나뭇잎 바스락거리는 소리, 새소리, 바람소리",
-        "smells": "흙냄새, 나무 향, 이끼 냄새",
-        "textures": "거친 나무껍질, 부드러운 이끼, 낙엽",
-        "mood_keywords": ["고요한", "신비로운", "원시적인", "생명력 넘치는"]
+    "forest_exploration": {
+        "environment": "narrow paths between trees, dense forest",
+        "sounds": "rustling leaves, bird songs, wind sounds",
+        "smells": "earth scent, wood fragrance, moss smell",
+        "textures": "rough bark, soft moss, fallen leaves",
+        "mood_keywords": ["quiet", "mysterious", "primitive", "vibrant"]
     },
     
-    "해변_걷기": {
-        "environment": "넓은 해변, 파도가 밀려오는 모래사장",
-        "sounds": "파도 소리, 갈매기 울음, 바람 소리",
-        "smells": "바다 냄새, 소금기, 해조류 냄새",
-        "textures": "모래, 차가운 바닷물, 부서지는 파도",
-        "mood_keywords": ["광활한", "자유로운", "역동적인", "시원한"]
+    "beach_walking": {
+        "environment": "wide beach, sandy shore with rolling waves",
+        "sounds": "wave sounds, seagull cries, wind noise",
+        "smells": "ocean scent, salt air, seaweed smell",
+        "textures": "sand, cold seawater, breaking waves",
+        "mood_keywords": ["vast", "free", "dynamic", "refreshing"]
     }
 }
 
 WEATHER_MOOD_MAPPING = {
-    "맑음": {
-        "light": "밝고 투명한 햇살",
-        "atmosphere": "상쾌하고 청명한",
-        "mood": "경쾌하고 희망적인",
-        "colors": ["황금빛", "푸른", "투명한"]
+    "clear": {
+        "light": "bright and transparent sunlight",
+        "atmosphere": "fresh and clear",
+        "mood": "cheerful and hopeful",
+        "colors": ["golden", "blue", "transparent"]
     },
     
-    "흐림": {
-        "light": "흐릿하고 부드러운 빛",
-        "atmosphere": "무겁고 답답한",
-        "mood": "침울하고 사색적인",
-        "colors": ["회색", "뿌연", "무거운"]
+    "cloudy": {
+        "light": "dim and soft light",
+        "atmosphere": "heavy and stuffy",
+        "mood": "gloomy and contemplative",
+        "colors": ["gray", "hazy", "heavy"]
     },
     
-    "비": {
-        "light": "흐리고 어두운",
-        "atmosphere": "촉촉하고 습한",
-        "mood": "우울하고 성찰적인",
-        "colors": ["어두운", "젖은", "반짝이는"]
+    "rain": {
+        "light": "dim and dark",
+        "atmosphere": "moist and humid",
+        "mood": "melancholy and reflective",
+        "colors": ["dark", "wet", "glistening"]
     },
     
-    "눈": {
-        "light": "하얗고 눈부신",
-        "atmosphere": "고요하고 순수한",
-        "mood": "평온하고 경건한",
-        "colors": ["하얀", "순수한", "빛나는"]
+    "snow": {
+        "light": "white and dazzling",
+        "atmosphere": "quiet and pure",
+        "mood": "peaceful and reverent",
+        "colors": ["white", "pure", "shining"]
     }
 }
 
@@ -130,18 +130,18 @@ def create_advanced_prompt(sensor_data, style, scenario_details=None):
     wind_dir = sensor_data["wind_direction"]
     
     # Get style information
-    style_info = LITERARY_STYLE_PROMPTS.get(style, LITERARY_STYLE_PROMPTS["감각적_묘사"])
+    style_info = LITERARY_STYLE_PROMPTS.get(style, LITERARY_STYLE_PROMPTS["sensory_description"])
     
     # Get scenario context
     scenario_info = SCENARIO_CONTEXT_PROMPTS.get(
         context["scenario"], 
-        SCENARIO_CONTEXT_PROMPTS["도시_산책"]
+        SCENARIO_CONTEXT_PROMPTS["city_walking"]
     )
     
     # Get weather mood
     weather_mood = WEATHER_MOOD_MAPPING.get(
         context["weather"],
-        WEATHER_MOOD_MAPPING["맑음"]
+        WEATHER_MOOD_MAPPING["clear"]
     )
     
     # Convert sensor data to literary context

@@ -20,28 +20,28 @@ class SyntheticLiteraryDatasetGenerator:
             
         # Literary style templates
         self.literary_styles = [
-            "모더니즘_소설",
-            "여행기_수필", 
-            "감각적_묘사",
-            "의식의_흐름",
-            "자연주의_문체"
+            "modernist_novel",
+            "travel_essay", 
+            "sensory_description",
+            "stream_of_consciousness",
+            "naturalist_style"
         ]
         
         # Scenario contexts
         self.scenarios = [
-            "도시_산책", "숲속_탐험", "해변_걷기", "산길_등반", 
-            "공원_산책", "골목길_탐험", "강변_걷기", "들판_횡단",
-            "옥상_정원", "지하_통로", "다리_위", "광장_횡단"
+            "city_walking", "forest_exploration", "beach_walking", "mountain_climbing", 
+            "park_stroll", "alley_exploration", "riverside_walking", "field_crossing",
+            "rooftop_garden", "underground_passage", "bridge_crossing", "plaza_traversal"
         ]
         
         # Time contexts
         self.time_contexts = [
-            "새벽", "아침", "오전", "정오", "오후", "저녁", "밤", "자정"
+            "dawn", "morning", "forenoon", "noon", "afternoon", "evening", "night", "midnight"
         ]
         
         # Weather contexts
         self.weather_contexts = [
-            "맑음", "흐림", "비", "눈", "안개", "바람", "폭우", "소나기"
+            "clear", "cloudy", "rain", "snow", "fog", "windy", "storm", "shower"
         ]
     
     def generate_realistic_sensor_data(self, scenario: str, time: str, weather: str) -> Dict:
@@ -58,38 +58,38 @@ class SyntheticLiteraryDatasetGenerator:
         """
         # Temperature based on time and weather
         base_temp = {
-            "새벽": 5, "아침": 12, "오전": 18, "정오": 25,
-            "오후": 24, "저녁": 20, "밤": 15, "자정": 8
+            "dawn": 5, "morning": 12, "forenoon": 18, "noon": 25,
+            "afternoon": 24, "evening": 20, "night": 15, "midnight": 8
         }[time]
         
         weather_temp_offset = {
-            "맑음": 3, "흐림": 0, "비": -5, "눈": -10,
-            "안개": -2, "바람": -3, "폭우": -8, "소나기": -3
+            "clear": 3, "cloudy": 0, "rain": -5, "snow": -10,
+            "fog": -2, "windy": -3, "storm": -8, "shower": -3
         }[weather]
         
         temperature = base_temp + weather_temp_offset + random.gauss(0, 2)
         
         # Humidity based on weather
         base_humidity = {
-            "맑음": 45, "흐림": 65, "비": 85, "눈": 70,
-            "안개": 95, "바람": 50, "폭우": 90, "소나기": 80
+            "clear": 45, "cloudy": 65, "rain": 85, "snow": 70,
+            "fog": 95, "windy": 50, "storm": 90, "shower": 80
         }[weather]
         
         humidity = max(20, min(100, base_humidity + random.gauss(0, 10)))
         
         # Wind direction (random but contextual)
-        if "해변" in scenario:
+        if "beach" in scenario:
             wind_direction = random.uniform(0, np.pi/2)  # Mostly from ocean
-        elif "산" in scenario:
+        elif "mountain" in scenario:
             wind_direction = random.uniform(0, 2*np.pi)  # Variable mountain winds
         else:
             wind_direction = random.uniform(0, 2*np.pi)  # Urban variable winds
             
         # IMU data (simulated movement)
-        if "등반" in scenario:
+        if "climbing" in scenario:
             imu = [random.gauss(0, 2), random.gauss(0, 2), 9.8 + random.gauss(0, 0.5),
                    random.gauss(0, 0.3), random.gauss(0, 0.3), random.gauss(0, 0.1)]
-        elif "걷기" in scenario or "산책" in scenario:
+        elif "walking" in scenario or "stroll" in scenario:
             imu = [random.gauss(0, 0.5), random.gauss(0, 0.5), 9.8 + random.gauss(0, 0.2),
                    random.gauss(0, 0.1), random.gauss(0, 0.1), random.gauss(0, 0.05)]
         else:
