@@ -2,9 +2,24 @@ import json
 import random
 import numpy as np
 from typing import Dict, List, Tuple
-import openai
 from datetime import datetime
 import os
+import glob
+import re
+
+try:
+    import requests
+    REQUESTS_AVAILABLE = True
+except ImportError:
+    REQUESTS_AVAILABLE = False
+    requests = None
+
+try:
+    import openai
+    OPENAI_AVAILABLE = True
+except ImportError:
+    OPENAI_AVAILABLE = False
+    openai = None
 
 
 class SyntheticLiteraryDatasetGenerator:
@@ -13,9 +28,14 @@ class SyntheticLiteraryDatasetGenerator:
     Creates pairs of sensor data and corresponding literary paragraphs.
     """
     
-    def __init__(self, api_key: str = None):
+    def __init__(self, api_key: str = None, input_dir: str = None, use_ollama: bool = True, ollama_model: str = "llama3.2:3b"):
         self.api_key = api_key
-        if api_key:
+        self.input_dir = input_dir
+        self.use_ollama = use_ollama
+        self.ollama_model = ollama_model
+        self.ollama_url = "http://localhost:11434/api/generate"
+        
+        if api_key and OPENAI_AVAILABLE and not use_ollama:
             openai.api_key = api_key
             
         # Literary style templates
@@ -43,6 +63,36 @@ class SyntheticLiteraryDatasetGenerator:
         self.weather_contexts = [
             "clear", "cloudy", "rain", "snow", "fog", "windy", "storm", "shower"
         ]
+    
+    def _call_ollama(self, prompt: str, temperature: float = 0.7) -> str:
+        """
+        Call Ollama API for text generation.
+        
+        Args:
+            prompt: Text prompt for generation
+            temperature: Temperature for generation
+            
+        Returns:
+            str: Generated response
+        """
+        if not REQUESTS_AVAILABLE:
+            raise Exception("requests library not available")
+            
+        data = {
+            "model": self.ollama_model,
+            "prompt": prompt,
+            "stream": False,
+            "options": {
+                "temperature": temperature,
+                "num_predict": 300
+            }
+        }
+        
+        response = requests.post(self.ollama_url, json=data)
+        response.raise_for_status()
+        
+        result = response.json()
+        return result.get("response", "")
     
     def generate_realistic_sensor_data(self, scenario: str, time: str, weather: str) -> Dict:
         """
@@ -127,31 +177,31 @@ class SyntheticLiteraryDatasetGenerator:
         # Convert wind direction to descriptive terms
         wind_desc = self.wind_direction_to_description(wind_dir_deg)
         
-        # Create detailed prompt
-        prompt = f"""당신은 감각적이고 시적인 문체로 글을 쓰는 소설가입니다. 
-로봇이 수집한 환경 센서 데이터를 바탕으로 {style} 스타일의 문학적 단락을 작성해주세요.
+        # Create detailed prompt in English
+        prompt = f"""You are a novelist who writes with sensory and poetic style. 
+Please write a literary paragraph in {style} style based on the environmental sensor data collected by a robot.
 
-**상황 정보:**
-- 장소: {context['scenario'].replace('_', ' ')}
-- 시간: {context['time']}
-- 날씨: {context['weather']}
+**Context Information:**
+- Location: {context['scenario'].replace('_', ' ')}
+- Time: {context['time']}
+- Weather: {context['weather']}
 
-**센서 데이터:**
-- 온도: {temp}°C
-- 습도: {humidity}%  
-- 바람 방향: {wind_desc} (로봇 기준)
-- 움직임: {"활발한 이동" if abs(sensor_data['imu'][0]) > 1 else "조용한 이동"}
+**Sensor Data:**
+- Temperature: {temp}°C
+- Humidity: {humidity}%  
+- Wind direction: {wind_desc} (from robot's perspective)
+- Movement: {"active movement" if abs(sensor_data['imu'][0]) > 1 else "quiet movement"}
 
-**작성 요구사항:**
-1. 150-250자의 단락으로 작성
-2. 센서 데이터를 직접적으로 언급하지 말고 감각적 묘사로 표현
-3. {style} 특성을 반영한 문체 사용
-4. 온도, 습도, 바람의 느낌을 자연스럽게 녹여내기
-5. 로봇의 움직임과 환경의 상호작용 표현
+**Writing Requirements:**
+1. Write a 150-250 character paragraph
+2. Express sensor data through sensory descriptions, not direct mentions
+3. Use writing style that reflects {style} characteristics
+4. Naturally incorporate feelings of temperature, humidity, and wind
+5. Express interaction between robot's movement and environment
 
-예시 시작: "그는 걸었다..." 또는 "공기가..." 또는 "바람이..."로 시작해주세요.
+Example beginnings: "He walked..." or "The air..." or "The wind..."
 
-문학적 단락:"""
+Literary paragraph:"""
 
         return prompt
     
@@ -160,21 +210,301 @@ class SyntheticLiteraryDatasetGenerator:
         angle = angle_degrees % 360
         
         if -22.5 <= angle < 22.5 or 337.5 <= angle <= 360:
-            return "정면에서 불어오는"
+            return "blowing from the front"
         elif 22.5 <= angle < 67.5:
-            return "오른쪽 앞에서 비스듬히"
+            return "coming diagonally from the front right"
         elif 67.5 <= angle < 112.5:
-            return "오른쪽에서 스치는"
+            return "brushing from the right"
         elif 112.5 <= angle < 157.5:
-            return "오른쪽 뒤에서 밀어주는"
+            return "pushing from the back right"
         elif 157.5 <= angle < 202.5:
-            return "뒤에서 떠미는"
+            return "pushing from behind"
         elif 202.5 <= angle < 247.5:
-            return "왼쪽 뒤에서 감싸는"
+            return "wrapping from the back left"
         elif 247.5 <= angle < 292.5:
-            return "왼쪽에서 스치는"
+            return "brushing from the left"
         else:
-            return "왼쪽 앞에서 비스듬히"
+            return "coming diagonally from the front left"
+    
+    def load_novel_files(self) -> List[str]:
+        """
+        Load novel files from input directory.
+        
+        Returns:
+            list: List of novel text contents
+        """
+        if not self.input_dir:
+            return []
+            
+        novel_texts = []
+        file_patterns = ['*.txt', '*.md']
+        
+        for pattern in file_patterns:
+            files = glob.glob(os.path.join(self.input_dir, '**', pattern), recursive=True)
+            for file_path in files:
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        if len(content) > 100:  # Skip very short files
+                            novel_texts.append(content)
+                except Exception as e:
+                    print(f"Warning: Could not read {file_path}: {e}")
+                    
+        return novel_texts
+    
+    def extract_text_chunks(self, text: str, chunk_size: int = 500) -> List[str]:
+        """
+        Extract meaningful text chunks from novel text.
+        
+        Args:
+            text: Novel text content
+            chunk_size: Target size for each chunk
+            
+        Returns:
+            list: List of text chunks
+        """
+        # Split by paragraphs first
+        paragraphs = re.split(r'\n\s*\n', text.strip())
+        
+        chunks = []
+        current_chunk = ""
+        
+        for paragraph in paragraphs:
+            paragraph = paragraph.strip()
+            if not paragraph:
+                continue
+                
+            # If adding this paragraph would exceed chunk_size, save current chunk
+            if len(current_chunk) + len(paragraph) > chunk_size and current_chunk:
+                chunks.append(current_chunk.strip())
+                current_chunk = paragraph
+            else:
+                if current_chunk:
+                    current_chunk += "\n\n" + paragraph
+                else:
+                    current_chunk = paragraph
+        
+        # Add the last chunk if it exists
+        if current_chunk:
+            chunks.append(current_chunk.strip())
+            
+        # Filter out very short chunks
+        chunks = [chunk for chunk in chunks if len(chunk) > 100]
+        
+        return chunks
+    
+    def analyze_text_for_environment(self, text: str) -> Dict:
+        """
+        Use LLM to analyze text and extract environmental information.
+        
+        Args:
+            text: Text chunk to analyze
+            
+        Returns:
+            dict: Environmental information extracted from text
+        """
+        if not OPENAI_AVAILABLE or not self.api_key:
+            # Fallback: simple pattern-based analysis
+            return self.simple_environmental_analysis(text)
+            
+        prompt = f"""Analyze the following literary text and extract environmental information that could be measured by sensors. Focus on:
+
+1. Temperature indicators (hot, cold, warm, cool, etc.)
+2. Weather conditions (rain, snow, wind, fog, clear, etc.)
+3. Time of day (morning, afternoon, evening, night, etc.)
+4. Location type (city, forest, beach, indoor, etc.)
+5. Movement/activity level (walking, running, still, etc.)
+
+Text to analyze:
+"{text}"
+
+Please respond with a JSON object containing:
+{{
+  "temperature_hint": "cold/cool/mild/warm/hot",
+  "weather": "clear/cloudy/rain/snow/fog/windy/storm",
+  "time_of_day": "dawn/morning/forenoon/noon/afternoon/evening/night/midnight",
+  "location": "city_walking/forest_exploration/beach_walking/indoor/etc",
+  "movement": "still/walking/running/active",
+  "confidence": 0.0-1.0
+}}
+
+Only extract information that is clearly indicated in the text. If uncertain, use "unknown" and lower confidence."""
+
+        try:
+            if self.use_ollama and REQUESTS_AVAILABLE:
+                response = self._call_ollama(
+                    prompt="You are an expert at analyzing literary text for environmental details. Always respond with valid JSON.\n\n" + prompt,
+                    temperature=0.3
+                )
+                result_text = response.strip()
+            else:
+                response = openai.ChatCompletion.create(
+                    model="gpt-4",
+                    messages=[
+                        {"role": "system", "content": "You are an expert at analyzing literary text for environmental details. Always respond with valid JSON."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    max_tokens=300,
+                    temperature=0.3
+                )
+                
+                result_text = response.choices[0].message.content.strip()
+            
+            # Try to parse JSON response
+            try:
+                result = json.loads(result_text)
+                return result
+            except json.JSONDecodeError:
+                # If JSON parsing fails, try to extract JSON from the response
+                json_match = re.search(r'\{.*\}', result_text, re.DOTALL)
+                if json_match:
+                    result = json.loads(json_match.group())
+                    return result
+                else:
+                    # Fallback to simple analysis
+                    return self.simple_environmental_analysis(text)
+                    
+        except Exception as e:
+            print(f"LLM analysis failed: {e}")
+            return self.simple_environmental_analysis(text)
+    
+    def simple_environmental_analysis(self, text: str) -> Dict:
+        """
+        Fallback method for environmental analysis using simple patterns.
+        
+        Args:
+            text: Text to analyze
+            
+        Returns:
+            dict: Basic environmental information
+        """
+        text_lower = text.lower()
+        
+        # Temperature analysis
+        if any(word in text_lower for word in ['hot', 'burning', 'sweltering', 'scorching']):
+            temperature_hint = "hot"
+        elif any(word in text_lower for word in ['warm', 'mild', 'pleasant']):
+            temperature_hint = "warm"
+        elif any(word in text_lower for word in ['cold', 'freezing', 'icy', 'chilly']):
+            temperature_hint = "cold"
+        elif any(word in text_lower for word in ['cool', 'crisp']):
+            temperature_hint = "cool"
+        else:
+            temperature_hint = "mild"
+            
+        # Weather analysis
+        weather = "clear"  # default
+        if any(word in text_lower for word in ['rain', 'raining', 'shower', 'drizzle']):
+            weather = "rain"
+        elif any(word in text_lower for word in ['snow', 'snowing', 'blizzard']):
+            weather = "snow"
+        elif any(word in text_lower for word in ['fog', 'foggy', 'mist', 'misty']):
+            weather = "fog"
+        elif any(word in text_lower for word in ['wind', 'windy', 'breeze', 'gust']):
+            weather = "windy"
+        elif any(word in text_lower for word in ['storm', 'thunder', 'lightning']):
+            weather = "storm"
+        elif any(word in text_lower for word in ['cloud', 'cloudy', 'overcast']):
+            weather = "cloudy"
+            
+        # Time analysis
+        time_of_day = "afternoon"  # default
+        if any(word in text_lower for word in ['morning', 'dawn', 'sunrise']):
+            time_of_day = "morning"
+        elif any(word in text_lower for word in ['noon', 'midday']):
+            time_of_day = "noon"
+        elif any(word in text_lower for word in ['evening', 'dusk', 'sunset']):
+            time_of_day = "evening"
+        elif any(word in text_lower for word in ['night', 'midnight', 'darkness']):
+            time_of_day = "night"
+            
+        # Location analysis
+        location = "city_walking"  # default
+        if any(word in text_lower for word in ['forest', 'woods', 'trees', 'jungle']):
+            location = "forest_exploration"
+        elif any(word in text_lower for word in ['beach', 'ocean', 'sea', 'shore']):
+            location = "beach_walking"
+        elif any(word in text_lower for word in ['mountain', 'hill', 'peak', 'climb']):
+            location = "mountain_climbing"
+        elif any(word in text_lower for word in ['park', 'garden']):
+            location = "park_stroll"
+        elif any(word in text_lower for word in ['river', 'stream', 'creek']):
+            location = "riverside_walking"
+            
+        # Movement analysis
+        movement = "walking"  # default
+        if any(word in text_lower for word in ['run', 'running', 'sprint', 'rush']):
+            movement = "active"
+        elif any(word in text_lower for word in ['still', 'motionless', 'stationary', 'sitting']):
+            movement = "still"
+        elif any(word in text_lower for word in ['walk', 'walking', 'stroll']):
+            movement = "walking"
+            
+        return {
+            "temperature_hint": temperature_hint,
+            "weather": weather,
+            "time_of_day": time_of_day,
+            "location": location,
+            "movement": movement,
+            "confidence": 0.7  # Medium confidence for pattern-based analysis
+        }
+    
+    def generate_sensor_from_environment(self, env_info: Dict) -> Dict:
+        """
+        Generate realistic sensor data based on environmental information.
+        
+        Args:
+            env_info: Environmental information extracted from text
+            
+        Returns:
+            dict: Generated sensor data
+        """
+        # Map temperature hints to ranges
+        temp_ranges = {
+            "hot": (25, 35),
+            "warm": (18, 25),
+            "mild": (12, 18),
+            "cool": (5, 12),
+            "cold": (-5, 5)
+        }
+        
+        temp_range = temp_ranges.get(env_info.get("temperature_hint", "mild"), (12, 18))
+        temperature = random.uniform(temp_range[0], temp_range[1])
+        
+        # Generate humidity based on weather
+        humidity_base = {
+            "clear": 45, "cloudy": 65, "rain": 85, "snow": 70,
+            "fog": 95, "windy": 50, "storm": 90
+        }
+        base_humidity = humidity_base.get(env_info.get("weather", "clear"), 50)
+        humidity = max(20, min(100, base_humidity + random.gauss(0, 10)))
+        
+        # Generate wind direction
+        wind_direction = random.uniform(0, 2*np.pi)
+        
+        # Generate IMU based on movement
+        movement = env_info.get("movement", "walking")
+        if movement == "active":
+            imu = [random.gauss(0, 2), random.gauss(0, 2), 9.8 + random.gauss(0, 0.5),
+                   random.gauss(0, 0.3), random.gauss(0, 0.3), random.gauss(0, 0.1)]
+        elif movement == "still":
+            imu = [random.gauss(0, 0.1), random.gauss(0, 0.1), 9.8 + random.gauss(0, 0.05),
+                   random.gauss(0, 0.02), random.gauss(0, 0.02), random.gauss(0, 0.01)]
+        else:  # walking
+            imu = [random.gauss(0, 0.5), random.gauss(0, 0.5), 9.8 + random.gauss(0, 0.2),
+                   random.gauss(0, 0.1), random.gauss(0, 0.1), random.gauss(0, 0.05)]
+        
+        return {
+            "temperature": round(temperature, 1),
+            "humidity": round(humidity, 1),
+            "wind_direction": round(wind_direction, 3),
+            "imu": [round(x, 3) for x in imu],
+            "context": {
+                "scenario": env_info.get("location", "city_walking"),
+                "time": env_info.get("time_of_day", "afternoon"),
+                "weather": env_info.get("weather", "clear")
+            }
+        }
     
     def generate_literary_paragraph(self, prompt: str) -> str:
         """
@@ -186,51 +516,200 @@ class SyntheticLiteraryDatasetGenerator:
         Returns:
             str: Generated literary paragraph
         """
-        try:
-            response = openai.ChatCompletion.create(
-                model="gpt-4",
-                messages=[
-                    {"role": "system", "content": "당신은 뛰어난 한국어 문학 작가입니다."},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=300,
-                temperature=0.8
-            )
-            
-            return response.choices[0].message.content.strip()
-            
-        except Exception as e:
-            # Fallback template-based generation
+        if self.use_ollama and REQUESTS_AVAILABLE:
+            try:
+                response = self._call_ollama(
+                    prompt="You are an excellent English literary writer.\n\n" + prompt,
+                    temperature=0.8
+                )
+                return response.strip()
+            except Exception as e:
+                print(f"Warning: Ollama failed ({e}), falling back to template")
+                return self.generate_template_paragraph(prompt)
+        elif not OPENAI_AVAILABLE or not self.api_key:
+            # Use template-based generation
             return self.generate_template_paragraph(prompt)
+        else:    
+            try:
+                response = openai.ChatCompletion.create(
+                    model="gpt-4",
+                    messages=[
+                        {"role": "system", "content": "You are an excellent English literary writer."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    max_tokens=300,
+                    temperature=0.8
+                )
+                
+                return response.choices[0].message.content.strip()
+            except Exception as e:
+                # Fallback template-based generation
+                return self.generate_template_paragraph(prompt)
     
     def generate_template_paragraph(self, prompt: str) -> str:
         """
         Fallback template-based paragraph generation.
         """
         templates = [
-            "공기가 {temp_desc} 느껴지는 가운데, {wind_desc} 바람이 {body_part}을 스치며 지나갔다. {movement_desc} 그의 발걸음은 {ground_desc} 땅을 딛으며 {destination_desc}로 향했다.",
+            "The air felt {temp_desc} as {wind_desc} wind brushed past his {body_part}. {movement_desc}, his footsteps pressed against the {ground_desc} ground, heading {destination_desc}.",
             
-            "바람이 {wind_desc} 불어오자 {skin_sensation}이 느껴졌다. {temp_desc} 공기 속에서 {humidity_desc} 기운이 감돌았고, 그는 {movement_desc} 계속 걸어갔다.",
+            "As the wind blew {wind_desc}, he felt a {skin_sensation}. In the {temp_desc} air, a {humidity_desc} atmosphere lingered, and he {movement_desc} continued walking.",
             
-            "{time_desc} {wind_desc} 바람이 {clothing_desc}을 흔들었다. {temp_desc} 공기가 {face_desc}을 감싸는 가운데, {step_desc} 발걸음이 {ground_desc} 위를 울렸다."
+            "In the {time_desc}, {wind_desc} wind rustled his {clothing_desc}. As the {temp_desc} air enveloped his {face_desc}, his {step_desc} footsteps echoed on the {ground_desc} surface."
         ]
         
         # This is a simplified template - in practice, you'd extract context from prompt
         return random.choice(templates).format(
-            temp_desc="차가운" if "차가운" in prompt else "따뜻한",
-            wind_desc="세차게" if "강한" in prompt else "부드럽게",
-            body_part="얼굴",
-            movement_desc="조심스럽게",
-            ground_desc="굳은",
-            destination_desc="앞",
-            skin_sensation="서늘함",
-            humidity_desc="촉촉한",
-            time_desc="이른 아침",
-            clothing_desc="옷깃",
-            face_desc="뺨",
-            step_desc="느린"
+            temp_desc="cold" if "cold" in prompt else "warm",
+            wind_desc="fiercely" if "strong" in prompt else "gently",
+            body_part="face",
+            movement_desc="carefully",
+            ground_desc="firm",
+            destination_desc="forward",
+            skin_sensation="coolness",
+            humidity_desc="moist",
+            time_desc="early morning",
+            clothing_desc="collar",
+            face_desc="cheek",
+            step_desc="slow"
         )
     
+    def generate_novel_based_dataset(self, max_examples: int = 100, max_per_novel: int = None) -> List[Dict]:
+        """
+        Generate dataset from real novel files by analyzing text for environmental information.
+        
+        Args:
+            max_examples: Maximum number of examples to generate
+            max_per_novel: Maximum examples per novel (default: max_examples // 10)
+            
+        Returns:
+            list: Generated dataset examples
+        """
+        if not self.input_dir:
+            print("Warning: No input directory specified. Falling back to synthetic generation.")
+            return self.generate_dataset_batch(max_examples)
+            
+        print(f"Loading novel files from {self.input_dir}...")
+        novel_texts = self.load_novel_files()
+        
+        if not novel_texts:
+            print("Warning: No novel files found. Falling back to synthetic generation.")
+            return self.generate_dataset_batch(max_examples)
+            
+        print(f"Found {len(novel_texts)} novel files")
+        
+        # Calculate max examples per novel to ensure diversity
+        if max_per_novel is None:
+            max_per_novel = max(1, max_examples // max(10, len(novel_texts) // 10))
+        
+        print(f"Max examples per novel: {max_per_novel}")
+        
+        dataset = []
+        example_id = 0
+        
+        for text_idx, novel_text in enumerate(novel_texts):
+            print(f"Processing novel {text_idx + 1}/{len(novel_texts)}...")
+            
+            # Extract chunks from this novel
+            chunks = self.extract_text_chunks(novel_text)
+            print(f"  Extracted {len(chunks)} text chunks")
+            
+            examples_from_this_novel = 0
+            
+            for chunk_idx, chunk in enumerate(chunks):
+                if len(dataset) >= max_examples:
+                    break
+                
+                # Limit examples per novel to ensure diversity
+                if examples_from_this_novel >= max_per_novel:
+                    print(f"  Reached max examples ({max_per_novel}) for this novel")
+                    break
+                    
+                try:
+                    # Analyze chunk for environmental information
+                    env_info = self.analyze_text_for_environment(chunk)
+                    
+                    if env_info.get("confidence", 0) < 0.3:
+                        continue  # Skip low-confidence extractions
+                    
+                    # Generate sensor data from environmental info
+                    sensor_data = self.generate_sensor_from_environment(env_info)
+                    
+                    # Determine literary style based on text characteristics
+                    style = self.infer_literary_style(chunk)
+                    
+                    # Create prompt for this sensor-text pair
+                    prompt = self.create_literary_prompt(sensor_data, style)
+                    
+                    # Generate paragraph using LLM or template
+                    if self.use_ollama or self.api_key:
+                        paragraph = self.generate_literary_paragraph(prompt)
+                    else:
+                        paragraph = chunk[:500]  # Fallback to original text if no LLM
+                    
+                    # Create dataset entry
+                    entry = {
+                        "id": f"novel_based_{example_id:06d}",
+                        "sensor_data": sensor_data,
+                        "literary_style": style,
+                        "prompt": prompt,
+                        "target_paragraph": paragraph,
+                        "source_info": {
+                            "novel_index": text_idx,
+                            "chunk_index": chunk_idx,
+                            "environmental_analysis": env_info
+                        },
+                        "metadata": {
+                            "generated_at": datetime.now().isoformat(),
+                            "context": sensor_data["context"],
+                            "source": "novel_analysis"
+                        }
+                    }
+                    
+                    dataset.append(entry)
+                    example_id += 1
+                    examples_from_this_novel += 1
+                    
+                    if (len(dataset)) % 10 == 0:
+                        print(f"  Generated {len(dataset)}/{max_examples} examples")
+                        
+                except Exception as e:
+                    print(f"  Error processing chunk: {e}")
+                    continue
+            
+            print(f"  Generated {examples_from_this_novel} examples from this novel")
+            
+            if len(dataset) >= max_examples:
+                break
+        
+        print(f"Generated {len(dataset)} examples from novel analysis")
+        print(f"Examples distributed across {len(set(ex['source_info']['novel_index'] for ex in dataset))} different novels")
+        return dataset
+    
+    def infer_literary_style(self, text: str) -> str:
+        """
+        Infer the literary style of a text chunk.
+        
+        Args:
+            text: Text to analyze
+            
+        Returns:
+            str: Inferred literary style
+        """
+        text_lower = text.lower()
+        
+        # Simple heuristics for style detection
+        if any(phrase in text_lower for phrase in ['he thought', 'she thought', 'consciousness', 'stream']):
+            return "stream_of_consciousness"
+        elif any(phrase in text_lower for phrase in ['saw', 'heard', 'felt', 'smelled', 'tasted']):
+            return "sensory_description"
+        elif any(phrase in text_lower for phrase in ['journey', 'traveled', 'destination', 'place']):
+            return "travel_essay"
+        elif len([s for s in text.split('.') if len(s.strip()) > 100]) > 2:
+            return "modernist_novel"
+        else:
+            return "naturalist_style"
+
     def generate_dataset_batch(self, batch_size: int = 100) -> List[Dict]:
         """
         Generate a batch of sensor-literature pairs.
@@ -257,7 +736,7 @@ class SyntheticLiteraryDatasetGenerator:
             prompt = self.create_literary_prompt(sensor_data, style)
             
             # Generate paragraph
-            if self.api_key:
+            if self.use_ollama or self.api_key:
                 paragraph = self.generate_literary_paragraph(prompt)
             else:
                 paragraph = self.generate_template_paragraph(prompt)
@@ -279,6 +758,38 @@ class SyntheticLiteraryDatasetGenerator:
             
             if (i + 1) % 10 == 0:
                 print(f"Generated {i + 1}/{batch_size} examples")
+        
+        return dataset
+    
+    def generate_dataset(self, num_examples: int = 100, max_files: int = None, output_path: str = None, use_novels: bool = True) -> List[Dict]:
+        """
+        Generate complete dataset with specified number of examples.
+        
+        Args:
+            num_examples: Number of examples to generate
+            max_files: Maximum number of files to use (for controlling file diversity)
+            output_path: Optional path to save dataset
+            use_novels: Whether to use novel analysis or synthetic generation
+            
+        Returns:
+            list: Generated dataset
+        """
+        print(f"Generating {num_examples} examples...")
+        
+        if use_novels and self.input_dir:
+            print("Using novel-based generation...")
+            # Calculate max per novel to ensure diversity across novels
+            if max_files:
+                max_per_novel = max(1, num_examples // max_files)
+            else:
+                max_per_novel = max(1, num_examples // 20)  # Default: distribute across at least 20 novels
+            dataset = self.generate_novel_based_dataset(max_examples=num_examples, max_per_novel=max_per_novel)
+        else:
+            print("Using synthetic generation...")
+            dataset = self.generate_dataset_batch(batch_size=num_examples)
+        
+        if output_path:
+            self.save_dataset(dataset, output_path)
         
         return dataset
     

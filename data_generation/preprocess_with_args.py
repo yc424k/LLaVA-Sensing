@@ -28,14 +28,16 @@ def main():
                        help='Minimum sensory content score')
     
     # 모드 선택
-    parser.add_argument('--mode', choices=['simple', 'advanced'], default='simple',
-                       help='Processing mode: simple (no deps) or advanced (with deps)')
+    parser.add_argument('--mode', choices=['simple', 'advanced', 'llm'], default='simple',
+                       help='Processing mode: simple (no deps), advanced (with deps), or llm (AI-enhanced)')
     parser.add_argument('--verbose', '-v', action='store_true',
                        help='Verbose output')
     parser.add_argument('--auto_split', action='store_true', default=True,
                        help='Automatically split dataset into chunks (default: True)')
     parser.add_argument('--chunk_size', type=int, default=100,
                        help='Number of examples per chunk when splitting')
+    parser.add_argument('--num_examples', type=int, default=None,
+                       help='Total number of examples to generate (overrides max_files calculation for LLM mode)')
     
     args = parser.parse_args()
     
@@ -85,9 +87,46 @@ def main():
                 print(f"Error: Advanced mode requires additional dependencies: {e}")
                 print("Try running: pip install numpy pandas nltk scikit-learn")
                 sys.exit(1)
+        
+        elif args.mode == 'llm':
+            try:
+                from synthetic_dataset_generator import SyntheticLiteraryDatasetGenerator
+                
+                if args.verbose:
+                    print(f"\n=== LLM Mode Processing ===")
+                    print("Using AI-enhanced text analysis and generation")
+                
+                generator = SyntheticLiteraryDatasetGenerator(input_dir=args.input_dir)
+                
+                # Determine number of examples to generate
+                if args.num_examples is not None:
+                    num_examples = args.num_examples
+                else:
+                    num_examples = args.max_files * 100
+                
+                # Generate dataset from novel analysis
+                dataset = generator.generate_dataset(
+                    num_examples=num_examples,
+                    max_files=args.max_files,
+                    output_path=f"{args.output_dir}/llm_dataset.json",
+                    use_novels=True
+                )
+                
+                if args.verbose:
+                    print(f"\n=== LLM Processing Complete ===")
+                    print(f"Total examples: {len(dataset)}")
+                    print(f"Output saved to: {args.output_dir}/llm_dataset.json")
+            
+            except ImportError as e:
+                print(f"Error: LLM mode requires additional dependencies: {e}")
+                print("Try running: pip install openai sentence-transformers")
+                sys.exit(1)
+            except Exception as e:
+                print(f"Error in LLM mode: {e}")
+                sys.exit(1)
     
         # Auto-split dataset if requested
-        if args.auto_split and args.mode == 'simple':
+        if args.auto_split and args.mode in ['simple', 'llm']:
             try:
                 from split_dataset import split_json_dataset
                 
@@ -95,7 +134,14 @@ def main():
                     print(f"\n=== Auto-splitting dataset ===")
                 
                 chunks_dir = f"{args.output_dir}/chunks"
-                split_json_dataset(output_file, chunks_dir, args.chunk_size)
+                
+                # Determine the dataset file based on mode
+                if args.mode == 'simple':
+                    dataset_file = output_file
+                elif args.mode == 'llm':
+                    dataset_file = f"{args.output_dir}/llm_dataset.json"
+                
+                split_json_dataset(dataset_file, chunks_dir, args.chunk_size)
                 
                 if args.verbose:
                     print(f"Dataset split into chunks of {args.chunk_size} examples")
