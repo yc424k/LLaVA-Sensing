@@ -28,7 +28,12 @@ class SyntheticLiteraryDatasetGenerator:
     Creates pairs of sensor data and corresponding literary paragraphs.
     """
     
-    def __init__(self, api_key: str = None, input_dir: str = None, use_ollama: bool = True, ollama_model: str = "llama3.2:3b"):
+    def __init__(self, api_key: str = None, input_dir: str = None, use_ollama: bool = True, ollama_model: str = "llama3.1:8b"):
+        # Model history:
+        # - llama3.2:3b (original, Q4_K_M quantization, 2.0GB)
+        # - deepseek-r1:8b (4.9GB)
+        # - gpt-oss:20b (13GB, too large)
+        # - llama3.1:8b (current)
         self.api_key = api_key
         self.input_dir = input_dir
         self.use_ollama = use_ollama
