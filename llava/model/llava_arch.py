@@ -21,6 +21,7 @@ import time
 import torch
 import torch.nn as nn
 from .multimodal_encoder.builder import build_vision_tower
+from .multimodal_encoder.environmental_sensor_encoder import EnvironmentalSensorEncoder
 from .multimodal_resampler.builder import build_vision_resampler
 from .multimodal_projector.builder import build_vision_projector
 
@@ -44,6 +45,10 @@ class LlavaMetaModel:
 
             if "unpad" in getattr(config, "mm_patch_merge_type", ""):
                 self.image_newline = nn.Parameter(torch.empty(config.hidden_size, dtype=self.dtype))
+        
+        # Initialize environmental sensor encoder
+        if getattr(config, "use_sensor_encoder", False):
+            self.sensor_encoder = EnvironmentalSensorEncoder(config)
 
     def get_vision_tower(self):
         vision_tower = getattr(self, "vision_tower", None)

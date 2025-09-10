@@ -54,6 +54,15 @@ class LlavaQwenForCausalLM(Qwen2ForCausalLM, LlavaMetaForCausalLM):
 
         self.model = LlavaQwenModel(config)
         self.lm_head = nn.Linear(config.hidden_size, config.vocab_size, bias=False)
+        
+        # Add sensor encoder if requested
+        if getattr(config, 'use_sensor_encoder', False):
+            from llava.model.multimodal_encoder.environmental_sensor_encoder import EnvironmentalSensorEncoder
+            self.sensor_encoder = EnvironmentalSensorEncoder(config)
+            print("Added EnvironmentalSensorEncoder to LlavaQwenForCausalLM")
+        else:
+            self.sensor_encoder = None
+        
         # Initialize weights and apply final processing
         self.post_init()
 
@@ -73,14 +82,44 @@ class LlavaQwenForCausalLM(Qwen2ForCausalLM, LlavaMetaForCausalLM):
         output_hidden_states: Optional[bool] = None,
         images: Optional[torch.FloatTensor] = None,
         image_sizes: Optional[List[List[int]]] = None,
+        sensor_data: Optional[Dict] = None,
         return_dict: Optional[bool] = None,
         modalities: Optional[List[str]] = ["image"],
         dpo_forward: Optional[bool] = False,
         cache_position=None,
     ) -> Union[Tuple, CausalLMOutputWithPast]:
 
+        # Process sensor data if available
+        sensor_embeddings = None
+        if sensor_data is not None and self.sensor_encoder is not None:
+            sensor_embeddings = self.sensor_encoder(sensor_data)  # [batch_size, 1, hidden_size]
+            
         if inputs_embeds is None:
             (input_ids, position_ids, attention_mask, past_key_values, inputs_embeds, labels) = self.prepare_inputs_labels_for_multimodal(input_ids, position_ids, attention_mask, past_key_values, labels, images, modalities, image_sizes)
+            
+        # Integrate sensor embeddings into input embeddings if available
+        if sensor_embeddings is not None and inputs_embeds is not None:
+            # Prepend sensor embeddings to the input sequence
+            inputs_embeds = torch.cat([sensor_embeddings, inputs_embeds], dim=1)  # [batch_size, seq_len+1, hidden_size]
+            
+            # Extend attention mask for sensor token
+            if attention_mask is not None:
+                sensor_attention_mask = torch.ones(attention_mask.shape[0], 1, device=attention_mask.device, dtype=attention_mask.dtype)
+                attention_mask = torch.cat([sensor_attention_mask, attention_mask], dim=1)
+            
+            # Adjust position_ids if provided
+            if position_ids is not None:
+                # Shift position_ids by 1 to account for sensor token
+                position_ids = position_ids + 1
+                # Add position 0 for sensor token
+                sensor_position_ids = torch.zeros(position_ids.shape[0], 1, device=position_ids.device, dtype=position_ids.dtype)
+                position_ids = torch.cat([sensor_position_ids, position_ids], dim=1)
+                
+            # Adjust labels if provided (sensor token should be ignored in loss calculation)
+            if labels is not None:
+                from llava.constants import IGNORE_INDEX
+                sensor_labels = torch.full((labels.shape[0], 1), IGNORE_INDEX, device=labels.device, dtype=labels.dtype)
+                labels = torch.cat([sensor_labels, labels], dim=1)
 
         if dpo_forward:
             outputs = self.model(

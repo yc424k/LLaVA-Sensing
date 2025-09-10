@@ -1,10 +1,12 @@
 import os
+import math
+import time
 import torch
 import torch.nn as nn
 import datetime
 
 from accelerate import Accelerator
-from accelerate.utils import InitProcessGroupKwargs, GradientAccumulationPlugin
+from accelerate.utils import InitProcessGroupKwargs, GradientAccumulationPlugin, DistributedType
 from torch.utils.data import Dataset, Sampler, DataLoader
 
 from trl.trainer import DPOTrainer
@@ -12,9 +14,19 @@ from trl.trainer.utils import DPODataCollatorWithPadding
 
 from transformers import Trainer
 from transformers.trainer import is_sagemaker_mp_enabled, get_parameter_names, has_length, ALL_LAYERNORM_LAYERS, logger, is_accelerate_available, is_datasets_available, GradientAccumulationPlugin
-from transformers.trainer_utils import seed_worker
+from transformers.utils import is_torch_xla_available
+from transformers.trainer_utils import seed_worker, PREFIX_CHECKPOINT_DIR, speed_metrics, denumpify_detensorize, EvalPrediction
+# Custom function to count model parameters
+def get_model_param_count(model, trainable_only=False):
+    if trainable_only:
+        return sum(p.numel() for p in model.parameters() if p.requires_grad)
+    else:
+        return sum(p.numel() for p in model.parameters())
+from transformers.trainer_callback import TrainerState, TrainerControl
+from transformers.debug_utils import DebugOption
 from transformers.trainer_pt_utils import get_length_grouped_indices as get_length_grouped_indices_hf
 from transformers.trainer_pt_utils import AcceleratorConfig
+from transformers.deepspeed import deepspeed_init
 from typing import List, Optional
 from datetime import timedelta
 
@@ -453,9 +465,16 @@ class LLaVATrainer(Trainer):
         rank0_print("Setting NCCL timeout to INF to avoid running errors.")
 
         # create accelerator object
-        self.accelerator = Accelerator(
-            dispatch_batches=self.args.dispatch_batches, split_batches=self.args.split_batches, deepspeed_plugin=self.args.deepspeed_plugin, gradient_accumulation_plugin=gradient_accumulation_plugin, kwargs_handlers=[accelerator_kwargs]
-        )
+        # Check if dispatch_batches is supported in this accelerate version
+        try:
+            self.accelerator = Accelerator(
+                dispatch_batches=self.args.dispatch_batches, split_batches=self.args.split_batches, deepspeed_plugin=self.args.deepspeed_plugin, gradient_accumulation_plugin=gradient_accumulation_plugin, kwargs_handlers=[accelerator_kwargs]
+            )
+        except TypeError:
+            # Fallback for older accelerate versions
+            self.accelerator = Accelerator(
+                split_batches=self.args.split_batches, deepspeed_plugin=self.args.deepspeed_plugin, gradient_accumulation_plugin=gradient_accumulation_plugin, kwargs_handlers=[accelerator_kwargs]
+            )
         # some Trainer classes need to use `gather` instead of `gather_for_metrics`, thus we store a flag
         self.gather_function = self.accelerator.gather_for_metrics
 
@@ -649,7 +668,6 @@ class LLaVATrainer(Trainer):
         if getattr(self.args, "tune_mm_mlp_adapter", False) or (
             hasattr(self.args, "mm_tunable_parts") and (len(self.args.mm_tunable_parts.split(",")) == 1 and ("mm_mlp_adapter" in self.args.mm_tunable_parts or "mm_vision_resampler" in self.args.mm_tunable_parts))
         ):
-            from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
 
             checkpoint_folder = f"{PREFIX_CHECKPOINT_DIR}-{self.state.global_step}"
 
@@ -1250,7 +1268,6 @@ class LLaVADPOTrainer(DPOTrainer):
         if getattr(self.args, "tune_mm_mlp_adapter", False) or (
             hasattr(self.args, "mm_tunable_parts") and (len(self.args.mm_tunable_parts.split(",")) == 1 and ("mm_mlp_adapter" in self.args.mm_tunable_parts or "mm_vision_resampler" in self.args.mm_tunable_parts))
         ):
-            from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
 
             checkpoint_folder = f"{PREFIX_CHECKPOINT_DIR}-{self.state.global_step}"
 
@@ -1274,8 +1291,7 @@ class LLaVADPOTrainer(DPOTrainer):
             # print(type(unwrap_model(model)))
             # print(unwrap_model(model).config)
             if self.args.lora_enable:
-                from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
-
+    
                 checkpoint_folder = f"{PREFIX_CHECKPOINT_DIR}-{self.state.global_step}"
                 run_dir = self._get_output_dir(trial=trial)
                 output_dir = os.path.join(run_dir, checkpoint_folder)

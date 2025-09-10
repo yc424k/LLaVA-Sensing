@@ -25,7 +25,7 @@ class DatasetQualityController:
     def __init__(self):
         self.min_length = 100
         self.max_length = 400
-        self.required_keywords = ["바람", "공기", "느낌", "감각"]
+        self.required_keywords = ["wind", "air", "feel", "sense", "sensation", "atmosphere"]
         
     def validate_paragraph(self, paragraph: str, sensor_data: Dict) -> Dict:
         """
@@ -62,16 +62,16 @@ class DatasetQualityController:
     def _check_temperature_mention(self, paragraph: str, temperature: float) -> bool:
         """Check if temperature context is reflected in text."""
         if temperature < 10:
-            return any(word in paragraph for word in ["차가운", "추운", "시원한", "얼어"])
+            return any(word in paragraph.lower() for word in ["cold", "cool", "chilly", "freezing", "icy", "frigid"])
         elif temperature > 25:
-            return any(word in paragraph for word in ["따뜻한", "뜨거운", "더운", "무더운"])
+            return any(word in paragraph.lower() for word in ["warm", "hot", "heated", "sweltering", "scorching", "burning"])
         else:
             return True  # Moderate temperature - less strict
     
     def _check_wind_mention(self, paragraph: str) -> bool:
         """Check if wind is mentioned or implied."""
-        wind_words = ["바람", "스치", "불어", "흔들", "휘날", "스며"]
-        return any(word in paragraph for word in wind_words)
+        wind_words = ["wind", "breeze", "gust", "blow", "brush", "sweep", "swirl", "whip", "rustle", "flutter"]
+        return any(word in paragraph.lower() for word in wind_words)
     
     def _calculate_coherence(self, paragraph: str) -> float:
         """Calculate text coherence (simplified)."""

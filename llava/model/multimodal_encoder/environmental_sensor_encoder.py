@@ -117,22 +117,17 @@ class EnvironmentalSensorEncoder(nn.Module):
         temp_features = self.temp_embed(sensor_data['temperature'])  # [B, embed_dim]
         humidity_features = self.humidity_embed(sensor_data['humidity'])  # [B, embed_dim]
         
-        # Encode wind direction as unit vector
-        wind_angle = sensor_data['wind_direction']
-        wind_vector = torch.stack([
-            torch.cos(wind_angle.squeeze(-1)),
-            torch.sin(wind_angle.squeeze(-1))
-        ], dim=-1)
+        # Wind direction is already in [cos, sin] format from preprocessing
+        wind_vector = sensor_data['wind_direction']  # [B, 2] - already [cos, sin]
         wind_features = self.wind_embed(wind_vector)  # [B, embed_dim]
         
         # Encode IMU data
         imu_features = self.imu_embed(sensor_data['imu'])  # [B, embed_dim]
         
         # Compute robot-relative wind direction
-        relative_wind = self.compute_robot_relative_wind(
-            sensor_data['wind_direction'].squeeze(-1), 
-            sensor_data['imu']
-        )
+        # Convert wind_vector [cos, sin] back to angle for relative calculation
+        wind_angle = torch.atan2(wind_vector[:, 1], wind_vector[:, 0])  # [B]
+        relative_wind = self.compute_robot_relative_wind(wind_angle, sensor_data['imu'])
         relative_wind_features = self.relative_wind_embed(relative_wind)  # [B, embed_dim]
         
         # Stack all sensor features
@@ -205,49 +200,49 @@ def interpret_relative_wind_direction(relative_wind_vector):
     # Literary descriptions based on relative direction
     if -22.5 <= angle_degrees < 22.5 or 337.5 <= angle_degrees < 360:
         return {
-            "direction": "앞에서",
-            "sensation": "마주치는", 
-            "description": "정면으로 불어오는 바람이 얼굴을 스치며"
+            "direction": "from ahead",
+            "sensation": "confronting", 
+            "description": "the wind blowing straight ahead brushes against the face"
         }
     elif 22.5 <= angle_degrees < 67.5:
         return {
-            "direction": "오른쪽 앞에서",
-            "sensation": "비스듬히 스며드는",
-            "description": "오른쪽으로 기울어진 바람이 어깨를 감싸며"
+            "direction": "from the right front",
+            "sensation": "slanting and penetrating",
+            "description": "the wind tilting to the right embraces the shoulder"
         }
     elif 67.5 <= angle_degrees < 112.5:
         return {
-            "direction": "오른쪽에서", 
-            "sensation": "옆으로 스치는",
-            "description": "오른쪽에서 불어오는 바람이 몸을 스치며"
+            "direction": "from the right", 
+            "sensation": "brushing sideways",
+            "description": "the wind blowing from the right brushes against the body"
         }
     elif 112.5 <= angle_degrees < 157.5:
         return {
-            "direction": "오른쪽 뒤에서",
-            "sensation": "뒤따라오는", 
-            "description": "뒤에서 밀어주는 바람이 등을 어루만지며"
+            "direction": "from the right rear",
+            "sensation": "following behind", 
+            "description": "the wind pushing from behind caresses the back"
         }
     elif 157.5 <= angle_degrees < 202.5:
         return {
-            "direction": "뒤에서",
-            "sensation": "떠미는",
-            "description": "뒤에서 불어오는 바람이 등을 밀어내며"
+            "direction": "from behind",
+            "sensation": "pushing",
+            "description": "the wind blowing from behind pushes against the back"
         }
     elif 202.5 <= angle_degrees < 247.5:
         return {
-            "direction": "왼쪽 뒤에서", 
-            "sensation": "뒤따라오는",
-            "description": "왼쪽 뒤에서 불어오는 바람이 어깨를 감싸며"
+            "direction": "from the left rear", 
+            "sensation": "following behind",
+            "description": "the wind blowing from the left rear embraces the shoulder"
         }
     elif 247.5 <= angle_degrees < 292.5:
         return {
-            "direction": "왼쪽에서",
-            "sensation": "옆으로 스치는", 
-            "description": "왼쪽에서 불어오는 바람이 몸을 스치며"
+            "direction": "from the left",
+            "sensation": "brushing sideways", 
+            "description": "the wind blowing from the left brushes against the body"
         }
     else:  # 292.5 <= angle_degrees < 337.5
         return {
-            "direction": "왼쪽 앞에서",
-            "sensation": "비스듬히 스며드는",
-            "description": "왼쪽으로 기울어진 바람이 어깨를 감싸며"
+            "direction": "from the left front",
+            "sensation": "slanting and penetrating",
+            "description": "the wind tilting to the left embraces the shoulder"
         }
