@@ -71,3 +71,9 @@ playground/*.json
 mlx_configs/
 data_processing/
 # demo/
+
+#Big Size Data
+llm_dataset.json
+
+#Data Processed Files
+/data_gereration/data/processed/*
