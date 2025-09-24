@@ -3,6 +3,8 @@
 간단히 논문 작성이나 코드 리뷰 시에 센서 융합 관련 파일들을 빠르게 찾을 수 있도록 정리했습니다. 기본 LLaVA 코드와 대비되는 연구 추가분 위주로 분류했습니다.
 
 ## 1. 데이터 전처리 & 유틸
+- `stage1_training/train/modules/environmental_sensor_encoder.py`
+  - 센서 임베딩 및 크로스모달 어텐션.
 - `stage1_training/train/modules/sensor_preprocessing.py`
   - 물리 센서 값을 정규화하고 텐서로 변환.
 - `stage0_data_processing/data_generation/`
