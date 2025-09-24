@@ -1,0 +1,43 @@
+{
+  "total_examples": 4652,
+  "generation_method": "hybrid",
+  "style_distribution": {
+    "modernist": 2764,
+    "travel": 1888
+  },
+  "average_llm_confidence": 0.7901117798796218,
+  "temperature_range": [
+    -20.0,
+    40.0
+  ],
+  "humidity_range": [
+    20.0,
+    90.0
+  ],
+  "avg_passage_length": 798,
+  "weather_distribution": {
+    "clear": 4176,
+    "cloudy": 274,
+    "storm": 27,
+    "rain": 76,
+    "windy": 45,
+    "snow": 10,
+    "fog": 32,
+    "sunny": 7,
+    "overcast": 1,
+    "hazy": 1,
+    "windy/storm": 1,
+    "squalls": 1,
+    "partly_cloudy": 1
+  },
+  "location_distribution": {
+    "general_walking": 782,
+    "city_walking": 2542,
+    "field_crossing": 89,
+    "forest_exploration": 46,
+    "beach_walking": 995,
+    "mountain_climbing": 66,
+    "riverside_walking": 132
+  },
+  "high_confidence_examples": 4209
+}

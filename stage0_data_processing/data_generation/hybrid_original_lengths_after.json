@@ -1,0 +1,46 @@
+{
+  "total_samples": 61801,
+  "statistics": {
+    "mean": 1777.2851733790715,
+    "median": 2196,
+    "min": 170,
+    "max": 5001,
+    "percentiles": {
+      "50th": 2196,
+      "75th": 2441,
+      "90th": 2490,
+      "95th": 3220,
+      "99th": 4973
+    }
+  },
+  "length_bins": {
+    "0-1K": {
+      "count": 22666,
+      "percentage": 36.675781945275965
+    },
+    "1K-2K": {
+      "count": 6214,
+      "percentage": 10.054853481335254
+    },
+    "2K-5K": {
+      "count": 32871,
+      "percentage": 53.18845973366126
+    },
+    "5K-10K": {
+      "count": 50,
+      "percentage": 0.0809048397275125
+    },
+    "10K-20K": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "20K-50K": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "50K+": {
+      "count": 0,
+      "percentage": 0.0
+    }
+  }
+}

@@ -13,7 +13,7 @@
 #    limitations under the License.
 
 
-from typing import List, Optional, Tuple, Union
+from typing import Dict, List, Optional, Tuple, Union
 
 import torch
 import torch.nn as nn
@@ -30,6 +30,12 @@ from transformers.modeling_outputs import CausalLMOutputWithPast
 from transformers.generation.utils import GenerateOutput
 
 from llava.model.llava_arch import LlavaMetaModel, LlavaMetaForCausalLM
+
+
+try:
+    from llava.model.multimodal_encoder.environmental_sensor_encoder import EnvironmentalSensorEncoder
+except ImportError:
+    EnvironmentalSensorEncoder = None
 
 
 class LlavaConfig(LlamaConfig):
@@ -60,6 +66,11 @@ class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
 
         self.model = LlavaLlamaModel(config)
         self.lm_head = nn.Linear(config.hidden_size, config.vocab_size, bias=False)
+
+        if getattr(config, 'use_sensor_encoder', False) and EnvironmentalSensorEncoder is not None:
+            self.sensor_encoder = EnvironmentalSensorEncoder(config)
+        else:
+            self.sensor_encoder = None
         # Initialize weights and apply final processing
         self.post_init()
 
@@ -83,10 +94,36 @@ class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
         modalities: Optional[List[str]] = ["image"],
         dpo_forward: Optional[bool] = None,
         cache_position=None,
+        sensor_data: Optional[Dict] = None,
     ) -> Union[Tuple, CausalLMOutputWithPast]:
+
+        sensor_embeddings = None
+        if sensor_data is not None:
+            encoder = getattr(self, 'sensor_encoder', None)
+            if encoder is None and hasattr(self.model, 'sensor_encoder'):
+                encoder = self.model.sensor_encoder
+            if encoder is not None:
+                sensor_embeddings = encoder(sensor_data)
 
         if inputs_embeds is None:
             (input_ids, position_ids, attention_mask, past_key_values, inputs_embeds, labels) = self.prepare_inputs_labels_for_multimodal(input_ids, position_ids, attention_mask, past_key_values, labels, images, modalities, image_sizes)
+
+        if sensor_embeddings is not None and inputs_embeds is not None:
+            inputs_embeds = torch.cat([sensor_embeddings, inputs_embeds], dim=1)
+
+            if attention_mask is not None:
+                sensor_attention_mask = torch.ones(attention_mask.shape[0], 1, device=attention_mask.device, dtype=attention_mask.dtype)
+                attention_mask = torch.cat([sensor_attention_mask, attention_mask], dim=1)
+
+            if position_ids is not None:
+                position_ids = position_ids + 1
+                sensor_position_ids = torch.zeros(position_ids.shape[0], 1, device=position_ids.device, dtype=position_ids.dtype)
+                position_ids = torch.cat([sensor_position_ids, position_ids], dim=1)
+
+            if labels is not None:
+                from llava.constants import IGNORE_INDEX
+                sensor_labels = torch.full((labels.shape[0], 1), IGNORE_INDEX, device=labels.device, dtype=labels.dtype)
+                labels = torch.cat([sensor_labels, labels], dim=1)
 
         if dpo_forward:
             outputs = self.model(

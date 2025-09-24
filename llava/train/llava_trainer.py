@@ -15,7 +15,14 @@ from trl.trainer.utils import DPODataCollatorWithPadding
 from transformers import Trainer
 from transformers.trainer import is_sagemaker_mp_enabled, get_parameter_names, has_length, ALL_LAYERNORM_LAYERS, logger, is_accelerate_available, is_datasets_available, GradientAccumulationPlugin
 from transformers.utils import is_torch_xla_available
-from transformers.trainer_utils import seed_worker, PREFIX_CHECKPOINT_DIR, speed_metrics, denumpify_detensorize, EvalPrediction
+from transformers.trainer_utils import (
+    seed_worker,
+    PREFIX_CHECKPOINT_DIR,
+    speed_metrics,
+    denumpify_detensorize,
+    EvalPrediction,
+    TrainOutput,
+)
 # Custom function to count model parameters
 def get_model_param_count(model, trainable_only=False):
     if trainable_only:
@@ -1238,13 +1245,8 @@ class LLaVATrainer(Trainer):
         if self.neftune_noise_alpha is not None:
             self._deactivate_neftune(self.model)
 
-        plot_graphs_based_on_log_history(
-            log_history=self.state.log_history,
-            output_dir=run_dir,
-            metrics=["train_loss"],
-        )
-
-        return TrainOutput(self.state.global_step, train_loss, metrics)
+        output = TrainOutput(self.state.global_step, train_loss, metrics)
+        return output
 
 
 class LLaVADPOTrainer(DPOTrainer):

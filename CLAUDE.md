@@ -27,7 +27,7 @@ The environmental sensor encoder handles:
 
 ### Data Generation Pipeline
 
-- Located in `data_generation/` directory
+- Located in `stage0_data_processing/data_generation/`
 - Processes large datasets into chunks for training
 - Custom dataset readers and processors
 - Novel dataset processing with chunking capabilities
@@ -49,17 +49,8 @@ pip install -e ".[train]"
 ### Training
 
 ```bash
-# Single image training
-bash scripts/train/finetune_si.sh
-
-# OneVision training
-bash scripts/train/finetune_ov.sh
-
-# DPO training
-bash scripts/train/dpo.sh
-
-# Pretraining
-bash scripts/train/pretrain_clip.sh
+# Example training entrypoint
+bash stage1_training/train/finetune_sensor_literature_llama3_8b.sh
 ```
 
 ### Evaluation
@@ -70,7 +61,7 @@ Use the [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) framework for
 
 ```bash
 # Basic inference using predict.py for Cog deployment
-python predict.py
+python stage2_inference/predict.py
 
 # Use SGLang for faster inference and deployment
 # See documentation in README for SGLang setup
@@ -80,13 +71,13 @@ python predict.py
 
 ```bash
 # Process datasets into chunks
-python data_generation/dataset_pipeline.py
+python stage0_data_processing/data_generation/dataset_pipeline.py
 
 # Split datasets
-python data_generation/split_dataset.py
+python stage0_data_processing/data_generation/split_dataset.py
 
 # Process novel datasets
-python data_generation/simple_novel_processor.py
+python stage0_data_processing/data_generation/simple_novel_processor.py
 ```
 
 ## Code Organization
@@ -102,14 +93,14 @@ python data_generation/simple_novel_processor.py
 ### Training Components
 
 - `llava/train/` - Training scripts and utilities
-- `scripts/train/` - Shell scripts for various training configurations
-- Configuration files use YAML format (see `scripts/train/*.yaml`)
+- `stage1_training/train/` - Shell scripts for various training configurations
+- Configuration files use YAML format (see `stage1_training/train/*.yaml`)
 
 ### Evaluation & Serving
 
 - `llava/eval/` - Evaluation utilities
 - `llava/serve/` - Model serving components
-- `predict.py` - Cog-compatible prediction interface
+- `stage2_inference/predict.py` - Cog-compatible prediction interface
 
 ## Environment Configuration
 
@@ -155,7 +146,7 @@ Supports various base models:
 
 - Uses Black formatter with 240 character line length
 - DeepSpeed configurations available in `scripts/zero*.json`
-- Model configurations via YAML files in `scripts/train/`
+- Model configurations via YAML files in `stage1_training/train/`
 
 ## Debugging & Development
 
