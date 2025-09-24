@@ -36,4 +36,4 @@ stage1_training/
 
 ## 참고
 - DeepSpeed 설정 파일은 그대로 `stage1_training/train/zero*.json`에 보관되어 있습니다.
-- 파인튜닝 로직은 `stage1_training/train/modules/train_sensor_literature.py`에서 수행되며, 센서 인코더 사용 여부는 스크립트 인자에서 제어합니다.
+- 파인튜닝 로직은 `stage1_training/train/modules/train_sensor_literature.py`에서 수행되며, 센서 인코더(`stage1_training/train/modules/environmental_sensor_encoder.py`) 사용 여부는 스크립트 인자에서 제어합니다.
