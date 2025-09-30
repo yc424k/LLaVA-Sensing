@@ -1,7 +1,7 @@
 import json
 import random
 import numpy as np
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 from datetime import datetime
 import os
 import glob
@@ -28,7 +28,16 @@ class SyntheticLiteraryDatasetGenerator:
     Creates pairs of sensor data and corresponding literary paragraphs.
     """
     
-    def __init__(self, api_key: str = None, input_dir: str = None, use_ollama: bool = True, ollama_model: str = "llama3.1:8b"):
+    def __init__(
+        self,
+        api_key: str = None,
+        input_dir: str = None,
+        use_ollama: bool = True,
+        ollama_model: str = "llama3.1:8b",
+        use_google_ai: bool = False,
+        google_api_key: Optional[str] = None,
+        google_model: str = "gemini-2.5-flash-lite"
+    ):
         # Model history:
         # - llama3.2:3b (original, Q4_K_M quantization, 2.0GB)
         # - deepseek-r1:8b (4.9GB)
@@ -37,9 +46,13 @@ class SyntheticLiteraryDatasetGenerator:
         self.api_key = api_key
         self.input_dir = input_dir
         self.use_ollama = use_ollama
+        self.use_google_ai = use_google_ai
+        self.google_api_key = google_api_key or os.getenv("GOOGLE_API_KEY")
+        self.google_model = google_model
         self.ollama_model = ollama_model
         self.ollama_url = "http://localhost:11434/api/generate"
-        
+        self.google_api_base = "https://generativelanguage.googleapis.com/v1beta"
+
         if api_key and OPENAI_AVAILABLE and not use_ollama:
             openai.api_key = api_key
             
@@ -72,7 +85,7 @@ class SyntheticLiteraryDatasetGenerator:
     def _call_ollama(self, prompt: str, temperature: float = 0.7) -> str:
         """
         Call Ollama API for text generation.
-        
+
         Args:
             prompt: Text prompt for generation
             temperature: Temperature for generation
@@ -98,6 +111,45 @@ class SyntheticLiteraryDatasetGenerator:
         
         result = response.json()
         return result.get("response", "")
+
+    def _call_google_ai(self, prompt: str, temperature: float = 0.7, max_output_tokens: int = 512) -> str:
+        if not REQUESTS_AVAILABLE:
+            raise Exception("requests library not available")
+        if not self.google_api_key:
+            raise Exception("Google API key not configured")
+
+        endpoint = (
+            f"{self.google_api_base}/models/{self.google_model}:generateContent"
+            f"?key={self.google_api_key}"
+        )
+
+        payload = {
+            "contents": [
+                {
+                    "role": "user",
+                    "parts": [{"text": prompt}]
+                }
+            ],
+            "generationConfig": {
+                "temperature": temperature,
+                "maxOutputTokens": max_output_tokens
+            }
+        }
+
+        response = requests.post(endpoint, json=payload, timeout=60)
+        response.raise_for_status()
+
+        data = response.json()
+        candidates = data.get("candidates") or []
+        if not candidates:
+            raise Exception("Google AI response missing candidates")
+
+        parts = candidates[0].get("content", {}).get("parts", [])
+        text_segments = [part.get("text", "") for part in parts if isinstance(part, dict)]
+        result_text = "".join(text_segments).strip()
+        if not result_text:
+            raise Exception("Google AI response empty")
+        return result_text
     
     def generate_realistic_sensor_data(self, scenario: str, time: str, weather: str) -> Dict:
         """
@@ -132,13 +184,8 @@ class SyntheticLiteraryDatasetGenerator:
         
         humidity = max(20, min(100, base_humidity + random.gauss(0, 10)))
         
-        # Wind direction (random but contextual)
-        if "beach" in scenario:
-            wind_direction = random.uniform(0, np.pi/2)  # Mostly from ocean
-        elif "mountain" in scenario:
-            wind_direction = random.uniform(0, 2*np.pi)  # Variable mountain winds
-        else:
-            wind_direction = random.uniform(0, 2*np.pi)  # Urban variable winds
+        wind_indices = self._sample_wind_direction_index(scenario)
+        wind_direction = wind_indices
             
         # IMU data (simulated movement)
         if "climbing" in scenario:
@@ -154,7 +201,7 @@ class SyntheticLiteraryDatasetGenerator:
         return {
             "temperature": round(temperature, 1),
             "humidity": round(humidity, 1),
-            "wind_direction": round(wind_direction, 3),
+            "wind_direction": wind_direction,
             "imu": [round(x, 3) for x in imu],
             "context": {
                 "scenario": scenario,
@@ -177,10 +224,7 @@ class SyntheticLiteraryDatasetGenerator:
         context = sensor_data["context"]
         temp = sensor_data["temperature"]
         humidity = sensor_data["humidity"] 
-        wind_dir_deg = np.degrees(sensor_data["wind_direction"])
-        
-        # Convert wind direction to descriptive terms
-        wind_desc = self.wind_direction_to_description(wind_dir_deg)
+        wind_desc = self.wind_direction_to_description(sensor_data["wind_direction"])
         
         # Create detailed prompt in English
         prompt = f"""You are a novelist who writes with sensory and poetic style. 
@@ -210,52 +254,78 @@ Literary paragraph:"""
 
         return prompt
     
-    def wind_direction_to_description(self, angle_degrees: float) -> str:
-        """Convert wind angle to descriptive text."""
-        angle = angle_degrees % 360
-        
-        if -22.5 <= angle < 22.5 or 337.5 <= angle <= 360:
-            return "blowing from the front"
-        elif 22.5 <= angle < 67.5:
-            return "coming diagonally from the front right"
-        elif 67.5 <= angle < 112.5:
-            return "brushing from the right"
-        elif 112.5 <= angle < 157.5:
-            return "pushing from the back right"
-        elif 157.5 <= angle < 202.5:
-            return "pushing from behind"
-        elif 202.5 <= angle < 247.5:
-            return "wrapping from the back left"
-        elif 247.5 <= angle < 292.5:
-            return "brushing from the left"
+    def wind_direction_to_description(self, direction_index: int) -> str:
+        """Convert 16-direction index to descriptive text."""
+        mapping = {
+            0: "blowing from the north",
+            1: "coming from the north-northeast",
+            2: "brushing from the northeast",
+            3: "coming from the east-northeast",
+            4: "blowing from the east",
+            5: "coming from the east-southeast",
+            6: "brushing from the southeast",
+            7: "coming from the south-southeast",
+            8: "pushing from the south",
+            9: "coming from the south-southwest",
+            10: "brushing from the southwest",
+            11: "coming from the west-southwest",
+            12: "blowing from the west",
+            13: "coming from the west-northwest",
+            14: "brushing from the northwest",
+            15: "coming from the north-northwest"
+        }
+        return mapping.get(int(direction_index) % 16, "shifting winds")
+
+    def _sample_wind_direction_index(self, scenario: str) -> int:
+        """Sample a discrete wind direction index (0-15) based on scenario."""
+        scenario = (scenario or "").lower()
+
+        if "beach" in scenario:
+            candidates = [0, 1, 2, 15]  # favour onshore breezes around north/east
+        elif "mountain" in scenario:
+            candidates = list(range(16))
+        elif "forest" in scenario or "field" in scenario:
+            candidates = list(range(16))
         else:
-            return "coming diagonally from the front left"
+            candidates = list(range(16))
+
+        return random.choice(candidates)
     
-    def load_novel_files(self) -> List[str]:
-        """
-        Load novel files from input directory.
-        
-        Returns:
-            list: List of novel text contents
-        """
+    def load_novel_files(self) -> List[Dict[str, str]]:
+        """Load novel files with their content, genre, and path."""
         if not self.input_dir:
             return []
-            
-        novel_texts = []
+
+        novel_entries: List[Dict[str, str]] = []
         file_patterns = ['*.txt', '*.md']
-        
+
         for pattern in file_patterns:
             files = glob.glob(os.path.join(self.input_dir, '**', pattern), recursive=True)
             for file_path in files:
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
                         content = f.read()
-                        if len(content) > 100:  # Skip very short files
-                            novel_texts.append(content)
+                        if len(content) <= 100:  # Skip very short files
+                            continue
+
+                        novel_entries.append({
+                            "content": content,
+                            "path": file_path,
+                            "genre": self._infer_genre_from_path(file_path)
+                        })
                 except Exception as e:
                     print(f"Warning: Could not read {file_path}: {e}")
-                    
-        return novel_texts
+
+        return novel_entries
+
+    def _infer_genre_from_path(self, file_path: str) -> str:
+        """Infer novel genre from file path."""
+        lowered = file_path.lower()
+        if "modernist_novel" in lowered:
+            return "modernist"
+        if "travel_novel" in lowered:
+            return "travel"
+        return "unknown"
     
     def extract_text_chunks(self, text: str, chunk_size: int = 500) -> List[str]:
         """
@@ -308,10 +378,6 @@ Literary paragraph:"""
         Returns:
             dict: Environmental information extracted from text
         """
-        if not OPENAI_AVAILABLE or not self.api_key:
-            # Fallback: simple pattern-based analysis
-            return self.simple_environmental_analysis(text)
-            
         prompt = f"""Analyze the following literary text and extract environmental information that could be measured by sensors. Focus on:
 
 1. Temperature indicators (hot, cold, warm, cool, etc.)
@@ -336,13 +402,19 @@ Please respond with a JSON object containing:
 Only extract information that is clearly indicated in the text. If uncertain, use "unknown" and lower confidence."""
 
         try:
-            if self.use_ollama and REQUESTS_AVAILABLE:
+            if self.use_google_ai:
+                result_text = self._call_google_ai(
+                    prompt="You are an expert at analyzing literary text for environmental details. Always respond with valid JSON.\n\n" + prompt,
+                    temperature=0.0,
+                    max_output_tokens=400
+                )
+            elif self.use_ollama and REQUESTS_AVAILABLE:
                 response = self._call_ollama(
                     prompt="You are an expert at analyzing literary text for environmental details. Always respond with valid JSON.\n\n" + prompt,
                     temperature=0.3
                 )
                 result_text = response.strip()
-            else:
+            elif OPENAI_AVAILABLE and self.api_key:
                 response = openai.ChatCompletion.create(
                     model="gpt-4",
                     messages=[
@@ -354,6 +426,8 @@ Only extract information that is clearly indicated in the text. If uncertain, us
                 )
                 
                 result_text = response.choices[0].message.content.strip()
+            else:
+                return self.simple_environmental_analysis(text)
             
             # Try to parse JSON response
             try:
@@ -485,7 +559,7 @@ Only extract information that is clearly indicated in the text. If uncertain, us
         humidity = max(20, min(100, base_humidity + random.gauss(0, 10)))
         
         # Generate wind direction
-        wind_direction = random.uniform(0, 2*np.pi)
+        wind_direction = self._sample_wind_direction_index(env_info.get("location", ""))
         
         # Generate IMU based on movement
         movement = env_info.get("movement", "walking")
@@ -502,7 +576,7 @@ Only extract information that is clearly indicated in the text. If uncertain, us
         return {
             "temperature": round(temperature, 1),
             "humidity": round(humidity, 1),
-            "wind_direction": round(wind_direction, 3),
+            "wind_direction": wind_direction,
             "imu": [round(x, 3) for x in imu],
             "context": {
                 "scenario": env_info.get("location", "city_walking"),
@@ -521,6 +595,17 @@ Only extract information that is clearly indicated in the text. If uncertain, us
         Returns:
             str: Generated literary paragraph
         """
+        if self.use_google_ai:
+            try:
+                response = self._call_google_ai(
+                    prompt="You are an excellent English literary writer.\n\n" + prompt,
+                    temperature=0.8,
+                    max_output_tokens=500
+                )
+                return response.strip()
+            except Exception as e:
+                print(f"Warning: Google AI call failed ({e}), falling back to alternative providers")
+
         if self.use_ollama and REQUESTS_AVAILABLE:
             try:
                 response = self._call_ollama(
@@ -531,10 +616,8 @@ Only extract information that is clearly indicated in the text. If uncertain, us
             except Exception as e:
                 print(f"Warning: Ollama failed ({e}), falling back to template")
                 return self.generate_template_paragraph(prompt)
-        elif not OPENAI_AVAILABLE or not self.api_key:
-            # Use template-based generation
-            return self.generate_template_paragraph(prompt)
-        else:    
+
+        if OPENAI_AVAILABLE and self.api_key:
             try:
                 response = openai.ChatCompletion.create(
                     model="gpt-4",
@@ -548,8 +631,9 @@ Only extract information that is clearly indicated in the text. If uncertain, us
                 
                 return response.choices[0].message.content.strip()
             except Exception as e:
-                # Fallback template-based generation
-                return self.generate_template_paragraph(prompt)
+                print(f"Warning: OpenAI generation failed ({e}), using template")
+
+        return self.generate_template_paragraph(prompt)
     
     def generate_template_paragraph(self, prompt: str) -> str:
         """
@@ -579,14 +663,20 @@ Only extract information that is clearly indicated in the text. If uncertain, us
             step_desc="slow"
         )
     
-    def generate_novel_based_dataset(self, max_examples: int = 100, max_per_novel: int = None) -> List[Dict]:
+    def generate_novel_based_dataset(
+        self,
+        max_examples: int = 100,
+        max_per_novel: int = None,
+        max_files: int = None
+    ) -> List[Dict]:
         """
         Generate dataset from real novel files by analyzing text for environmental information.
         
         Args:
-            max_examples: Maximum number of examples to generate
-            max_per_novel: Maximum examples per novel (default: max_examples // 10)
-            
+            max_examples: Maximum number of examples to generate (global cap)
+            max_per_novel: Deprecated; retained for backward compatibility (ignored)
+            max_files: Optional cap on number of source novels to process
+        
         Returns:
             list: Generated dataset examples
         """
@@ -595,25 +685,28 @@ Only extract information that is clearly indicated in the text. If uncertain, us
             return self.generate_dataset_batch(max_examples)
             
         print(f"Loading novel files from {self.input_dir}...")
-        novel_texts = self.load_novel_files()
-        
-        if not novel_texts:
+        novel_entries = self.load_novel_files()
+
+        if max_files is not None:
+            novel_entries = novel_entries[:max_files]
+
+        if max_per_novel is not None:
+            print("Warning: max_per_novel is deprecated; processing will continue without per-file caps.")
+
+        if not novel_entries:
             print("Warning: No novel files found. Falling back to synthetic generation.")
             return self.generate_dataset_batch(max_examples)
             
-        print(f"Found {len(novel_texts)} novel files")
-        
-        # Calculate max examples per novel to ensure diversity
-        if max_per_novel is None:
-            max_per_novel = max(1, max_examples // max(10, len(novel_texts) // 10))
-        
-        print(f"Max examples per novel: {max_per_novel}")
-        
+        print(f"Found {len(novel_entries)} novel files")
+
         dataset = []
         example_id = 0
         
-        for text_idx, novel_text in enumerate(novel_texts):
-            print(f"Processing novel {text_idx + 1}/{len(novel_texts)}...")
+        for text_idx, novel_entry in enumerate(novel_entries):
+            novel_text = novel_entry["content"]
+            source_genre = novel_entry.get("genre", "unknown")
+            source_path = novel_entry.get("path")
+            print(f"Processing novel {text_idx + 1}/{len(novel_entries)}...")
             
             # Extract chunks from this novel
             chunks = self.extract_text_chunks(novel_text)
@@ -625,11 +718,6 @@ Only extract information that is clearly indicated in the text. If uncertain, us
                 if len(dataset) >= max_examples:
                     break
                 
-                # Limit examples per novel to ensure diversity
-                if examples_from_this_novel >= max_per_novel:
-                    print(f"  Reached max examples ({max_per_novel}) for this novel")
-                    break
-                    
                 try:
                     # Analyze chunk for environmental information
                     env_info = self.analyze_text_for_environment(chunk)
@@ -641,7 +729,13 @@ Only extract information that is clearly indicated in the text. If uncertain, us
                     sensor_data = self.generate_sensor_from_environment(env_info)
                     
                     # Determine literary style based on text characteristics
-                    style = self.infer_literary_style(chunk)
+                    inferred_style = self.infer_literary_style(chunk)
+                    if source_genre == "modernist":
+                        style = "modernist_novel"
+                    elif source_genre == "travel":
+                        style = "travel_essay"
+                    else:
+                        style = inferred_style
                     
                     # Create prompt for this sensor-text pair
                     prompt = self.create_literary_prompt(sensor_data, style)
@@ -662,12 +756,15 @@ Only extract information that is clearly indicated in the text. If uncertain, us
                         "source_info": {
                             "novel_index": text_idx,
                             "chunk_index": chunk_idx,
-                            "environmental_analysis": env_info
+                            "environmental_analysis": env_info,
+                            "source_genre": source_genre,
+                            "source_path": source_path
                         },
                         "metadata": {
                             "generated_at": datetime.now().isoformat(),
                             "context": sensor_data["context"],
-                            "source": "novel_analysis"
+                            "source": "novel_analysis",
+                            "style_category": style
                         }
                     }
                     
@@ -784,11 +881,11 @@ Only extract information that is clearly indicated in the text. If uncertain, us
         if use_novels and self.input_dir:
             print("Using novel-based generation...")
             # Calculate max per novel to ensure diversity across novels
-            if max_files:
-                max_per_novel = max(1, num_examples // max_files)
-            else:
-                max_per_novel = max(1, num_examples // 20)  # Default: distribute across at least 20 novels
-            dataset = self.generate_novel_based_dataset(max_examples=num_examples, max_per_novel=max_per_novel)
+            dataset = self.generate_novel_based_dataset(
+                max_examples=num_examples,
+                max_per_novel=None,
+                max_files=max_files
+            )
         else:
             print("Using synthetic generation...")
             dataset = self.generate_dataset_batch(batch_size=num_examples)
@@ -848,11 +945,10 @@ class DatasetAugmentor:
             variant["humidity"] = max(0, min(100, variant["humidity"] + humidity_delta))
             variations.append(variant)
         
-        # Wind direction variations
-        for wind_delta in [-0.5, -0.2, 0.2, 0.5]:
+        # Wind direction variations (wrap around 0-15)
+        for wind_delta in [-1, -2, 1, 2]:
             variant = sensor_data.copy()
-            variant["wind_direction"] += wind_delta
-            variant["wind_direction"] = variant["wind_direction"] % (2 * np.pi)
+            variant["wind_direction"] = (variant["wind_direction"] + wind_delta) % 16
             variations.append(variant)
         
         # IMU noise variations
@@ -885,7 +981,7 @@ def main():
     print(f"Scenario: {example['sensor_data']['context']}")
     print(f"Temperature: {example['sensor_data']['temperature']}°C")
     print(f"Humidity: {example['sensor_data']['humidity']}%")
-    print(f"Wind Direction: {example['sensor_data']['wind_direction']:.2f} rad")
+    print(f"Wind Direction Index: {example['sensor_data']['wind_direction']}")
     print(f"Literary Style: {example['literary_style']}")
     print(f"Generated Paragraph:\n{example['target_paragraph']}")
     

@@ -38,6 +38,12 @@ def main():
                        help='Number of examples per chunk when splitting')
     parser.add_argument('--num_examples', type=int, default=None,
                        help='Total number of examples to generate (overrides max_files calculation for LLM mode)')
+    parser.add_argument('--use_google_ai', action='store_true',
+                       help='Use Google AI Studio (Gemini) as the LLM backend')
+    parser.add_argument('--google_model', default='gemini-2.5-flash-lite',
+                       help='Google AI Studio model name (default: gemini-2.5-flash-lite)')
+    parser.add_argument('--google_api_key', default=None,
+                       help='Google AI Studio API key (defaults to GOOGLE_API_KEY environment variable)')
     
     args = parser.parse_args()
     
@@ -96,7 +102,15 @@ def main():
                     print(f"\n=== LLM Mode Processing ===")
                     print("Using AI-enhanced text analysis and generation")
                 
-                generator = SyntheticLiteraryDatasetGenerator(input_dir=args.input_dir)
+                openai_key = os.getenv('OPENAI_API_KEY')
+                generator = SyntheticLiteraryDatasetGenerator(
+                    api_key=openai_key,
+                    input_dir=args.input_dir,
+                    use_ollama=not args.use_google_ai,
+                    use_google_ai=args.use_google_ai,
+                    google_api_key=args.google_api_key,
+                    google_model=args.google_model
+                )
                 
                 # Determine number of examples to generate
                 if args.num_examples is not None:
