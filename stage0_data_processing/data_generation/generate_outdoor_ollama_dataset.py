@@ -7,6 +7,7 @@ import json
 import math
 import random
 import re
+import time
 from pathlib import Path
 from typing import Iterator
 
@@ -141,9 +142,11 @@ def generate_records(
     count: int,
     keyword_map: dict[str, list[str]],
     seed: int | None = None,
+    progress_interval: int = 100,
 ) -> Iterator[dict]:
     rng = random.Random(seed)
-    progress_step = max(1, count // 10) if count > 0 else None
+    interval = max(1, progress_interval)
+    last_log_time = 0.0
 
     for idx in range(count):
         sensor_data = sample_sensor_payload(rng)
@@ -180,7 +183,17 @@ def generate_records(
             },
         }
 
-        if progress_step and ((idx + 1) % progress_step == 0 or idx + 1 == count):
+        now = time.time()
+        should_log = False
+        if idx == 0:
+            should_log = True
+        elif (idx + 1) % interval == 0 or idx + 1 == count:
+            should_log = True
+        elif now - last_log_time >= 5.0:
+            should_log = True
+
+        if should_log:
+            last_log_time = now
             print(
                 f"[progress] {model_name}: {idx + 1}/{count} samples generated",
                 flush=True,
@@ -246,6 +259,12 @@ def parse_args() -> argparse.Namespace:
         help="Path to genre keyword JSON (used to enforce required words).",
     )
     parser.add_argument(
+        "--progress-interval",
+        type=int,
+        default=100,
+        help="How frequently to report progress (number of samples between logs).",
+    )
+    parser.add_argument(
         "--seed",
         type=int,
         default=None,
@@ -286,6 +305,7 @@ def main() -> None:
         args.records,
         keyword_map,
         seed=seed,
+        progress_interval=args.progress_interval,
     )
 
     output_file = (
