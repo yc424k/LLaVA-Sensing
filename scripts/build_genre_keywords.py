@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 from typing import Iterable, TypeVar
@@ -28,25 +29,25 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("Novel/genre_keywords.json"),
+        default=Path("Novel/genre_keywords-lg.json"),
         help="Where to save the resulting JSON dictionary.",
     )
     parser.add_argument(
         "--top-k",
         type=int,
-        default=150,
+        default=500,
         help="Number of top keywords to keep per genre.",
     )
     parser.add_argument(
         "--min-df",
         type=int,
-        default=5,
+        default=10,
         help="Minimum number of documents a term must appear in to be kept.",
     )
     parser.add_argument(
         "--max-df",
         type=float,
-        default=0.5,
+        default=0.8,
         help="Ignore terms that appear in more than this fraction of documents (0-1).",
     )
     parser.add_argument(
@@ -82,7 +83,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--spacy-n-process",
         type=int,
-        default=2,
+        default=14,
         help="Number of processes spaCy should use for entity stripping (>=1).",
     )
     parser.add_argument(
@@ -228,6 +229,26 @@ def build_stopword_list(extra_stopwords: list[str]) -> list[str]:
     return sorted({word for word in combined if word})
 
 
+def _split_into_paragraph_chunks(text: str, max_length: int) -> list[str]:
+    paragraphs = [segment.strip() for segment in re.split(r"\n\s*\n", text) if segment.strip()]
+    if not paragraphs:
+        stripped = text.strip()
+        paragraphs = [stripped] if stripped else [text]
+
+    chunks: list[str] = []
+    for paragraph in paragraphs:
+        if len(paragraph) <= max_length:
+            chunks.append(paragraph)
+            continue
+        chunks.extend(
+            chunk
+            for chunk in (paragraph[idx : idx + max_length] for idx in range(0, len(paragraph), max_length))
+            if chunk.strip()
+        )
+
+    return chunks or [""]
+
+
 def filter_person_entities(
     texts: list[str],
     model_name: str,
@@ -248,19 +269,36 @@ def filter_person_entities(
             f"spaCy model '{model_name}' is not installed. Run `python -m spacy download {model_name}` and retry."
         ) from exc
 
-    cleaned: list[str] = []
-    iterator = nlp.pipe(texts, batch_size=32, n_process=max(1, n_process))
+    doc_chunks = [_split_into_paragraph_chunks(text, nlp.max_length) for text in texts]
+    total_chunks = sum(len(chunks) for chunks in doc_chunks)
+    cleaned_chunks: list[list[str]] = [[] for _ in texts]
+
+    chunk_stream = (
+        (chunk, doc_idx)
+        for doc_idx, chunks in enumerate(doc_chunks)
+        for chunk in chunks
+    )
+
+    iterator = nlp.pipe(
+        chunk_stream,
+        batch_size=32,
+        n_process=max(1, n_process),
+        as_tuples=True,
+    )
     iterator = maybe_progress(
         iterator,
         enabled=show_progress,
         description="Removing PERSON entities",
-        total=len(texts),
+        total=total_chunks,
     )
 
-    for doc in iterator:
+    for doc, doc_idx in iterator:
         tokens = [token.text for token in doc if token.ent_type_ != "PERSON"]
-        cleaned.append(" ".join(tokens))
-    return cleaned
+        cleaned_text = " ".join(tokens).strip()
+        if cleaned_text:
+            cleaned_chunks[doc_idx].append(cleaned_text)
+
+    return [" ".join(chunks) if chunks else "" for chunks in cleaned_chunks]
 
 
 def _build_vectorizer(
@@ -386,6 +424,9 @@ def main() -> None:
         scoring=args.scoring,
         stop_words=stop_words,
     )
+
+    if (modernist_terms := keywords.get("modernist")) is not None:
+        keywords["modernist"] = [term for term in modernist_terms if "said" not in term]
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(keywords, indent=2, ensure_ascii=False), encoding="utf-8")
