@@ -82,4 +82,8 @@ llm_dataset.json
 # Stage 0 processed data (not tracked)
 stage0_data_processing/data_generation/data/
 .code/
-Novel/
+Novel/Modernist_Novel/
+Novel/Travel_Novel/
+Novel/*.json
+!Novel/genre_keywords-lg.json
+Novel/custom_stopwords.txt
